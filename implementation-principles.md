@@ -1,4 +1,4 @@
-# Checklist when writing code
+# Principles when writing code
 
 - Single responsibility
 
