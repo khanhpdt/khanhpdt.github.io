@@ -1,6 +1,6 @@
 # Checklist when writing code
 
-- Single responsibility:
+- Single responsibility
 
  “Gather together those things that change for the same reason, and separate those things that change for different reasons.”, Robert C. Martin
  
