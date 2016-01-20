@@ -1,8 +1,14 @@
 # Principles when writing code
 
-- Single responsibility
+- SOLID
+ 
+ - Single Responsibility
+ - Open-Closed
+ - Liskov Substitution
+ - Interface Segregation
+ - Dependency Inversion
 
- “Gather together those things that change for the same reason, and separate those things that change for different reasons.”, https://blog.8thlight.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html
+ http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod
  
 - Tell, don't ask
 
@@ -16,3 +22,6 @@
 
  "Only talk to your friends.", http://www.ccs.neu.edu/home/lieber/LoD.html
  
+- Encapsulation and Information hiding
+ 
+ http://www.javaworld.com/article/2075271/core-java/encapsulation-is-not-information-hiding.html
