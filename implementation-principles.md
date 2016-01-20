@@ -11,3 +11,8 @@
 - Don't repeat yourself (DRY)
  
  "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.", http://c2.com/cgi/wiki?DontRepeatYourself
+
+- Law of Demeter, or more general The principle of least knowledge
+
+ "Only talk to your friends.", http://www.ccs.neu.edu/home/lieber/LoD.html
+ 
