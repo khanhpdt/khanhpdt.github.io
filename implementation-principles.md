@@ -25,3 +25,7 @@
 - Encapsulation and Information hiding
  
  http://www.javaworld.com/article/2075271/core-java/encapsulation-is-not-information-hiding.html
+
+- Single level of abstraction (SLAP)
+
+ http://clean-code-developer.com/Orange-Grade.ashx
