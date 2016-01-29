@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software development notes</title>
+    <description>Notes on my daily work as a software developer.</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 29 Jan 2016 22:59:51 +0700</pubDate>
+    <lastBuildDate>Fri, 29 Jan 2016 22:59:51 +0700</lastBuildDate>
+    <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Implementation Principles</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;SOLID
+    &lt;ul&gt;
+      &lt;li&gt;Single Responsibility&lt;/li&gt;
+      &lt;li&gt;Open-Closed&lt;/li&gt;
+      &lt;li&gt;Liskov Substitution&lt;/li&gt;
+      &lt;li&gt;Interface Segregation&lt;/li&gt;
+      &lt;li&gt;Dependency Inversion&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Tell, don’t ask&lt;/p&gt;
+
+    &lt;p&gt;“Rather than asking an object for data and acting on that data, we should instead tell an object what to do.”, http://martinfowler.com/bliki/TellDontAsk.html&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Don’t repeat yourself (DRY)&lt;/p&gt;
+
+    &lt;p&gt;“Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.”, http://c2.com/cgi/wiki?DontRepeatYourself&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Law of Demeter, or more general The principle of least knowledge&lt;/p&gt;
+
+    &lt;p&gt;“Only talk to your friends.”, http://www.ccs.neu.edu/home/lieber/LoD.html&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Encapsulation and Information hiding&lt;/p&gt;
+
+    &lt;p&gt;http://www.javaworld.com/article/2075271/core-java/encapsulation-is-not-information-hiding.html&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Single level of abstraction (SLAP)&lt;/p&gt;
+
+    &lt;p&gt;http://clean-code-developer.com/Orange-Grade.ashx&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 28 Jan 2016 00:00:00 +0700</pubDate>
+        <link>/2016/01/28/implementation-principles.html</link>
+        <guid isPermaLink="true">/2016/01/28/implementation-principles.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Implementation Patterns</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Encapsulated collection&lt;/p&gt;
+
+    &lt;p&gt;“The key point with this is that you don’t want to give clients direct access to the collection data structure itself - for if you do it allows clients to alter the supplier’s data without the supplier being able to intervene.”, http://martinfowler.com/bliki/EncapsulatedCollection.html&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 28 Jan 2016 00:00:00 +0700</pubDate>
+        <link>/2016/01/28/implementation-patterns.html</link>
+        <guid isPermaLink="true">/2016/01/28/implementation-patterns.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Implementation Anti-patterns</title>
+        <description>
+</description>
+        <pubDate>Thu, 28 Jan 2016 00:00:00 +0700</pubDate>
+        <link>/2016/01/28/implementation-anti-patterns.html</link>
+        <guid isPermaLink="true">/2016/01/28/implementation-anti-patterns.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
