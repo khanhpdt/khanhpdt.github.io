@@ -15,4 +15,4 @@ baseurl: "" # the subpath of your site, e.g. /blog
 github_username: khanhpdt
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet

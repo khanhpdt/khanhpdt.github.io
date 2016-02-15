@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Implementation Patterns</title>
-  <meta name="description" content="  Encapsulated collection">
+  <meta name="description" content="Encapsulated collection">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/2016/01/28/implementation-patterns.html">
@@ -63,13 +63,127 @@
 
   <div class="post-content" itemprop="articleBody">
     <ul>
-  <li>
-    <p>Encapsulated collection</p>
-
-    <p>“The key point with this is that you don’t want to give clients direct access to the collection data structure itself - for if you do it allows clients to alter the supplier’s data without the supplier being able to intervene.”, http://martinfowler.com/bliki/EncapsulatedCollection.html</p>
-  </li>
+<li>Encapsulated collection</li>
 </ul>
 
+<p>&quot;The key point with this is that you don&#39;t want to give clients direct access to the collection data structure itself - for if you do it allows clients to alter the supplier&#39;s data without the supplier being able to intervene.&quot;, http://martinfowler.com/bliki/EncapsulatedCollection.html</p>
+
+<h1>Book: Implementation patterns, Kent Beck</h1>
+
+<h2>Chapter 8: Methods</h2>
+
+<ul>
+<li>Method name should be written from the client&#39;s perspective.</li>
+<li>Data and logic acting upon the data should be together.</li>
+<li>Complete constructor
+
+<ul>
+<li>If you want to impose required data on an object, introduce a constructor with the required data. The reverse also holds, which means that if a constructor has parameters, then it implies that the parameters are required for the object to function properly.</li>
+</ul></li>
+<li>Factory method
+
+<ul>
+<li>A (static) method used to create an instance of the class.</li>
+<li>Should be used with care, as it implies that there&#39;s something special inside the method that a simple constructor would not suffice to do. </li>
+<li>For example, factory methods should be used when the name is important, or when the return type is dynamic.</li>
+</ul></li>
+<li><p>Internal factory</p>
+
+<ul>
+<li>Should use lazy initialization when the creation is complex. For example:</li>
+</ul>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">ComplexObject</span> <span class="nf">getComplexObject</span><span class="p">(</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">complexObj</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">complexObj</span> <span class="o">=</span> <span class="n">doComplexComputation</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">complexObj</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></li>
+<li><p>Collection accessor method</p>
+
+<ul>
+<li>If you happen to know that a bug can occur at runtime, try to eliminate it. The cost to debug such bug in production is expensive. For example, <code>Collections.unmodifiableList(List)</code> can cause exception if the clients try to modify the collection.</li>
+<li>Try to reduce the accesses to the collections from the clients. This conforms to the rules &quot;Minimize accessibility, Item 13&quot; and &quot;Minimize mutability, Item 15&quot; in Effective Java.</li>
+<li>Carefully analyze the clients to see if they really need access to the collections. If they just need to perform some simple operations on the collections, then we can just expose only those operations.</li>
+</ul></li>
+<li><p>Query method</p>
+
+<ul>
+<li>If an object has a lot of logics dependent on the state of another object, it&#39;s likely that the logics are in a wrong place. This is similar to the smell of Feature Envy in Refactoring book.</li>
+</ul></li>
+<li><p>Equality method</p>
+
+<ul>
+<li>equals() and hashCode() should be implemented together and should also operate on the same data. Similar to Item 9 in Effective Java. The reason is that equal objects must have the same hash code.</li>
+</ul></li>
+<li><p>Safe copy</p>
+
+<ul>
+<li>Alias problem is when two different objects get control of the same other object without being aware of each other.</li>
+<li>This pattern is only a palliative one, as it does not actually solve the alias problem, which is likely to be a design problem.</li>
+</ul></li>
+</ul>
+
+<h2>Chapter 9: Collections</h2>
+
+<ul>
+<li>Express one of the most fundamental variations in programming, the variation in cardinality (the other variation is in behavior)</li>
+<li>Fundamental issues about collections
+
+<ul>
+<li>Size</li>
+<li>Order</li>
+<li>Uniqueness</li>
+<li>Performance</li>
+</ul></li>
+<li>Use the possibly simplest collection implementation first. Later we can change to more specialized implementation if needed.</li>
+<li>Some kinds of collections
+
+<ul>
+<li>Array<br>
+
+<ul>
+<li>Built-in feature in Java</li>
+<li>Most efficient</li>
+<li>Fixed size</li>
+</ul></li>
+<li>Iterable
+
+<ul>
+<li>Just to iterate</li>
+<li>Used with foreach loop</li>
+</ul></li>
+<li>Collection
+
+<ul>
+<li>Simple operations: add, remove, search, count</li>
+</ul></li>
+<li>List
+
+<ul>
+<li>Orderred items</li>
+</ul></li>
+<li>Set
+
+<ul>
+<li>No duplicate</li>
+</ul></li>
+<li>SortedSet
+
+<ul>
+<li>Orderred by a comparator</li>
+<li>No duplicate</li>
+</ul></li>
+</ul></li>
+<li>Performance factors on choosing collection type:
+
+<ul>
+<li>Type of frequent operations</li>
+<li>Collection size</li>
+<li>Profiling (don&#39;t just guess)</li>
+</ul></li>
+<li>Avoid extending collections by inheritance (try to use delegation instead)</li>
+</ul>
 
   </div>
 

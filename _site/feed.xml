@@ -5,49 +5,245 @@
     <description>Notes on my daily work as a software developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Jan 2016 22:59:51 +0700</pubDate>
-    <lastBuildDate>Fri, 29 Jan 2016 22:59:51 +0700</lastBuildDate>
+    <pubDate>Sun, 14 Feb 2016 11:31:54 +0700</pubDate>
+    <lastBuildDate>Sun, 14 Feb 2016 11:31:54 +0700</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Java Collections</title>
+        <description>&lt;h1&gt;Chapter 10&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Java Collections Framework: java.util and java.util.concurrent&lt;/li&gt;
+&lt;li&gt;Figure 10-1: The main interfaces of Java Collections Framework&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Chapter 11&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Iterator
+
+&lt;ul&gt;
+&lt;li&gt;Provides a &lt;em&gt;uniform&lt;/em&gt; way to access collection elements sequentially&lt;/li&gt;
+&lt;li&gt;foreach loop can be used with arrays or any collections implementing Iterable&lt;/li&gt;
+&lt;li&gt;fail-fast behavior&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Three basic operations:
+
+&lt;ul&gt;
+&lt;li&gt;Insertion and removal of elements by position&lt;/li&gt;
+&lt;li&gt;Retrieval elements by their contents&lt;/li&gt;
+&lt;li&gt;Iteration over all elements&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Amortized cost&lt;/li&gt;
+&lt;li&gt;Concurrent collections are preferred over synchronized collections
+
+&lt;ul&gt;
+&lt;li&gt;See Java concurrency in practice for more details on concurrent collections&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Chapter 12&lt;/h1&gt;
+
+&lt;h1&gt;Chapter 13&lt;/h1&gt;
+
+&lt;h2&gt;Set&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;No duplicate&lt;/li&gt;
+&lt;li&gt;HashSet
+
+&lt;ul&gt;
+&lt;li&gt;Implemented by a hash table&lt;/li&gt;
+&lt;li&gt;Pros: basic operations like add, remove, check items&lt;/li&gt;
+&lt;li&gt;Cons: iterating&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;LinkedHashSet
+
+&lt;ul&gt;
+&lt;li&gt;Order when adding is reserved&lt;/li&gt;
+&lt;li&gt;Pros: next() operation&lt;/li&gt;
+&lt;li&gt;Cons: overhead in maintaining references to the previous and next elements&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;CopyOnWriteArraySet
+
+&lt;ul&gt;
+&lt;li&gt;Thread-safe&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;EnumSet
+
+&lt;ul&gt;
+&lt;li&gt;Operations are bit-wise, thus they are fast&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 02 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/02/java-collections.html</link>
+        <guid isPermaLink="true">/2016/02/02/java-collections.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>The productive programmer</title>
+        <description>&lt;h1&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;The productive programmer, Neal Ford&lt;/p&gt;
+
+&lt;h1&gt;Main points&lt;/h1&gt;
+</description>
+        <pubDate>Mon, 01 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/01/the-productive-programmer.html</link>
+        <guid isPermaLink="true">/2016/02/01/the-productive-programmer.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>HTTP basics</title>
+        <description>&lt;h1&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;[1] HTTP The definitive guide&lt;/p&gt;
+
+&lt;h1&gt;Overview&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTP is a protocol at the Application layer&lt;/li&gt;
+&lt;li&gt;HTTP transaction, messages&lt;/li&gt;
+&lt;li&gt;HTTP architecture components
+
+&lt;ul&gt;
+&lt;li&gt;Proxy&lt;/li&gt;
+&lt;li&gt;Cache&lt;/li&gt;
+&lt;li&gt;Gateway&lt;/li&gt;
+&lt;li&gt;Tunnel &lt;/li&gt;
+&lt;li&gt;Agent&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Resources&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;URI: URL and URN&lt;/li&gt;
+&lt;li&gt;URL syntax&lt;/li&gt;
+&lt;li&gt;Escape characters in URLs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Messages&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Inbound vs. outbound, upstream vs. downstream&lt;/li&gt;
+&lt;li&gt;Three parts
+
+&lt;ul&gt;
+&lt;li&gt;Formats of request and response messages&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Methods&lt;/li&gt;
+&lt;li&gt;Status codes&lt;/li&gt;
+&lt;li&gt;Headers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Connection management&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTP over TCP over IP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Client identification and Cookies&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Identification methods
+
+&lt;ul&gt;
+&lt;li&gt;HTTP headers in client request&lt;/li&gt;
+&lt;li&gt;Client IP address&lt;/li&gt;
+&lt;li&gt;Client login&lt;/li&gt;
+&lt;li&gt;Authorization header&lt;/li&gt;
+&lt;li&gt;Fat URLs&lt;/li&gt;
+&lt;li&gt;Client information is embedded in the URLs&lt;/li&gt;
+&lt;li&gt;Cookies&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Cookies&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;RFC 2965&lt;/li&gt;
+&lt;li&gt;Client state information
+
+&lt;ul&gt;
+&lt;li&gt;Mainly used to store client identification information. This is to help the server to keep track of the client browsing history&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Two types
+
+&lt;ul&gt;
+&lt;li&gt;Session cookies: deleted when exiting the browser&lt;/li&gt;
+&lt;li&gt;Persistent cookies: stored on disk and still available when exiting browser or restarting the computer, usually expired by a specified date&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;How it works
+
+&lt;ul&gt;
+&lt;li&gt;Generated by server at the first time the client makes request to the server&lt;/li&gt;
+&lt;li&gt;Managed by browsers at the client side&lt;/li&gt;
+&lt;li&gt;Cookies can also contain other information other than the information about client identification&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 29 Jan 2016 00:00:00 +0700</pubDate>
+        <link>/2016/01/29/HTTP-basics.html</link>
+        <guid isPermaLink="true">/2016/01/29/HTTP-basics.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Implementation Principles</title>
         <description>&lt;ul&gt;
-  &lt;li&gt;SOLID
-    &lt;ul&gt;
-      &lt;li&gt;Single Responsibility&lt;/li&gt;
-      &lt;li&gt;Open-Closed&lt;/li&gt;
-      &lt;li&gt;Liskov Substitution&lt;/li&gt;
-      &lt;li&gt;Interface Segregation&lt;/li&gt;
-      &lt;li&gt;Dependency Inversion&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;SOLID&lt;/p&gt;
 
-    &lt;p&gt;http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Tell, don’t ask&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Single Responsibility&lt;/li&gt;
+&lt;li&gt;Open-Closed&lt;/li&gt;
+&lt;li&gt;Liskov Substitution&lt;/li&gt;
+&lt;li&gt;Interface Segregation&lt;/li&gt;
+&lt;li&gt;Dependency Inversion&lt;/li&gt;
+&lt;/ul&gt;
 
-    &lt;p&gt;“Rather than asking an object for data and acting on that data, we should instead tell an object what to do.”, http://martinfowler.com/bliki/TellDontAsk.html&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Don’t repeat yourself (DRY)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod&quot;&gt;source&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tell, don&amp;#39;t ask&lt;/p&gt;
 
-    &lt;p&gt;“Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.”, http://c2.com/cgi/wiki?DontRepeatYourself&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Law of Demeter, or more general The principle of least knowledge&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Rather than asking an object for data and acting on that data, we should instead tell an object what to do.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-    &lt;p&gt;“Only talk to your friends.”, http://www.ccs.neu.edu/home/lieber/LoD.html&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Encapsulation and Information hiding&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://martinfowler.com/bliki/TellDontAsk.html&quot;&gt;source&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Don&amp;#39;t repeat yourself (DRY)&lt;/p&gt;
 
-    &lt;p&gt;http://www.javaworld.com/article/2075271/core-java/encapsulation-is-not-information-hiding.html&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Single level of abstraction (SLAP)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-    &lt;p&gt;http://clean-code-developer.com/Orange-Grade.ashx&lt;/p&gt;
-  &lt;/li&gt;
+&lt;p&gt;&lt;a href=&quot;http://c2.com/cgi/wiki?DontRepeatYourself&quot;&gt;source&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Law of Demeter, or more general The principle of least knowledge&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Only talk to your friends.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ccs.neu.edu/home/lieber/LoD.html&quot;&gt;source&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Encapsulation and Information hiding&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.javaworld.com/article/2075271/core-java/encapsulation-is-not-information-hiding.html&quot;&gt;link&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Single level of abstraction (SLAP)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://clean-code-developer.com/Orange-Grade.ashx&quot;&gt;link&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Design principles from Head First Design Patterns&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Identify what vary and encapsulate them from what don&amp;#39;t&lt;/li&gt;
+&lt;li&gt;Program to an interface, not an implementation&lt;/li&gt;
+&lt;li&gt;Favor composition over inheritance&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 28 Jan 2016 00:00:00 +0700</pubDate>
@@ -60,13 +256,127 @@
       <item>
         <title>Implementation Patterns</title>
         <description>&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Encapsulated collection&lt;/p&gt;
-
-    &lt;p&gt;“The key point with this is that you don’t want to give clients direct access to the collection data structure itself - for if you do it allows clients to alter the supplier’s data without the supplier being able to intervene.”, http://martinfowler.com/bliki/EncapsulatedCollection.html&lt;/p&gt;
-  &lt;/li&gt;
+&lt;li&gt;Encapsulated collection&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&amp;quot;The key point with this is that you don&amp;#39;t want to give clients direct access to the collection data structure itself - for if you do it allows clients to alter the supplier&amp;#39;s data without the supplier being able to intervene.&amp;quot;, http://martinfowler.com/bliki/EncapsulatedCollection.html&lt;/p&gt;
+
+&lt;h1&gt;Book: Implementation patterns, Kent Beck&lt;/h1&gt;
+
+&lt;h2&gt;Chapter 8: Methods&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Method name should be written from the client&amp;#39;s perspective.&lt;/li&gt;
+&lt;li&gt;Data and logic acting upon the data should be together.&lt;/li&gt;
+&lt;li&gt;Complete constructor
+
+&lt;ul&gt;
+&lt;li&gt;If you want to impose required data on an object, introduce a constructor with the required data. The reverse also holds, which means that if a constructor has parameters, then it implies that the parameters are required for the object to function properly.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Factory method
+
+&lt;ul&gt;
+&lt;li&gt;A (static) method used to create an instance of the class.&lt;/li&gt;
+&lt;li&gt;Should be used with care, as it implies that there&amp;#39;s something special inside the method that a simple constructor would not suffice to do. &lt;/li&gt;
+&lt;li&gt;For example, factory methods should be used when the name is important, or when the return type is dynamic.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Internal factory&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Should use lazy initialization when the creation is complex. For example:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;ComplexObject&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getComplexObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;complexObj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;complexObj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doComplexComputation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;complexObj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Collection accessor method&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If you happen to know that a bug can occur at runtime, try to eliminate it. The cost to debug such bug in production is expensive. For example, &lt;code&gt;Collections.unmodifiableList(List)&lt;/code&gt; can cause exception if the clients try to modify the collection.&lt;/li&gt;
+&lt;li&gt;Try to reduce the accesses to the collections from the clients. This conforms to the rules &amp;quot;Minimize accessibility, Item 13&amp;quot; and &amp;quot;Minimize mutability, Item 15&amp;quot; in Effective Java.&lt;/li&gt;
+&lt;li&gt;Carefully analyze the clients to see if they really need access to the collections. If they just need to perform some simple operations on the collections, then we can just expose only those operations.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Query method&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If an object has a lot of logics dependent on the state of another object, it&amp;#39;s likely that the logics are in a wrong place. This is similar to the smell of Feature Envy in Refactoring book.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Equality method&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;equals() and hashCode() should be implemented together and should also operate on the same data. Similar to Item 9 in Effective Java. The reason is that equal objects must have the same hash code.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Safe copy&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Alias problem is when two different objects get control of the same other object without being aware of each other.&lt;/li&gt;
+&lt;li&gt;This pattern is only a palliative one, as it does not actually solve the alias problem, which is likely to be a design problem.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Chapter 9: Collections&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Express one of the most fundamental variations in programming, the variation in cardinality (the other variation is in behavior)&lt;/li&gt;
+&lt;li&gt;Fundamental issues about collections
+
+&lt;ul&gt;
+&lt;li&gt;Size&lt;/li&gt;
+&lt;li&gt;Order&lt;/li&gt;
+&lt;li&gt;Uniqueness&lt;/li&gt;
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use the possibly simplest collection implementation first. Later we can change to more specialized implementation if needed.&lt;/li&gt;
+&lt;li&gt;Some kinds of collections
+
+&lt;ul&gt;
+&lt;li&gt;Array&lt;br&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Built-in feature in Java&lt;/li&gt;
+&lt;li&gt;Most efficient&lt;/li&gt;
+&lt;li&gt;Fixed size&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Iterable
+
+&lt;ul&gt;
+&lt;li&gt;Just to iterate&lt;/li&gt;
+&lt;li&gt;Used with foreach loop&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Collection
+
+&lt;ul&gt;
+&lt;li&gt;Simple operations: add, remove, search, count&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;List
+
+&lt;ul&gt;
+&lt;li&gt;Orderred items&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Set
+
+&lt;ul&gt;
+&lt;li&gt;No duplicate&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;SortedSet
+
+&lt;ul&gt;
+&lt;li&gt;Orderred by a comparator&lt;/li&gt;
+&lt;li&gt;No duplicate&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Performance factors on choosing collection type:
+
+&lt;ul&gt;
+&lt;li&gt;Type of frequent operations&lt;/li&gt;
+&lt;li&gt;Collection size&lt;/li&gt;
+&lt;li&gt;Profiling (don&amp;#39;t just guess)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Avoid extending collections by inheritance (try to use delegation instead)&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Thu, 28 Jan 2016 00:00:00 +0700</pubDate>
         <link>/2016/01/28/implementation-patterns.html</link>
@@ -77,8 +387,7 @@
     
       <item>
         <title>Implementation Anti-patterns</title>
-        <description>
-</description>
+        <description></description>
         <pubDate>Thu, 28 Jan 2016 00:00:00 +0700</pubDate>
         <link>/2016/01/28/implementation-anti-patterns.html</link>
         <guid isPermaLink="true">/2016/01/28/implementation-anti-patterns.html</guid>
