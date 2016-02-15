@@ -13,4 +13,10 @@ title: Effective Java
   - Provides an "abnormal" and unique way to
    - Invoke class methods and constructors
    - Access and modify class fields
-
+- Cons:
+  - Performance overhead over non-reflective couterparts
+  - Loss of compile-time type checking
+  - Exposure of internals, e.g., `private` fields or methods can be accessed and modified
+- General rule
+  - Should always try to avoid using reflection in normal applications
+  - If it is unavoidable, refelection should be used very cautiously. One acceptable way to use reflection is to create an instance, but after that normal invocation should be used on the created instance.
