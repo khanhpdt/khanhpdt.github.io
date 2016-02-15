@@ -7,10 +7,10 @@ title: Effective Java
 - Pros:
   - Provides a programmatic way to introspect a class
   - Provides an "abnormal" and unique way to
-   - Invoke class methods and constructors
-   - Access and modify class fields
+    - Invoke class methods and constructors
+    - Access and modify class fields
 - Cons:
-  - Performance overhead over non-reflective couterparts
+  - Performance overhead over non-reflective counterparts
   - Loss of compile-time type checking
   - Exposure of internals, e.g., `private` fields or methods can be accessed and modified
 - General rule
