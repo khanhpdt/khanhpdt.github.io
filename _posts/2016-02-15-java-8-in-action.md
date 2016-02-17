@@ -10,18 +10,12 @@ Reference: Book Java 8 in action
   - Passing code to methods
   - Default methods in interfaces
 - While collections are mostly about storing and accessing data, streams are mostly about how to perform computations on the data. Streams allows and encourages to process the data in parallel.
-- Ideas from functional programming
-  - Functions as first-class citizens (in Java 8, functions are equivalent to methods and lambdas)
-  - Functions cause no side-effects (or observable effects)
-  - No null value
-  - Pattern matching
-  - Focus on the what, not the how, i.e., specify the desireed result, not how it should be done to achieve the result
   
 # Chapter 2
 - Behavior parameterization by passing code (which performs the behavior) around
 - Predicate: a function which returns a boolean value
 
-# Chapter 3
+# Chapter 3: Lambda expressions
 - Functional interface
   - An interface with _exactly_ one abstract method. The inheriting methods (not from Object) also count. The signature of the abstract method is also called the function descriptor.
   - Because it's only required for a function interface to have exactly one method, the number of default methods in the interface does not matter.
@@ -51,7 +45,7 @@ Reference: Book Java 8 in action
    - Constructor: Type::new
   - Usually combined with other utility methods to make code more concise
 
-# Chapter 4
+# Chapter 4: Streams
 - Streams
   - "A sequence of elements from a source that supports data processing operations"
   - Designed to provide a declarative way to process collections (like the way SQL processes records): you specify _what_ you want to achieve
@@ -68,13 +62,13 @@ Reference: Book Java 8 in action
   - Intermediate operations
   - Terminal operations
   
-# Chapter 5
+# Chapter 5: Working with streams
 - Stream operations
   - Stateless
   - Stateful
 - Short-circuiting: A computation terminates as soon as the result is found.
 
-# Chapter 6
+# Chapter 6: Collecting data
 - Collectors
   - Implements Collector interface
   - Applies transforming operation on stream elements and then collects these transformed elements into a specified data structure to produce the desired output.
@@ -88,4 +82,57 @@ Reference: Book Java 8 in action
 - Multi-level collector
   - Inner collector is passed as an argument of the outer collector. The inner collector will act upon the result of the outer collector.
 
-# Chapter 7
+# Chapter 9: Default methods
+- Three kinds of compatibility in Java code
+  - Binary
+  - Source
+  - Behavior
+- Default methods
+  - Start with the `default` modifier
+  - Defined inside interface
+   - Can have body
+   - The implementations of the interface do not need to override. 
+- Typical usages
+  - Optional methods in the interface hierarchy
+  - Simulate multiple inheritance because a class can implement multiple interfaces
+- Resolution rules when a class implement multiple interfaces which happen to have the same default methods
+  - Methods in ordinary classes win
+  - Methods in the most specific interface win
+  - Otherwise, conflicts occur. One solution is to let the current class override the default methods and then explicitly call the overriding methods.
+
+# Chapter 13: Thinking functionally
+- Ideas from functional programming
+  - Functions as first-class citizens (in Java 8, functions are equivalent to methods and lambdas)
+  - Pure functions: functions cause no side-effects (or observable effects).
+  - Declarative programming: focus on the what, not the how, i.e., specify the desireed result, not how it should be done to achieve the result
+  - Referential transparency: A method always produces the same result for the same arguments, regardless of the context in which it is called. Thus referential-transparency methods can be characterized by their inputs and outputs.
+- Pure functional programming vs. Functional-style programming
+  - Pure functional programming: methods are pure functions, which do not alter state of their enclosing class as well as all other objects.
+  - Functional-style programming: methods can change state of some objects, as long as these changes are not observable by the callers. For example, methods ony change their local variables, or they change the state of some object but also revert the change before terminating.
+
+# Chapter 14: Functional programming techniques
+- Functions
+  - First-class citizens. Functions are treated as values, e.g., they can be passed around as arguments
+  - No side-effect
+  - Currying: a technique to reduce the number of parameters. For example, let say you have a legacy function with 4 parameters f(a,b,c,d), but for some reason you don't want to pass all 4 arguments everytime you call the function but only 2 at a time. The following code shows one way to do that
+  <pre><code class="java">
+  Integer f(a,b,c,d) {
+	  // do something
+  }
+  
+  void g(a,b) {
+	  return (c,d) -> f(a,b,c,d);
+  }
+  
+  // client code
+  BiFunction<Integer, Integer, Integer> f12 = g(1,2);
+  int c = 3; int d = 4;
+  f12(c,d);
+  </code></pre>
+- Persistent data structures
+  - Persisting data structures means that they are isolated and thus not affected by changes happenning around them.
+  - One way to achieve persistent data structures is to clone the existing data structures and operate upon the clone. Because the operations are performed only at the creation time, it does not count that the data structures are altered.
+- Lazy evaluation with streams
+  - e.g., lazy evaluation of stream elements
+- Pattern matching
+

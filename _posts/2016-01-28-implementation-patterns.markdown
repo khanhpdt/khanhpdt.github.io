@@ -20,16 +20,14 @@ title: Implementation Patterns
   - For example, factory methods should be used when the name is important, or when the return type is dynamic.
 - Internal factory
   - Should use lazy initialization when the creation is complex. For example:
-	
-	```java
+  <pre><code class="java">
 	ComplexObject getComplexObject() {
 		if (complexObj == null) {
 			complexObj = doComplexComputation();
 		}
 		return complexObj;
 	}
-	```
-	
+  </code></pre>
 - Collection accessor method
   - If you happen to know that a bug can occur at runtime, try to eliminate it. The cost to debug such bug in production is expensive. For example, ``Collections.unmodifiableList(List)`` can cause exception if the clients try to modify the collection.
   - Try to reduce the accesses to the collections from the clients. This conforms to the rules "Minimize accessibility, Item 13" and "Minimize mutability, Item 15" in Effective Java.
