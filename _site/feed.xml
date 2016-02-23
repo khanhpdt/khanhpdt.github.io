@@ -5,9 +5,258 @@
     <description>Notes on my daily work as a software developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 17 Feb 2016 08:35:23 +0700</pubDate>
-    <lastBuildDate>Wed, 17 Feb 2016 08:35:23 +0700</lastBuildDate>
+    <pubDate>Tue, 23 Feb 2016 08:37:16 +0700</pubDate>
+    <lastBuildDate>Tue, 23 Feb 2016 08:37:16 +0700</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Java puzzlers</title>
+        <description>&lt;h1 id=&quot;expressive-puzzlers&quot;&gt;Expressive Puzzlers&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Puzzle 2
+    &lt;ul&gt;
+      &lt;li&gt;Not all decimals can be represented exactly using binary floating-point&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 8
+    &lt;ul&gt;
+      &lt;li&gt;Conditional operator&lt;/li&gt;
+      &lt;li&gt;Should always avoid mixed-type computations&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 9
+    &lt;ul&gt;
+      &lt;li&gt;Compound assignment (e.g., a += b) contains an implicit cast&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;puzzlers-with-characters&quot;&gt;Puzzlers with characters&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Puzzle 13
+    &lt;ul&gt;
+      &lt;li&gt;String interning&lt;/li&gt;
+      &lt;li&gt;Object comparison by equals() and ==&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 18
+    &lt;ul&gt;
+      &lt;li&gt;The conversion between String and byte[] always involves using a specific charset&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;loopy-puzzlers&quot;&gt;Loopy puzzlers&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Puzzle 25
+    &lt;ul&gt;
+      &lt;li&gt;Postfix increment operator&lt;/li&gt;
+      &lt;li&gt;Do not assign a variable more than once in a single expression&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 28
+    &lt;ul&gt;
+      &lt;li&gt;Infinity&lt;/li&gt;
+      &lt;li&gt;Floating-point operations return the floating-point value that is closest to their exact mathematical result.&lt;/li&gt;
+      &lt;li&gt;Binary floating point arithmetics in Java&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;exceptional-puzzlers&quot;&gt;Exceptional puzzlers&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Puzzle 36
+    &lt;ul&gt;
+      &lt;li&gt;The try statement 14.20 (Java Language Specification Java SE 7 (JLS7))&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 37
+    &lt;ul&gt;
+      &lt;li&gt;Exception checking 11.2.3 (JLS7)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 38
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Compile-time checking of exceptions 11.2 JLS7&lt;/p&gt;
+
+        &lt;blockquote&gt;
+          &lt;p&gt;When interfaces are involved, more than one method declaration may be overridden by a single overriding declaration. In this case, the overriding declaration must have a throws clause that is compatible with all the overridden declarations (§9.4.1).&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 39
+    &lt;ul&gt;
+      &lt;li&gt;The System.exit method halts the execution of the current thread and all others dead in their tracks.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 40
+    &lt;ul&gt;
+      &lt;li&gt;Initialization of classes and interfaces 12.4 JLS7&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 42
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;table&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&amp;amp; and&lt;/td&gt;
+              &lt;td&gt;can be used as &amp;amp;&amp;amp; and&lt;/td&gt;
+              &lt;td&gt; &lt;/td&gt;
+              &lt;td&gt;for boolean values, but they do not support short-circuit evaluation.&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 43
+    &lt;ul&gt;
+      &lt;li&gt;It’s possible that an undeclared exception can be thrown out. Examples:
+        &lt;ul&gt;
+          &lt;li&gt;newInstance()&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Generics
+        &lt;ul&gt;
+          &lt;li&gt;Java exception checking is a compile-time facility, not a JVM feature.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;classy-puzzlers&quot;&gt;Classy puzzlers&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Puzzle 46
+    &lt;ul&gt;
+      &lt;li&gt;If more than one methods are applicable to an invocation, the most specific one is chosen.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 47
+    &lt;ul&gt;
+      &lt;li&gt;Static fields are shared by their declaring class and any &lt;em&gt;subclasses&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 48
+    &lt;ul&gt;
+      &lt;li&gt;No dynamic dispatch on static methods (15.12.4.4 JLS7)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 49
+    &lt;ul&gt;
+      &lt;li&gt;The static initializers and class variable initializers are executed in textual order (12.4.1 JLS7)&lt;/li&gt;
+      &lt;li&gt;Be very careful of circularity in class initialization&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 50
+    &lt;ul&gt;
+      &lt;li&gt;instanceof and cast operators
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;null&lt;/code&gt; is a subtype of every type. However, &lt;code class=&quot;highlighter-rouge&quot;&gt;null instanceof Type&lt;/code&gt; always returns false.&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;instanceof&lt;/code&gt; requires two operands must be in the same hierarchy. Otherwise, there’ll be compile errors.&lt;/li&gt;
+          &lt;li&gt;cast operator throws exception at run-time if the types are not convertable.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 51
+    &lt;ul&gt;
+      &lt;li&gt;Be very careful of circularity in class instance initialization&lt;/li&gt;
+      &lt;li&gt;Should never call overridable (especially overridden) methods in constructors&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 52
+    &lt;ul&gt;
+      &lt;li&gt;Be consistent: either use eager or lazy initialization, not both&lt;/li&gt;
+      &lt;li&gt;Default values are set in the preparation phase, while the field initializers are executed in the initialization phase, which occurs after the preparation phase. For more details, see &lt;a href=&quot;http://docs.oracle.com/javase/specs/jls/se8/html/jls-12.html#jls-12.1&quot;&gt;JVM Startup&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 53
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;From &lt;a href=&quot;http://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.8.7&quot;&gt;JLS8&lt;/a&gt;&lt;/p&gt;
+
+        &lt;blockquote&gt;
+          &lt;p&gt;If a constructor body does not begin with an explicit constructor invocation and the constructor being declared is not part of the primordial class Object, then the constructor body implicitly begins with a superclass constructor invocation “super();”&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Private constructor capture pattern&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Workaround to be able to do both things: passing a value to the superclass constructor, while also storing the value at the class itself. Without this pattern, doing these two things is not possible due to rules on constructors.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 54&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 22 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/22/java-puzzlers.html</link>
+        <guid isPermaLink="true">/2016/02/22/java-puzzlers.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>How to design API</title>
+        <description>&lt;h1 id=&quot;oracle-java-tutorialshttpsdocsoraclecomjavasetutorialcollectionsinteroperabilityapi-designhtml&quot;&gt;&lt;a href=&quot;https://docs.oracle.com/javase/tutorial/collections/interoperability/api-design.html&quot;&gt;Oracle Java tutorials&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Parameters
+    &lt;ul&gt;
+      &lt;li&gt;Prefere interface over implementation&lt;/li&gt;
+      &lt;li&gt;Always try to use the least-specific type that makes sense&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Return type
+    &lt;ul&gt;
+      &lt;li&gt;It is acceptable to use the more specific type as the return type. In fact, that should be the way to do it. For example, the method can return List instead of Collection so that the clients know for sure that the result collection is ordered and supports random access.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;regular-apihttpsdzonecomarticleshow-design-good-regular-api&quot;&gt;&lt;a href=&quot;https://dzone.com/articles/how-design-good-regular-api&quot;&gt;Regular API&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Be consistent
+    &lt;ul&gt;
+      &lt;li&gt;On the terms&lt;/li&gt;
+      &lt;li&gt;On argument order&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Be symmetric
+    &lt;ul&gt;
+      &lt;li&gt;On what you provide. e.g., if the API provides add(), then it should also provide remove()&lt;/li&gt;
+      &lt;li&gt;On the terms&lt;/li&gt;
+      &lt;li&gt;On the implementation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Be convenient
+    &lt;ul&gt;
+      &lt;li&gt;On how the API is used&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;effective-api-designhttpwwwinfoqcompresentationseffective-api-design&quot;&gt;&lt;a href=&quot;http://www.infoq.com/presentations/effective-api-design&quot;&gt;Effective API design&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&quot;checklisthttptheamiableapicom20120116java-api-design-checklist&quot;&gt;&lt;a href=&quot;http://theamiableapi.com/2012/01/16/java-api-design-checklist/&quot;&gt;Checklist&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&quot;java-api-design-guidelineshttpwwwartimacomweblogsviewpostjspthread142428&quot;&gt;&lt;a href=&quot;http://www.artima.com/weblogs/viewpost.jsp?thread=142428&quot;&gt;Java API design guidelines&lt;/a&gt;&lt;/h1&gt;
+</description>
+        <pubDate>Sat, 20 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/20/api-design.html</link>
+        <guid isPermaLink="true">/2016/02/20/api-design.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Java 8 in action</title>
@@ -239,8 +488,8 @@ f12(c,d);
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Pattern matching&lt;/li&gt;
+  &lt;li&gt;Memoization or caching&lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
         <pubDate>Mon, 15 Feb 2016 00:00:00 +0700</pubDate>
         <link>/2016/02/15/java-8-in-action.html</link>
@@ -518,6 +767,8 @@ f12(c,d);
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&quot;secure-http&quot;&gt;Secure HTTP&lt;/h1&gt;
 </description>
         <pubDate>Fri, 29 Jan 2016 00:00:00 +0700</pubDate>
         <link>/2016/01/29/HTTP-basics.html</link>
@@ -599,18 +850,40 @@ f12(c,d);
         <title>Implementation Patterns</title>
         <description>&lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Encapsulated collection&lt;/p&gt;
+    &lt;p&gt;Encapsulated collection (http://martinfowler.com/bliki/EncapsulatedCollection.html)&lt;/p&gt;
 
-    &lt;p&gt;“The key point with this is that you don’t want to give clients direct access to the collection data structure itself - for if you do it allows clients to alter the supplier’s data without the supplier being able to intervene.”, http://martinfowler.com/bliki/EncapsulatedCollection.html&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;The key point with this is that you don’t want to give clients direct access to the collection data structure itself - for if you do it allows clients to alter the supplier’s data without the supplier being able to intervene.&lt;/p&gt;
+    &lt;/blockquote&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;book-implementation-patterns-kent-beck&quot;&gt;Book: Implementation patterns, Kent Beck&lt;/h1&gt;
 
+&lt;h2 id=&quot;chapter-7-behavior&quot;&gt;Chapter 7: Behavior&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Main flow
+    &lt;ul&gt;
+      &lt;li&gt;Must be expressed in the clearest way. This does not mean that the minor flows are not important. It just means that the main flow must be the most visible one, so that readers know that it is the main processing of the code and the others are not as important.&lt;/li&gt;
+      &lt;li&gt;The minor flows should not be written in a way that obscures the main flow. Exceptions and guard clauses can be used for these minor flows. Just remember not to let them get in the way of the main flow.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Messages
+    &lt;ul&gt;
+      &lt;li&gt;The places where the implementation inside the message receiver can be modified without affecting the sender.&lt;/li&gt;
+      &lt;li&gt;Due to polymorphism, the message handling may vary at run-time.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;chapter-8-methods&quot;&gt;Chapter 8: Methods&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Method name should be written from the client’s perspective.&lt;/li&gt;
-  &lt;li&gt;Data and logic acting upon the data should be together.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Method name should be written from the client’s perspective.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Data and logic acting upon the data should be together.&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;Complete constructor
     &lt;ul&gt;
       &lt;li&gt;If you want to impose required data on an object, introduce a constructor with the required data. The reverse also holds, which means that if a constructor has parameters, then it implies that the parameters are required for the object to function properly.&lt;/li&gt;
@@ -663,7 +936,9 @@ f12(c,d);
 
 &lt;h2 id=&quot;chapter-9-collections&quot;&gt;Chapter 9: Collections&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Express one of the most fundamental variations in programming, the variation in cardinality (the other variation is in behavior)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Express one of the most fundamental variations in programming, the variation in cardinality (the other variation is in behavior)&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;Fundamental issues about collections
     &lt;ul&gt;
       &lt;li&gt;Size&lt;/li&gt;
@@ -672,7 +947,9 @@ f12(c,d);
       &lt;li&gt;Performance&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Use the possibly simplest collection implementation first. Later we can change to more specialized implementation if needed.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use the possibly simplest collection implementation first. Later we can change to more specialized implementation if needed.&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;Some kinds of collections
     &lt;ul&gt;
       &lt;li&gt;Array

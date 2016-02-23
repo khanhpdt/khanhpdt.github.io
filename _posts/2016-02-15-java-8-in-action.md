@@ -135,4 +135,4 @@ Reference: Book Java 8 in action
 - Lazy evaluation with streams
   - e.g., lazy evaluation of stream elements
 - Pattern matching
-
+- Memoization or caching
