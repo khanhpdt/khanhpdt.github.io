@@ -84,10 +84,23 @@
   </li>
   <li>Messages
     <ul>
-      <li>The places where the implementation inside the message receiver can be modified without affecting the sender.</li>
+      <li>Make it possible to modify the message receiver without affecting the sender.</li>
       <li>Due to polymorphism, the message handling may vary at run-time.</li>
+      <li>Polymorphic messages are good for code extension because new message handling can be added without changing the existing handlings. However, porlymorphic messages are not good for studying code as the readers have to navigate to a lot of classes to understand a message. Sometimes it also makes debugging code become annoying as we have to know the exact receivers to be able to put breakpoints there.</li>
+      <li>Should always try to find an intention-revealing names for methods, because this helps the readers a lot when studying the code.</li>
     </ul>
   </li>
+  <li>Double dispatch
+    <ul>
+      <li>Messages are dispatched by two-level. After receiving the message, the first receiver will dispatch another message to the second receiver along with its information. The second receiver is the one that actually performs the job. See Visitor pattern for an application of this technique.</li>
+    </ul>
+  </li>
+  <li>Decoposing messages
+    <ul>
+      <li>If a message is too complicated (e.g., needs a long list of parameters), it is sometimes better to split the message into multiple ones, each of which handles an related aspects of the message.</li>
+    </ul>
+  </li>
+  <li></li>
 </ul>
 
 <h2 id="chapter-8-methods">Chapter 8: Methods</h2>

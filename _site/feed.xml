@@ -5,1013 +5,277 @@
     <description>Notes on my daily work as a software developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 Feb 2016 08:37:16 +0700</pubDate>
-    <lastBuildDate>Tue, 23 Feb 2016 08:37:16 +0700</lastBuildDate>
+    <pubDate>Fri, 26 Feb 2016 00:45:55 +0700</pubDate>
+    <lastBuildDate>Fri, 26 Feb 2016 00:45:55 +0700</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
-        <title>Java puzzlers</title>
-        <description>&lt;h1 id=&quot;expressive-puzzlers&quot;&gt;Expressive Puzzlers&lt;/h1&gt;
+        <title>Public Key Infrastructure</title>
+        <description>&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+&lt;p&gt;[1] Introduction to Public Key Infrastructure, Springer&lt;/p&gt;
+
+&lt;h1 id=&quot;chapter-1-the-purpose-of-pki&quot;&gt;Chapter 1: The purpose of PKI&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Puzzle 2
-    &lt;ul&gt;
-      &lt;li&gt;Not all decimals can be represented exactly using binary floating-point&lt;/li&gt;
-    &lt;/ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enables the use of public key cryptography on open networks, especially the internet&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Puzzle 8
+  &lt;li&gt;Main security goals
     &lt;ul&gt;
-      &lt;li&gt;Conditional operator&lt;/li&gt;
-      &lt;li&gt;Should always avoid mixed-type computations&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 9
-    &lt;ul&gt;
-      &lt;li&gt;Compound assignment (e.g., a += b) contains an implicit cast&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;puzzlers-with-characters&quot;&gt;Puzzlers with characters&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Puzzle 13
-    &lt;ul&gt;
-      &lt;li&gt;String interning&lt;/li&gt;
-      &lt;li&gt;Object comparison by equals() and ==&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 18
-    &lt;ul&gt;
-      &lt;li&gt;The conversion between String and byte[] always involves using a specific charset&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;loopy-puzzlers&quot;&gt;Loopy puzzlers&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Puzzle 25
-    &lt;ul&gt;
-      &lt;li&gt;Postfix increment operator&lt;/li&gt;
-      &lt;li&gt;Do not assign a variable more than once in a single expression&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 28
-    &lt;ul&gt;
-      &lt;li&gt;Infinity&lt;/li&gt;
-      &lt;li&gt;Floating-point operations return the floating-point value that is closest to their exact mathematical result.&lt;/li&gt;
-      &lt;li&gt;Binary floating point arithmetics in Java&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;exceptional-puzzlers&quot;&gt;Exceptional puzzlers&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Puzzle 36
-    &lt;ul&gt;
-      &lt;li&gt;The try statement 14.20 (Java Language Specification Java SE 7 (JLS7))&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 37
-    &lt;ul&gt;
-      &lt;li&gt;Exception checking 11.2.3 (JLS7)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 38
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Compile-time checking of exceptions 11.2 JLS7&lt;/p&gt;
-
-        &lt;blockquote&gt;
-          &lt;p&gt;When interfaces are involved, more than one method declaration may be overridden by a single overriding declaration. In this case, the overriding declaration must have a throws clause that is compatible with all the overridden declarations (§9.4.1).&lt;/p&gt;
-        &lt;/blockquote&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 39
-    &lt;ul&gt;
-      &lt;li&gt;The System.exit method halts the execution of the current thread and all others dead in their tracks.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 40
-    &lt;ul&gt;
-      &lt;li&gt;Initialization of classes and interfaces 12.4 JLS7&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 42
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;table&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td&gt;&amp;amp; and&lt;/td&gt;
-              &lt;td&gt;can be used as &amp;amp;&amp;amp; and&lt;/td&gt;
-              &lt;td&gt; &lt;/td&gt;
-              &lt;td&gt;for boolean values, but they do not support short-circuit evaluation.&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 43
-    &lt;ul&gt;
-      &lt;li&gt;It’s possible that an undeclared exception can be thrown out. Examples:
+      &lt;li&gt;Confidentiality
         &lt;ul&gt;
-          &lt;li&gt;newInstance()&lt;/li&gt;
+          &lt;li&gt;Data is protected from unauthorized entities.&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;Generics
+      &lt;li&gt;Integrity
         &lt;ul&gt;
-          &lt;li&gt;Java exception checking is a compile-time facility, not a JVM feature.&lt;/li&gt;
+          &lt;li&gt;Data could not be changed by unauthorized entities.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Authentication
+        &lt;ul&gt;
+          &lt;li&gt;Involved entities must prove who they are&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Authenticity
+        &lt;ul&gt;
+          &lt;li&gt;Data integrity and additionally the origin of the data must be reliable.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Non-repudiation
+        &lt;ul&gt;
+          &lt;li&gt;Prevents involved entities from denying that they have performed some actions, e.g., some harmful actions.&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Secret key (or Symmetric) cryptosystems
+    &lt;ul&gt;
+      &lt;li&gt;Involved entities must agree on secret keys which are used to encrypt the plaintext and decrypt the ciphertext. The encryption and decryption keys can be different but they are still be computed from each other.&lt;/li&gt;
+      &lt;li&gt;Examples: Data Encryption Standard (DES), Advanced Encryption Standard (AES)&lt;/li&gt;
+      &lt;li&gt;Main disadvantage is that the secret keys still need to be exchanged between the entities.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Public key (or Asymmetric) cryptosystems
+    &lt;ul&gt;
+      &lt;li&gt;Main idea is to have one key for encryption (the encryption key) and one for decryption (the decryption key). These keys cannot be computed from each other. The encrytion key can be made public, and thus it is also called the public key. The decryption key is also called the private key.&lt;/li&gt;
+      &lt;li&gt;For example, if Alice wants to send Bob a secret message, she will encrypt the message by Bob’s public key. On receiving the encrypted message, Bob will use his private key to decrypt the message.&lt;/li&gt;
+      &lt;li&gt;Main advantage is that no exchange of secret keys are needed.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RSA public key cryptosystems
+    &lt;ul&gt;
+      &lt;li&gt;The first and also the most widely used public key cryptosystems&lt;/li&gt;
+      &lt;li&gt;The public key is a pair (n, e) where n is called RSA modulus and e encryption exponent. The private key is called the decryption exponent.&lt;/li&gt;
+      &lt;li&gt;Main disadvantage is its performance&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hybrid cryptosystems
+    &lt;ul&gt;
+      &lt;li&gt;The secret key cryptography is used for the message, and the public key cryptography is used for the secret key.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Digital signatures
+    &lt;ul&gt;
+      &lt;li&gt;Similar to public key cryptography in that there are two keys involved. One is the private key which is used to create the signature, and the other is the public (or verification) key which is used to verify the signature.&lt;/li&gt;
+      &lt;li&gt;Can be used to prove the integrity and authenticity of the data&lt;/li&gt;
+      &lt;li&gt;Also supports entity authentication and non-repudiation&lt;/li&gt;
+      &lt;li&gt;Examples
+        &lt;ul&gt;
+          &lt;li&gt;RSA signature scheme: The most widely used digital signature scheme&lt;/li&gt;
+          &lt;li&gt;Digital Signature Algorithm (DSA)&lt;/li&gt;
+          &lt;li&gt;Elliptic Curve DSA (ECDSA)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PKI responsibilities
+    &lt;ul&gt;
+      &lt;li&gt;Generate keys&lt;/li&gt;
+      &lt;li&gt;Use keys for encrypting, decrypting, signing, and verifying&lt;/li&gt;
+      &lt;li&gt;Publish public keys&lt;/li&gt;
+      &lt;li&gt;Back up keys&lt;/li&gt;
+      &lt;li&gt;Manage invalid keys&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;classy-puzzlers&quot;&gt;Classy puzzlers&lt;/h1&gt;
+&lt;h1 id=&quot;chapter-2-certificates&quot;&gt;Chapter 2: Certificates&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Puzzle 46
+  &lt;li&gt;
+    &lt;p&gt;Certificates are data structures that bind public keys to entities and are signed by a trusted third-party. For example, if Alice wants to check the authenticity of Bob’s public key, she has to have a certificate which binds the public key to Bob. Furthermore, the certificate issuer (the third party) must be trustworthy.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Certificate standards&lt;/p&gt;
     &lt;ul&gt;
-      &lt;li&gt;If more than one methods are applicable to an invocation, the most specific one is chosen.&lt;/li&gt;
+      &lt;li&gt;X.509&lt;/li&gt;
+      &lt;li&gt;Attribute certificates&lt;/li&gt;
+      &lt;li&gt;Card verifiable (CV) certificates&lt;/li&gt;
+      &lt;li&gt;Pretty good privacy (PGP) certificates&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Puzzle 47
-    &lt;ul&gt;
-      &lt;li&gt;Static fields are shared by their declaring class and any &lt;em&gt;subclasses&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 48
-    &lt;ul&gt;
-      &lt;li&gt;No dynamic dispatch on static methods (15.12.4.4 JLS7)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 49
-    &lt;ul&gt;
-      &lt;li&gt;The static initializers and class variable initializers are executed in textual order (12.4.1 JLS7)&lt;/li&gt;
-      &lt;li&gt;Be very careful of circularity in class initialization&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 50
-    &lt;ul&gt;
-      &lt;li&gt;instanceof and cast operators
-        &lt;ul&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;null&lt;/code&gt; is a subtype of every type. However, &lt;code class=&quot;highlighter-rouge&quot;&gt;null instanceof Type&lt;/code&gt; always returns false.&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;instanceof&lt;/code&gt; requires two operands must be in the same hierarchy. Otherwise, there’ll be compile errors.&lt;/li&gt;
-          &lt;li&gt;cast operator throws exception at run-time if the types are not convertable.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 51
-    &lt;ul&gt;
-      &lt;li&gt;Be very careful of circularity in class instance initialization&lt;/li&gt;
-      &lt;li&gt;Should never call overridable (especially overridden) methods in constructors&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 52
-    &lt;ul&gt;
-      &lt;li&gt;Be consistent: either use eager or lazy initialization, not both&lt;/li&gt;
-      &lt;li&gt;Default values are set in the preparation phase, while the field initializers are executed in the initialization phase, which occurs after the preparation phase. For more details, see &lt;a href=&quot;http://docs.oracle.com/javase/specs/jls/se8/html/jls-12.html#jls-12.1&quot;&gt;JVM Startup&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Puzzle 53
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;From &lt;a href=&quot;http://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.8.7&quot;&gt;JLS8&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;
 
-        &lt;blockquote&gt;
-          &lt;p&gt;If a constructor body does not begin with an explicit constructor invocation and the constructor being declared is not part of the primordial class Object, then the constructor body implicitly begins with a superclass constructor invocation “super();”&lt;/p&gt;
-        &lt;/blockquote&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Private constructor capture pattern&lt;/p&gt;
+&lt;h1 id=&quot;chapter-4-private-keys&quot;&gt;Chapter 4: Private keys&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The keys have their own life cycles. They can be in many states and can transit from one state to another.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Storable keys are stored in volatile memory, and must be stored in some personal security environment (PSE) before being delivered.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;PSEs: protect private keys from unauthorized accesses&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Software
         &lt;ul&gt;
-          &lt;li&gt;Workaround to be able to do both things: passing a value to the superclass constructor, while also storing the value at the class itself. Without this pattern, doing these two things is not possible due to rules on constructors.&lt;/li&gt;
+          &lt;li&gt;PKCS#12&lt;/li&gt;
+          &lt;li&gt;PKCS#8: almost always used with PKCS#12&lt;/li&gt;
+          &lt;li&gt;Java keystore&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Hardware
+        &lt;ul&gt;
+          &lt;li&gt;Smart cards&lt;/li&gt;
+          &lt;li&gt;Hardware security modules&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Puzzle 54&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 22 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/22/java-puzzlers.html</link>
-        <guid isPermaLink="true">/2016/02/22/java-puzzlers.html</guid>
+        <pubDate>Thu, 25 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/25/public-key-infrastructure.html</link>
+        <guid isPermaLink="true">/2016/02/25/public-key-infrastructure.html</guid>
         
         
       </item>
     
       <item>
-        <title>How to design API</title>
-        <description>&lt;h1 id=&quot;oracle-java-tutorialshttpsdocsoraclecomjavasetutorialcollectionsinteroperabilityapi-designhtml&quot;&gt;&lt;a href=&quot;https://docs.oracle.com/javase/tutorial/collections/interoperability/api-design.html&quot;&gt;Oracle Java tutorials&lt;/a&gt;&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Parameters
-    &lt;ul&gt;
-      &lt;li&gt;Prefere interface over implementation&lt;/li&gt;
-      &lt;li&gt;Always try to use the least-specific type that makes sense&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Return type
-    &lt;ul&gt;
-      &lt;li&gt;It is acceptable to use the more specific type as the return type. In fact, that should be the way to do it. For example, the method can return List instead of Collection so that the clients know for sure that the result collection is ordered and supports random access.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;regular-apihttpsdzonecomarticleshow-design-good-regular-api&quot;&gt;&lt;a href=&quot;https://dzone.com/articles/how-design-good-regular-api&quot;&gt;Regular API&lt;/a&gt;&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Be consistent
-    &lt;ul&gt;
-      &lt;li&gt;On the terms&lt;/li&gt;
-      &lt;li&gt;On argument order&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Be symmetric
-    &lt;ul&gt;
-      &lt;li&gt;On what you provide. e.g., if the API provides add(), then it should also provide remove()&lt;/li&gt;
-      &lt;li&gt;On the terms&lt;/li&gt;
-      &lt;li&gt;On the implementation&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Be convenient
-    &lt;ul&gt;
-      &lt;li&gt;On how the API is used&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;effective-api-designhttpwwwinfoqcompresentationseffective-api-design&quot;&gt;&lt;a href=&quot;http://www.infoq.com/presentations/effective-api-design&quot;&gt;Effective API design&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h1 id=&quot;checklisthttptheamiableapicom20120116java-api-design-checklist&quot;&gt;&lt;a href=&quot;http://theamiableapi.com/2012/01/16/java-api-design-checklist/&quot;&gt;Checklist&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h1 id=&quot;java-api-design-guidelineshttpwwwartimacomweblogsviewpostjspthread142428&quot;&gt;&lt;a href=&quot;http://www.artima.com/weblogs/viewpost.jsp?thread=142428&quot;&gt;Java API design guidelines&lt;/a&gt;&lt;/h1&gt;
-</description>
-        <pubDate>Sat, 20 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/20/api-design.html</link>
-        <guid isPermaLink="true">/2016/02/20/api-design.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Java 8 in action</title>
-        <description>&lt;p&gt;Reference: Book Java 8 in action&lt;/p&gt;
-
-&lt;h1 id=&quot;chapter-1&quot;&gt;Chapter 1&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Java 8 new features
-    &lt;ul&gt;
-      &lt;li&gt;Streams API&lt;/li&gt;
-      &lt;li&gt;Passing code to methods&lt;/li&gt;
-      &lt;li&gt;Default methods in interfaces&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;While collections are mostly about storing and accessing data, streams are mostly about how to perform computations on the data. Streams allows and encourages to process the data in parallel.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;chapter-2&quot;&gt;Chapter 2&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Behavior parameterization by passing code (which performs the behavior) around&lt;/li&gt;
-  &lt;li&gt;Predicate: a function which returns a boolean value&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;chapter-3-lambda-expressions&quot;&gt;Chapter 3: Lambda expressions&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Functional interface
-    &lt;ul&gt;
-      &lt;li&gt;An interface with &lt;em&gt;exactly&lt;/em&gt; one abstract method. The inheriting methods (not from Object) also count. The signature of the abstract method is also called the function descriptor.&lt;/li&gt;
-      &lt;li&gt;Because it’s only required for a function interface to have exactly one method, the number of default methods in the interface does not matter.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Lambda expression
-    &lt;ul&gt;
-      &lt;li&gt;An anonymous function which can be passed around&lt;/li&gt;
-      &lt;li&gt;Syntax:
-(parameters) -&amp;gt; expression
-(parameter) -&amp;gt; { statements }&lt;/li&gt;
-      &lt;li&gt;Used in the context of a functional interface, and must have the same signature as the function descriptor of the interface.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Compile-time type checking
-    &lt;ul&gt;
-      &lt;li&gt;Also performed on lambda expresion by relying on the context in which lambda is used (i.e., the client code and the function descriptor)&lt;/li&gt;
-      &lt;li&gt;Special case: If the lambda body has only one statement, then its return type is compatible to both void and the type of the statement result.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Type inference
-    &lt;ul&gt;
-      &lt;li&gt;The types of the parameters in lambda can be inferred by the compiler, just like the type infererence in the diamond operator.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;If the lambda uses local variables that are not defined inside the lambda, the variables must be either declaratively or effectively &lt;em&gt;final&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;Closure
-    &lt;ul&gt;
-      &lt;li&gt;Loosely speaking, closure is a programming mechanism in which functions can access and modify variables defined outside of their scopes&lt;/li&gt;
-      &lt;li&gt;Lambda is different with Closure in that it can only access but are not allowed to modify local variables in the enclosing method.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Method reference
-    &lt;ul&gt;
-      &lt;li&gt;Syntactic sugar for lambdas&lt;/li&gt;
-      &lt;li&gt;Syntax
-TargetReference::methodName&lt;/li&gt;
-      &lt;li&gt;Main types&lt;/li&gt;
-      &lt;li&gt;Static method: Type::methodName&lt;/li&gt;
-      &lt;li&gt;Instance method of a type: Type::methodName&lt;/li&gt;
-      &lt;li&gt;Instance method of an object: object::methodName&lt;/li&gt;
-      &lt;li&gt;Constructor: Type::new&lt;/li&gt;
-      &lt;li&gt;Usually combined with other utility methods to make code more concise&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;chapter-4-streams&quot;&gt;Chapter 4: Streams&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Streams
-    &lt;ul&gt;
-      &lt;li&gt;“A sequence of elements from a source that supports data processing operations”&lt;/li&gt;
-      &lt;li&gt;Designed to provide a declarative way to process collections (like the way SQL processes records): you specify &lt;em&gt;what&lt;/em&gt; you want to achieve&lt;/li&gt;
-      &lt;li&gt;Supports pipelining&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Streams vs. Collections
-    &lt;ul&gt;
-      &lt;li&gt;Lazily constructed, i.e., elements are computed on demand. This is opposed to conventional collections, which are eagerly constructed or their elements are computed before being added to the collections.&lt;/li&gt;
-      &lt;li&gt;A stream can only be iterated &lt;em&gt;once&lt;/em&gt; during its life-time.&lt;/li&gt;
-      &lt;li&gt;Internal iterations, rather than external iterations which are used on collections. This internal iteration encapsulates the iterating implementation from the client code, thus giving more flexibility in how the iteration is done.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Stream operations
-    &lt;ul&gt;
-      &lt;li&gt;Intermediate operations that can be pipelined. These operations do not return any result and are actually performed only when a terminal operation is invoked. This enables the loop fusion techniques.&lt;/li&gt;
-      &lt;li&gt;Terminal operations that terminate the pipeline, close the stream, and return values or void.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Working with streams usually involves three pieces
-    &lt;ul&gt;
-      &lt;li&gt;A data source&lt;/li&gt;
-      &lt;li&gt;Intermediate operations&lt;/li&gt;
-      &lt;li&gt;Terminal operations&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;chapter-5-working-with-streams&quot;&gt;Chapter 5: Working with streams&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Stream operations
-    &lt;ul&gt;
-      &lt;li&gt;Stateless&lt;/li&gt;
-      &lt;li&gt;Stateful&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Short-circuiting: A computation terminates as soon as the result is found.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;chapter-6-collecting-data&quot;&gt;Chapter 6: Collecting data&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Collectors
-    &lt;ul&gt;
-      &lt;li&gt;Implements Collector interface&lt;/li&gt;
-      &lt;li&gt;Applies transforming operation on stream elements and then collects these transformed elements into a specified data structure to produce the desired output.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Collect vs. Reduce
-    &lt;ul&gt;
-      &lt;li&gt;Reduce always creates a new value for each element when processed&lt;/li&gt;
-      &lt;li&gt;Collect does not create new value, instead it acts directly on the element. Thus it can also modify the elements during the process.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Main collector usages
-    &lt;ul&gt;
-      &lt;li&gt;Reducing and summarizing&lt;/li&gt;
-      &lt;li&gt;Grouping
-        &lt;ul&gt;
-          &lt;li&gt;Also supports multi-level grouping&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Multi-level collector
-    &lt;ul&gt;
-      &lt;li&gt;Inner collector is passed as an argument of the outer collector. The inner collector will act upon the result of the outer collector.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;chapter-9-default-methods&quot;&gt;Chapter 9: Default methods&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Three kinds of compatibility in Java code
-    &lt;ul&gt;
-      &lt;li&gt;Binary&lt;/li&gt;
-      &lt;li&gt;Source&lt;/li&gt;
-      &lt;li&gt;Behavior&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Default methods
-    &lt;ul&gt;
-      &lt;li&gt;Start with the &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; modifier&lt;/li&gt;
-      &lt;li&gt;Defined inside interface&lt;/li&gt;
-      &lt;li&gt;Can have body&lt;/li&gt;
-      &lt;li&gt;The implementations of the interface do not need to override.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Typical usages
-    &lt;ul&gt;
-      &lt;li&gt;Optional methods in the interface hierarchy&lt;/li&gt;
-      &lt;li&gt;Simulate multiple inheritance because a class can implement multiple interfaces&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Resolution rules when a class implement multiple interfaces which happen to have the same default methods
-    &lt;ul&gt;
-      &lt;li&gt;Methods in ordinary classes win&lt;/li&gt;
-      &lt;li&gt;Methods in the most specific interface win&lt;/li&gt;
-      &lt;li&gt;Otherwise, conflicts occur. One solution is to let the current class override the default methods and then explicitly call the overriding methods.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;chapter-13-thinking-functionally&quot;&gt;Chapter 13: Thinking functionally&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ideas from functional programming
-    &lt;ul&gt;
-      &lt;li&gt;Functions as first-class citizens (in Java 8, functions are equivalent to methods and lambdas)&lt;/li&gt;
-      &lt;li&gt;Pure functions: functions cause no side-effects (or observable effects).&lt;/li&gt;
-      &lt;li&gt;Declarative programming: focus on the what, not the how, i.e., specify the desireed result, not how it should be done to achieve the result&lt;/li&gt;
-      &lt;li&gt;Referential transparency: A method always produces the same result for the same arguments, regardless of the context in which it is called. Thus referential-transparency methods can be characterized by their inputs and outputs.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pure functional programming vs. Functional-style programming
-    &lt;ul&gt;
-      &lt;li&gt;Pure functional programming: methods are pure functions, which do not alter state of their enclosing class as well as all other objects.&lt;/li&gt;
-      &lt;li&gt;Functional-style programming: methods can change state of some objects, as long as these changes are not observable by the callers. For example, methods ony change their local variables, or they change the state of some object but also revert the change before terminating.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;chapter-14-functional-programming-techniques&quot;&gt;Chapter 14: Functional programming techniques&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Functions
-    &lt;ul&gt;
-      &lt;li&gt;First-class citizens. Functions are treated as values, e.g., they can be passed around as arguments&lt;/li&gt;
-      &lt;li&gt;No side-effect&lt;/li&gt;
-      &lt;li&gt;Currying: a technique to reduce the number of parameters. For example, let say you have a legacy function with 4 parameters f(a,b,c,d), but for some reason you don’t want to pass all 4 arguments everytime you call the function but only 2 at a time. The following code shows one way to do that&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;pre&gt;&lt;code class=&quot;java&quot;&gt;
-Integer f(a,b,c,d) {
-    // do something
-}
-  
-void g(a,b) {
-    return (c,d) -&amp;gt; f(a,b,c,d);
-}
-  
-// client code
-BiFunction&amp;lt;Integer, Integer, Integer&amp;gt; f12 = g(1,2);
-int c = 3; int d = 4;
-f12(c,d);
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Persistent data structures
-    &lt;ul&gt;
-      &lt;li&gt;Persisting data structures means that they are isolated and thus not affected by changes happenning around them.&lt;/li&gt;
-      &lt;li&gt;One way to achieve persistent data structures is to clone the existing data structures and operate upon the clone. Because the operations are performed only at the creation time, it does not count that the data structures are altered.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Lazy evaluation with streams
-    &lt;ul&gt;
-      &lt;li&gt;e.g., lazy evaluation of stream elements&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pattern matching&lt;/li&gt;
-  &lt;li&gt;Memoization or caching&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 15 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/15/java-8-in-action.html</link>
-        <guid isPermaLink="true">/2016/02/15/java-8-in-action.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Effective Java</title>
-        <description>&lt;h1 id=&quot;reflection&quot;&gt;Reflection&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Pros:
-    &lt;ul&gt;
-      &lt;li&gt;Provides a programmatic way to introspect a class&lt;/li&gt;
-      &lt;li&gt;Provides an “abnormal” and unique way to
-        &lt;ul&gt;
-          &lt;li&gt;Invoke class methods and constructors&lt;/li&gt;
-          &lt;li&gt;Access and modify class fields&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Cons:
-    &lt;ul&gt;
-      &lt;li&gt;Performance overhead over non-reflective counterparts&lt;/li&gt;
-      &lt;li&gt;Loss of compile-time type checking&lt;/li&gt;
-      &lt;li&gt;Exposure of internals, e.g., &lt;code class=&quot;highlighter-rouge&quot;&gt;private&lt;/code&gt; fields or methods can be accessed and modified&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;General rule
-    &lt;ul&gt;
-      &lt;li&gt;Should always try to avoid using reflection in normal applications&lt;/li&gt;
-      &lt;li&gt;If it is unavoidable, refelection should be used very cautiously. One acceptable way to use reflection is to create an instance, but after that normal invocation should be used on the created instance.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;References
-    &lt;ul&gt;
-      &lt;li&gt;[1] Item 53, Effective Java 2nd, Joshua Bloch&lt;/li&gt;
-      &lt;li&gt;[2] https://docs.oracle.com/javase/tutorial/reflect/&lt;/li&gt;
-      &lt;li&gt;[3] http://www.javaworld.com/article/2077015/java-se/take-an-in-depth-look-at-the-java-reflection-api.html&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 15 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/15/effective-java.html</link>
-        <guid isPermaLink="true">/2016/02/15/effective-java.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Java Collections</title>
-        <description>&lt;h1 id=&quot;chapter-10&quot;&gt;Chapter 10&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Java Collections Framework: java.util and java.util.concurrent&lt;/li&gt;
-  &lt;li&gt;Figure 10-1: The main interfaces of Java Collections Framework&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;chapter-11&quot;&gt;Chapter 11&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Iterator
-    &lt;ul&gt;
-      &lt;li&gt;Provides a &lt;em&gt;uniform&lt;/em&gt; way to access collection elements sequentially&lt;/li&gt;
-      &lt;li&gt;foreach loop can be used with arrays or any collections implementing Iterable&lt;/li&gt;
-      &lt;li&gt;fail-fast behavior&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Three basic operations:
-    &lt;ul&gt;
-      &lt;li&gt;Insertion and removal of elements by position&lt;/li&gt;
-      &lt;li&gt;Retrieval elements by their contents&lt;/li&gt;
-      &lt;li&gt;Iteration over all elements&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Amortized cost&lt;/li&gt;
-  &lt;li&gt;Concurrent collections are preferred over synchronized collections
-    &lt;ul&gt;
-      &lt;li&gt;See Java concurrency in practice for more details on concurrent collections&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;chapter-12&quot;&gt;Chapter 12&lt;/h1&gt;
-
-&lt;h1 id=&quot;chapter-13&quot;&gt;Chapter 13&lt;/h1&gt;
-
-&lt;h2 id=&quot;set&quot;&gt;Set&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;No duplicate&lt;/li&gt;
-  &lt;li&gt;HashSet
-    &lt;ul&gt;
-      &lt;li&gt;Implemented by a hash table&lt;/li&gt;
-      &lt;li&gt;Pros: basic operations like add, remove, check items&lt;/li&gt;
-      &lt;li&gt;Cons: iterating&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;LinkedHashSet
-    &lt;ul&gt;
-      &lt;li&gt;Order when adding is reserved&lt;/li&gt;
-      &lt;li&gt;Pros: next() operation&lt;/li&gt;
-      &lt;li&gt;Cons: overhead in maintaining references to the previous and next elements&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;CopyOnWriteArraySet
-    &lt;ul&gt;
-      &lt;li&gt;Thread-safe&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;EnumSet
-    &lt;ul&gt;
-      &lt;li&gt;Operations are bit-wise, thus they are fast&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 02 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/02/java-collections.html</link>
-        <guid isPermaLink="true">/2016/02/02/java-collections.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>The productive programmer</title>
-        <description>&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-&lt;p&gt;The productive programmer, Neal Ford&lt;/p&gt;
-
-&lt;h1 id=&quot;main-points&quot;&gt;Main points&lt;/h1&gt;
-</description>
-        <pubDate>Mon, 01 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/01/the-productive-programmer.html</link>
-        <guid isPermaLink="true">/2016/02/01/the-productive-programmer.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>HTTP basics</title>
-        <description>&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-&lt;p&gt;[1] HTTP The definitive guide&lt;/p&gt;
-
-&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;HTTP is a protocol at the Application layer&lt;/li&gt;
-  &lt;li&gt;HTTP transaction, messages&lt;/li&gt;
-  &lt;li&gt;HTTP architecture components
-    &lt;ul&gt;
-      &lt;li&gt;Proxy&lt;/li&gt;
-      &lt;li&gt;Cache&lt;/li&gt;
-      &lt;li&gt;Gateway&lt;/li&gt;
-      &lt;li&gt;Tunnel&lt;/li&gt;
-      &lt;li&gt;Agent&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;resources&quot;&gt;Resources&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;URI: URL and URN&lt;/li&gt;
-  &lt;li&gt;URL syntax&lt;/li&gt;
-  &lt;li&gt;Escape characters in URLs&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;messages&quot;&gt;Messages&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Inbound vs. outbound, upstream vs. downstream&lt;/li&gt;
-  &lt;li&gt;Three parts
-    &lt;ul&gt;
-      &lt;li&gt;Formats of request and response messages&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Methods&lt;/li&gt;
-  &lt;li&gt;Status codes&lt;/li&gt;
-  &lt;li&gt;Headers&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;connection-management&quot;&gt;Connection management&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;HTTP over TCP over IP&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;client-identification-and-cookies&quot;&gt;Client identification and Cookies&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Identification methods
-    &lt;ul&gt;
-      &lt;li&gt;HTTP headers in client request&lt;/li&gt;
-      &lt;li&gt;Client IP address&lt;/li&gt;
-      &lt;li&gt;Client login&lt;/li&gt;
-      &lt;li&gt;Authorization header&lt;/li&gt;
-      &lt;li&gt;Fat URLs&lt;/li&gt;
-      &lt;li&gt;Client information is embedded in the URLs&lt;/li&gt;
-      &lt;li&gt;Cookies&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;cookies&quot;&gt;Cookies&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;RFC 2965&lt;/li&gt;
-  &lt;li&gt;Client state information
-    &lt;ul&gt;
-      &lt;li&gt;Mainly used to store client identification information. This is to help the server to keep track of the client browsing history&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Two types
-    &lt;ul&gt;
-      &lt;li&gt;Session cookies: deleted when exiting the browser&lt;/li&gt;
-      &lt;li&gt;Persistent cookies: stored on disk and still available when exiting browser or restarting the computer, usually expired by a specified date&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How it works
-    &lt;ul&gt;
-      &lt;li&gt;Generated by server at the first time the client makes request to the server&lt;/li&gt;
-      &lt;li&gt;Managed by browsers at the client side&lt;/li&gt;
-      &lt;li&gt;Cookies can also contain other information other than the information about client identification&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;basic-authentication&quot;&gt;Basic authentication&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Authentication means showing that you are who you claim you are.&lt;/li&gt;
-  &lt;li&gt;Challenge/Response authentication framework. Four phases:
-    &lt;ul&gt;
-      &lt;li&gt;Client: Request&lt;/li&gt;
-      &lt;li&gt;Server: Challenge authentication&lt;/li&gt;
-      &lt;li&gt;Client: Give authentication information in the header Authorization&lt;/li&gt;
-      &lt;li&gt;Server: OK/NOK&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;RFC 2617&lt;/li&gt;
-  &lt;li&gt;One of the two official authentication protocol. The other is digest authentication. Basic authentication is the most widely used protocol among the two of them.&lt;/li&gt;
-  &lt;li&gt;Encoding method: Base64. This method basically joins the username and password by a colon (:) and then encodes the result by Base64 algorithm.&lt;/li&gt;
-  &lt;li&gt;Pros:
-    &lt;ul&gt;
-      &lt;li&gt;Simple&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Cons:
-    &lt;ul&gt;
-      &lt;li&gt;The client identification is still vulnerable, as the base64-encoded identification information sent over the network can still be captured and decoded easily.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Can be used with encrypted transmission (e.g., SSL) to avoid leaking identification information.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;digest-authentication&quot;&gt;Digest authentication&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;One of the two official HTTP authentication protocol.&lt;/li&gt;
-  &lt;li&gt;Much more secure than Basic authentication, but less widely-used. However, it is designed to replace Basic authentication in the future.&lt;/li&gt;
-  &lt;li&gt;How it works
-    &lt;ul&gt;
-      &lt;li&gt;Never send password over the network. Instead, the fingerprint or digest of the password is sent. The digest is calculated by digest algorithm (e.g., MD5).&lt;/li&gt;
-      &lt;li&gt;Both client and server must know the password (or the digest of the password) of the client beforehand.&lt;/li&gt;
-      &lt;li&gt;nonce is used to prevent replay attacks.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;security-considerations&quot;&gt;Security considerations&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;RFC 2617&lt;/li&gt;
-  &lt;li&gt;Considerations
-    &lt;ul&gt;
-      &lt;li&gt;Header tampering&lt;/li&gt;
-      &lt;li&gt;Replay attack&lt;/li&gt;
-      &lt;li&gt;Multiple authentication mechanisms&lt;/li&gt;
-      &lt;li&gt;Dictionary attack&lt;/li&gt;
-      &lt;li&gt;Man-in-the-middle attack&lt;/li&gt;
-      &lt;li&gt;Chosen plaintext attack&lt;/li&gt;
-      &lt;li&gt;Storing passwords&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;secure-http&quot;&gt;Secure HTTP&lt;/h1&gt;
-</description>
-        <pubDate>Fri, 29 Jan 2016 00:00:00 +0700</pubDate>
-        <link>/2016/01/29/HTTP-basics.html</link>
-        <guid isPermaLink="true">/2016/01/29/HTTP-basics.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Implementation Principles</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;SOLID
-    &lt;ul&gt;
-      &lt;li&gt;Single Responsibility&lt;/li&gt;
-      &lt;li&gt;Open-Closed&lt;/li&gt;
-      &lt;li&gt;Liskov Substitution&lt;/li&gt;
-      &lt;li&gt;Interface Segregation&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Dependency Inversion&lt;/p&gt;
-
-        &lt;p&gt;&lt;a href=&quot;http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod&quot;&gt;source&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Tell, don’t ask&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Rather than asking an object for data and acting on that data, we should instead tell an object what to do.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://martinfowler.com/bliki/TellDontAsk.html&quot;&gt;source&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Don’t repeat yourself (DRY)&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://c2.com/cgi/wiki?DontRepeatYourself&quot;&gt;source&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Law of Demeter, or more general The principle of least knowledge&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Only talk to your friends.&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://www.ccs.neu.edu/home/lieber/LoD.html&quot;&gt;source&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Encapsulation and Information hiding&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://www.javaworld.com/article/2075271/core-java/encapsulation-is-not-information-hiding.html&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Single level of abstraction (SLAP)&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://clean-code-developer.com/Orange-Grade.ashx&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Design principles from Head First Design Patterns
-    &lt;ul&gt;
-      &lt;li&gt;Identify what vary and encapsulate them from what don’t&lt;/li&gt;
-      &lt;li&gt;Program to an interface, not an implementation&lt;/li&gt;
-      &lt;li&gt;Favor composition over inheritance&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 28 Jan 2016 00:00:00 +0700</pubDate>
-        <link>/2016/01/28/implementation-principles.html</link>
-        <guid isPermaLink="true">/2016/01/28/implementation-principles.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Implementation Patterns</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Encapsulated collection (http://martinfowler.com/bliki/EncapsulatedCollection.html)&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;The key point with this is that you don’t want to give clients direct access to the collection data structure itself - for if you do it allows clients to alter the supplier’s data without the supplier being able to intervene.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;book-implementation-patterns-kent-beck&quot;&gt;Book: Implementation patterns, Kent Beck&lt;/h1&gt;
-
-&lt;h2 id=&quot;chapter-7-behavior&quot;&gt;Chapter 7: Behavior&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Main flow
-    &lt;ul&gt;
-      &lt;li&gt;Must be expressed in the clearest way. This does not mean that the minor flows are not important. It just means that the main flow must be the most visible one, so that readers know that it is the main processing of the code and the others are not as important.&lt;/li&gt;
-      &lt;li&gt;The minor flows should not be written in a way that obscures the main flow. Exceptions and guard clauses can be used for these minor flows. Just remember not to let them get in the way of the main flow.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Messages
-    &lt;ul&gt;
-      &lt;li&gt;The places where the implementation inside the message receiver can be modified without affecting the sender.&lt;/li&gt;
-      &lt;li&gt;Due to polymorphism, the message handling may vary at run-time.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;chapter-8-methods&quot;&gt;Chapter 8: Methods&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Method name should be written from the client’s perspective.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Data and logic acting upon the data should be together.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Complete constructor
-    &lt;ul&gt;
-      &lt;li&gt;If you want to impose required data on an object, introduce a constructor with the required data. The reverse also holds, which means that if a constructor has parameters, then it implies that the parameters are required for the object to function properly.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Factory method
-    &lt;ul&gt;
-      &lt;li&gt;A (static) method used to create an instance of the class.&lt;/li&gt;
-      &lt;li&gt;Should be used with care, as it implies that there’s something special inside the method that a simple constructor would not suffice to do.&lt;/li&gt;
-      &lt;li&gt;For example, factory methods should be used when the name is important, or when the return type is dynamic.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Internal factory
-    &lt;ul&gt;
-      &lt;li&gt;Should use lazy initialization when the creation is complex. For example:&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;pre&gt;&lt;code class=&quot;java&quot;&gt;
-  ComplexObject getComplexObject() {
-      if (complexObj == null) {
-          complexObj = doComplexComputation();
-      }
-      return complexObj;
-  }
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Collection accessor method
-    &lt;ul&gt;
-      &lt;li&gt;If you happen to know that a bug can occur at runtime, try to eliminate it. The cost to debug such bug in production is expensive. For example, &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections.unmodifiableList(List)&lt;/code&gt; can cause exception if the clients try to modify the collection.&lt;/li&gt;
-      &lt;li&gt;Try to reduce the accesses to the collections from the clients. This conforms to the rules “Minimize accessibility, Item 13” and “Minimize mutability, Item 15” in Effective Java.&lt;/li&gt;
-      &lt;li&gt;Carefully analyze the clients to see if they really need access to the collections. If they just need to perform some simple operations on the collections, then we can just expose only those operations.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Query method
-    &lt;ul&gt;
-      &lt;li&gt;If an object has a lot of logics dependent on the state of another object, it’s likely that the logics are in a wrong place. This is similar to the smell of Feature Envy in Refactoring book.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Equality method
-    &lt;ul&gt;
-      &lt;li&gt;equals() and hashCode() should be implemented together and should also operate on the same data. Similar to Item 9 in Effective Java. The reason is that equal objects must have the same hash code.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Safe copy
-    &lt;ul&gt;
-      &lt;li&gt;Alias problem is when two different objects get control of the same other object without being aware of each other.&lt;/li&gt;
-      &lt;li&gt;This pattern is only a palliative one, as it does not actually solve the alias problem, which is likely to be a design problem.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;chapter-9-collections&quot;&gt;Chapter 9: Collections&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Express one of the most fundamental variations in programming, the variation in cardinality (the other variation is in behavior)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Fundamental issues about collections
-    &lt;ul&gt;
-      &lt;li&gt;Size&lt;/li&gt;
-      &lt;li&gt;Order&lt;/li&gt;
-      &lt;li&gt;Uniqueness&lt;/li&gt;
-      &lt;li&gt;Performance&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Use the possibly simplest collection implementation first. Later we can change to more specialized implementation if needed.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Some kinds of collections
-    &lt;ul&gt;
-      &lt;li&gt;Array
-        &lt;ul&gt;
-          &lt;li&gt;Built-in feature in Java&lt;/li&gt;
-          &lt;li&gt;Most efficient&lt;/li&gt;
-          &lt;li&gt;Fixed size&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Iterable
-        &lt;ul&gt;
-          &lt;li&gt;Just to iterate&lt;/li&gt;
-          &lt;li&gt;Used with foreach loop&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Collection
-        &lt;ul&gt;
-          &lt;li&gt;Simple operations: add, remove, search, count&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;List
-        &lt;ul&gt;
-          &lt;li&gt;Orderred items&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Set
-        &lt;ul&gt;
-          &lt;li&gt;No duplicate&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;SortedSet
-        &lt;ul&gt;
-          &lt;li&gt;Orderred by a comparator&lt;/li&gt;
-          &lt;li&gt;No duplicate&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Performance factors on choosing collection type:
-    &lt;ul&gt;
-      &lt;li&gt;Type of frequent operations&lt;/li&gt;
-      &lt;li&gt;Collection size&lt;/li&gt;
-      &lt;li&gt;Profiling (don’t just guess)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Avoid extending collections by inheritance (try to use delegation instead)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 28 Jan 2016 00:00:00 +0700</pubDate>
-        <link>/2016/01/28/implementation-patterns.html</link>
-        <guid isPermaLink="true">/2016/01/28/implementation-patterns.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Implementation Anti-patterns</title>
+        <title>Programming Pearls</title>
         <description>
 </description>
-        <pubDate>Thu, 28 Jan 2016 00:00:00 +0700</pubDate>
-        <link>/2016/01/28/implementation-anti-patterns.html</link>
-        <guid isPermaLink="true">/2016/01/28/implementation-anti-patterns.html</guid>
+        <pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/24/programming-pearls.html</link>
+        <guid isPermaLink="true">/2016/02/24/programming-pearls.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Enterprise Integration Patterns</title>
+        <description>
+</description>
+        <pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/24/enterprise-integration-patterns.html</link>
+        <guid isPermaLink="true">/2016/02/24/enterprise-integration-patterns.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>EJB</title>
+        <description>&lt;p&gt;x&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/24/ejb.html</link>
+        <guid isPermaLink="true">/2016/02/24/ejb.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Software Architectures</title>
+        <description>&lt;h1 id=&quot;the-java-ee-architects-handbook-2nd-edition&quot;&gt;The Java EE Architect’s Handbook, 2nd edition&lt;/h1&gt;
+
+&lt;h2 id=&quot;chapter-4-designing-external-application-interfaces&quot;&gt;Chapter 4: Designing external application interfaces&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;External application interfaces define how our application interacts with the external ones.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Strategies to fetch external data
+    &lt;ul&gt;
+      &lt;li&gt;Read the database of the external application directly&lt;/li&gt;
+      &lt;li&gt;Read the operational data store created from the external data. The data in these data stores can also be in a vendor-independent format so that changing the data stores will not affect our application.&lt;/li&gt;
+      &lt;li&gt;Use JAX-WS web services supported by the external applications. The most important advantage of using web services is that it is platform-independent. Two applications written in different technologies can still talk to each other via web services. One disadvantage of JAX-WS is that it is not optimized to receive big data.
+&amp;gt; It is usually advisable to segregate code consuming or publishing web services from the rest of your application.&lt;/li&gt;
+      &lt;li&gt;Use JAX-RS web services. One disadvantage is that it does not hava a standard specification yet, as opposed to JAX-WS whose specification can be written in WSDL files.&lt;/li&gt;
+      &lt;li&gt;Use messaging services, which are asynchronous communication methods. These services can be implemented by message-driven beans in Java EE. Main advantage is the asynchronousity, which can provide guaranteeed dilivery because we can retry if the calls were failed.&lt;/li&gt;
+      &lt;li&gt;Use EJBs, but this limits the participants to use Java.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Common mistakes
+    &lt;ul&gt;
+      &lt;li&gt;Use database or file system as message broker. This means that the messages are put into the database or file system, and then there is another process which will read these messages from the database or file system and handle them.&lt;/li&gt;
+      &lt;li&gt;Use asynchronous methods when their responses are required&lt;/li&gt;
+      &lt;li&gt;Not tested on production environment&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/23/software-architectures.html</link>
+        <guid isPermaLink="true">/2016/02/23/software-architectures.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Microservices</title>
+        <description>
+</description>
+        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/23/microservices.html</link>
+        <guid isPermaLink="true">/2016/02/23/microservices.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>JAX-WS in practice</title>
+        <description>
+</description>
+        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/23/jax-ws-in-practice.html</link>
+        <guid isPermaLink="true">/2016/02/23/jax-ws-in-practice.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>JAX-RS in practice</title>
+        <description>&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+&lt;p&gt;[1] RESTful Java with JAX-RS 2.0, Bill Burke&lt;/p&gt;
+</description>
+        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/23/jax-rs-in-practice.html</link>
+        <guid isPermaLink="true">/2016/02/23/jax-rs-in-practice.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Java Interview</title>
+        <description>
+</description>
+        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/23/java-interview.html</link>
+        <guid isPermaLink="true">/2016/02/23/java-interview.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Java EE patterns</title>
+        <description>
+</description>
+        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/2016/02/23/java-ee-patterns.html</link>
+        <guid isPermaLink="true">/2016/02/23/java-ee-patterns.html</guid>
         
         
       </item>
