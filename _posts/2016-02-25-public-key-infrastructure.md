@@ -15,14 +15,14 @@ The main idea of public-key cryptography is to use different keys for encryption
 Two important requirements on public-key cryptography are that the encryption function must be a one-way function and that it is infeasible to derive one key from another.
 
 Public-key cryptosystems use the public key to encrypt messages. The encrypted messages can only be decrypted with the corresponding private keys. Thus, even if the messages are intercepted, the interceptors still cannot know the original messages unless they know the private keys. The main processing flow is as follows [1]:
-![public-key-cryptography](./imgs/pki/public-key-cryptography.png "public-key-cryptography")
+![public-key-cryptography]({{ site.url }}/assets/imgs/pki/public-key-cryptography.png "public-key-cryptography")
 
 The first and most widely used public-key cryptosystem is RSA, which is named after its inventors Ron Rivest, Adi Shamir, and Leonard Adleman.
 
 ## Digital signatures
 
 Digital signatures are analogous to hand-written signatures in that they are used to prove the authenticity of a message. The main idea is that then sender uses its private key (which is only known to the sender) to sign the message and the receiver will use the sender's public key to verify the signature. The process is as follows [2]:
-![digital-signature](./imgs/pki/digital-signature.png "digital-signature")
+![digital-signature]({{ site.url }}/assets/imgs/pki/digital-signature.png "digital-signature")
 
 It is important to note that the signature must always be associated with the message from which the signature is created.
 
@@ -33,7 +33,7 @@ The most widely used digital signature is the RSA signature scheme.
 Digital certificates are used to prove the authenticity of public keys by binding public keys to their owners. Without certificates, public-key cryptography can easily be the victim of the man-in-the-middle attacks. For example, if Oscar somehow replaces Alice's public key by his, then every messages encrypted with the compromised Alice's public key can be decrypted by Oscar when he intercepts the messages.
 
 In its simplest form, a certificate looks like this [2]:
-![simplest-cert](./imgs/pki/simple-cert.png "simple-cert")
+![simplest-cert]({{ site.url }}/assets/imgs/pki/simple-cert.png "simple-cert")
 
 The certificate contains the signature which must be signed by a certificate authority. This signature guarantees the integrity of the certificate, which provides the information about the public key and its owner.
 

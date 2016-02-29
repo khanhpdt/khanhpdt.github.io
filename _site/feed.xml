@@ -5,146 +5,97 @@
     <description>Notes on my daily work as a software developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 26 Feb 2016 00:45:55 +0700</pubDate>
-    <lastBuildDate>Fri, 26 Feb 2016 00:45:55 +0700</lastBuildDate>
-    <generator>Jekyll v3.1.0</generator>
+    <pubDate>Tue, 01 Mar 2016 01:38:23 +0700</pubDate>
+    <lastBuildDate>Tue, 01 Mar 2016 01:38:23 +0700</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
     
       <item>
-        <title>Public Key Infrastructure</title>
-        <description>&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
-&lt;p&gt;[1] Introduction to Public Key Infrastructure, Springer&lt;/p&gt;
+        <title>Public Key Infrastructure (PKI)</title>
+        <description>&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
-&lt;h1 id=&quot;chapter-1-the-purpose-of-pki&quot;&gt;Chapter 1: The purpose of PKI&lt;/h1&gt;
+&lt;p&gt;PKI is security infrastructure which provides all necessary services to implement public-key cryptography and thus enables secure communication using public-key cryptography on open networks.&lt;/p&gt;
+
+&lt;h1 id=&quot;main-concepts&quot;&gt;Main concepts&lt;/h1&gt;
+
+&lt;h2 id=&quot;public-key-cryptography&quot;&gt;Public-key cryptography&lt;/h2&gt;
+
+&lt;p&gt;The main idea of public-key cryptography is to use different keys for encryption and decryption. The encryption key is made public and thus also called public key, while the decryption key is kept private and thus also called private key.&lt;/p&gt;
+
+&lt;p&gt;Two important requirements on public-key cryptography are that the encryption function must be a one-way function and that it is infeasible to derive one key from another.&lt;/p&gt;
+
+&lt;p&gt;Public-key cryptosystems use the public key to encrypt messages. The encrypted messages can only be decrypted with the corresponding private keys. Thus, even if the messages are intercepted, the interceptors still cannot know the original messages unless they know the private keys. The main processing flow is as follows [1]:
+&lt;img src=&quot;/assets/imgs/pki/public-key-cryptography.png&quot; alt=&quot;public-key-cryptography&quot; title=&quot;public-key-cryptography&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The first and most widely used public-key cryptosystem is RSA, which is named after its inventors Ron Rivest, Adi Shamir, and Leonard Adleman.&lt;/p&gt;
+
+&lt;h2 id=&quot;digital-signatures&quot;&gt;Digital signatures&lt;/h2&gt;
+
+&lt;p&gt;Digital signatures are analogous to hand-written signatures in that they are used to prove the authenticity of a message. The main idea is that then sender uses its private key (which is only known to the sender) to sign the message and the receiver will use the sender’s public key to verify the signature. The process is as follows [2]:
+&lt;img src=&quot;/assets/imgs/pki/digital-signature.png&quot; alt=&quot;digital-signature&quot; title=&quot;digital-signature&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is important to note that the signature must always be associated with the message from which the signature is created.&lt;/p&gt;
+
+&lt;p&gt;The most widely used digital signature is the RSA signature scheme.&lt;/p&gt;
+
+&lt;h2 id=&quot;digital-certificates&quot;&gt;Digital certificates&lt;/h2&gt;
+
+&lt;p&gt;Digital certificates are used to prove the authenticity of public keys by binding public keys to their owners. Without certificates, public-key cryptography can easily be the victim of the man-in-the-middle attacks. For example, if Oscar somehow replaces Alice’s public key by his, then every messages encrypted with the compromised Alice’s public key can be decrypted by Oscar when he intercepts the messages.&lt;/p&gt;
+
+&lt;p&gt;In its simplest form, a certificate looks like this [2]:
+&lt;img src=&quot;/assets/imgs/pki/simple-cert.png&quot; alt=&quot;simplest-cert&quot; title=&quot;simple-cert&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The certificate contains the signature which must be signed by a certificate authority. This signature guarantees the integrity of the certificate, which provides the information about the public key and its owner.&lt;/p&gt;
+
+&lt;p&gt;One commonly used certificate standard is X.509.&lt;/p&gt;
+
+&lt;h2 id=&quot;certificate-authority-ca&quot;&gt;Certificate authority (CA)&lt;/h2&gt;
+
+&lt;p&gt;Certificate authorities are trusted third-parties who are responsible for managing the certificates, e.g., issuing and revoking certificates.&lt;/p&gt;
+
+&lt;h1 id=&quot;main-services&quot;&gt;Main services&lt;/h1&gt;
+
+&lt;p&gt;The main services provided by PKI include:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Enables the use of public key cryptography on open networks, especially the internet&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Main security goals
+  &lt;li&gt;Confidentiality
     &lt;ul&gt;
-      &lt;li&gt;Confidentiality
-        &lt;ul&gt;
-          &lt;li&gt;Data is protected from unauthorized entities.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Integrity
-        &lt;ul&gt;
-          &lt;li&gt;Data could not be changed by unauthorized entities.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Authentication
-        &lt;ul&gt;
-          &lt;li&gt;Involved entities must prove who they are&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Authenticity
-        &lt;ul&gt;
-          &lt;li&gt;Data integrity and additionally the origin of the data must be reliable.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Non-repudiation
-        &lt;ul&gt;
-          &lt;li&gt;Prevents involved entities from denying that they have performed some actions, e.g., some harmful actions.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
+      &lt;li&gt;Data is protected from unauthorized entities.&lt;/li&gt;
+      &lt;li&gt;By public key encryption and private key decryption&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Secret key (or Symmetric) cryptosystems
+  &lt;li&gt;Data integrity
     &lt;ul&gt;
-      &lt;li&gt;Involved entities must agree on secret keys which are used to encrypt the plaintext and decrypt the ciphertext. The encryption and decryption keys can be different but they are still be computed from each other.&lt;/li&gt;
-      &lt;li&gt;Examples: Data Encryption Standard (DES), Advanced Encryption Standard (AES)&lt;/li&gt;
-      &lt;li&gt;Main disadvantage is that the secret keys still need to be exchanged between the entities.&lt;/li&gt;
+      &lt;li&gt;Data could not be changed by unauthorized entities.&lt;/li&gt;
+      &lt;li&gt;By digital signatures&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Public key (or Asymmetric) cryptosystems
+  &lt;li&gt;Authentication
     &lt;ul&gt;
-      &lt;li&gt;Main idea is to have one key for encryption (the encryption key) and one for decryption (the decryption key). These keys cannot be computed from each other. The encrytion key can be made public, and thus it is also called the public key. The decryption key is also called the private key.&lt;/li&gt;
-      &lt;li&gt;For example, if Alice wants to send Bob a secret message, she will encrypt the message by Bob’s public key. On receiving the encrypted message, Bob will use his private key to decrypt the message.&lt;/li&gt;
-      &lt;li&gt;Main advantage is that no exchange of secret keys are needed.&lt;/li&gt;
+      &lt;li&gt;Involved entities must prove who they are&lt;/li&gt;
+      &lt;li&gt;By signing on authentication information&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;RSA public key cryptosystems
+  &lt;li&gt;Data origin authenticity
     &lt;ul&gt;
-      &lt;li&gt;The first and also the most widely used public key cryptosystems&lt;/li&gt;
-      &lt;li&gt;The public key is a pair (n, e) where n is called RSA modulus and e encryption exponent. The private key is called the decryption exponent.&lt;/li&gt;
-      &lt;li&gt;Main disadvantage is its performance&lt;/li&gt;
+      &lt;li&gt;The origin of the data must be reliable.&lt;/li&gt;
+      &lt;li&gt;By digital certificates and signatures&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Hybrid cryptosystems
+  &lt;li&gt;Non-repudiation
     &lt;ul&gt;
-      &lt;li&gt;The secret key cryptography is used for the message, and the public key cryptography is used for the secret key.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Digital signatures
-    &lt;ul&gt;
-      &lt;li&gt;Similar to public key cryptography in that there are two keys involved. One is the private key which is used to create the signature, and the other is the public (or verification) key which is used to verify the signature.&lt;/li&gt;
-      &lt;li&gt;Can be used to prove the integrity and authenticity of the data&lt;/li&gt;
-      &lt;li&gt;Also supports entity authentication and non-repudiation&lt;/li&gt;
-      &lt;li&gt;Examples
-        &lt;ul&gt;
-          &lt;li&gt;RSA signature scheme: The most widely used digital signature scheme&lt;/li&gt;
-          &lt;li&gt;Digital Signature Algorithm (DSA)&lt;/li&gt;
-          &lt;li&gt;Elliptic Curve DSA (ECDSA)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;PKI responsibilities
-    &lt;ul&gt;
-      &lt;li&gt;Generate keys&lt;/li&gt;
-      &lt;li&gt;Use keys for encrypting, decrypting, signing, and verifying&lt;/li&gt;
-      &lt;li&gt;Publish public keys&lt;/li&gt;
-      &lt;li&gt;Back up keys&lt;/li&gt;
-      &lt;li&gt;Manage invalid keys&lt;/li&gt;
+      &lt;li&gt;Prevents involved entities from denying that they have performed some actions, e.g., some harmful actions.&lt;/li&gt;
+      &lt;li&gt;By digital signatures&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;chapter-2-certificates&quot;&gt;Chapter 2: Certificates&lt;/h1&gt;
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Certificates are data structures that bind public keys to entities and are signed by a trusted third-party. For example, if Alice wants to check the authenticity of Bob’s public key, she has to have a certificate which binds the public key to Bob. Furthermore, the certificate issuer (the third party) must be trustworthy.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Certificate standards&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;X.509&lt;/li&gt;
-      &lt;li&gt;Attribute certificates&lt;/li&gt;
-      &lt;li&gt;Card verifiable (CV) certificates&lt;/li&gt;
-      &lt;li&gt;Pretty good privacy (PGP) certificates&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;[1] &lt;a href=&quot;http://www.amazon.com/Introduction-Public-Infrastructures-Johannes-Buchmann/dp/3642406564/ref=sr_1_1?ie=UTF8&amp;amp;qid=1456768775&amp;amp;sr=8-1&amp;amp;keywords=introduction+to+pki&quot;&gt;Introduction to Public Key Infrastructures&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;chapter-4-private-keys&quot;&gt;Chapter 4: Private keys&lt;/h1&gt;
+&lt;p&gt;[2] &lt;a href=&quot;http://www.amazon.com/Understanding-Cryptography-Textbook-Students-Practitioners/dp/3642041000/ref=sr_1_1?s=books&amp;amp;ie=UTF8&amp;amp;qid=1456768821&amp;amp;sr=1-1&amp;amp;keywords=understanding+cryptography+a+textbook+for+students+and+practitioners&quot;&gt;Understanding Cryptography: A Textbook for Students and Practitioners&lt;/a&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;The keys have their own life cycles. They can be in many states and can transit from one state to another.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Storable keys are stored in volatile memory, and must be stored in some personal security environment (PSE) before being delivered.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;PSEs: protect private keys from unauthorized accesses&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Software
-        &lt;ul&gt;
-          &lt;li&gt;PKCS#12&lt;/li&gt;
-          &lt;li&gt;PKCS#8: almost always used with PKCS#12&lt;/li&gt;
-          &lt;li&gt;Java keystore&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Hardware
-        &lt;ul&gt;
-          &lt;li&gt;Smart cards&lt;/li&gt;
-          &lt;li&gt;Hardware security modules&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;[3] &lt;a href=&quot;http://www.amazon.com/Understanding-PKI-Standards-Deployment-Considerations/dp/0321743091/ref=sr_1_1?ie=UTF8&amp;amp;qid=1456768907&amp;amp;sr=8-1&amp;amp;keywords=understanding+pki&quot;&gt;Understanding PKI: Concepts, Standards, and Deployment Considerations&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 Feb 2016 00:00:00 +0700</pubDate>
         <link>/2016/02/25/public-key-infrastructure.html</link>
