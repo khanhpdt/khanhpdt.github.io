@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to design API
+category: general
 ---
 # [Oracle Java tutorials](https://docs.oracle.com/javase/tutorial/collections/interoperability/api-design.html)
 - Parameters
@@ -19,7 +20,7 @@ title: How to design API
   - On the implementation
 - Be convenient
   - On how the API is used
-  
+
 # [Effective API design](http://www.infoq.com/presentations/effective-api-design)
 
 # [Checklist](http://theamiableapi.com/2012/01/16/java-api-design-checklist/)

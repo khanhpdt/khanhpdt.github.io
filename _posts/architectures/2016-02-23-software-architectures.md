@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Software Architectures
+category: architectures
 ---
 # The Java EE Architect's Handbook, 2nd edition
 
@@ -12,7 +13,7 @@ title: Software Architectures
   - Read the database of the external application directly
   - Read the operational data store created from the external data. The data in these data stores can also be in a vendor-independent format so that changing the data stores will not affect our application.
   - Use JAX-WS web services supported by the external applications. The most important advantage of using web services is that it is platform-independent. Two applications written in different technologies can still talk to each other via web services. One disadvantage of JAX-WS is that it is not optimized to receive big data.
-  
+
     > It is usually advisable to segregate code consuming or publishing web services from the rest of your application.
 
   - Use JAX-RS web services. One disadvantage is that it does not hava a standard specification yet, as opposed to JAX-WS whose specification can be written in WSDL files.

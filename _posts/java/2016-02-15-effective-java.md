@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Effective Java
+category: java
 ---
 
 # Reflection

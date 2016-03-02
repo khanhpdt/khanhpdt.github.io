@@ -5,8 +5,8 @@
     <description>Notes on my daily work as a software developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 Mar 2016 22:55:54 +0700</pubDate>
-    <lastBuildDate>Wed, 02 Mar 2016 22:55:54 +0700</lastBuildDate>
+    <pubDate>Wed, 02 Mar 2016 23:43:55 +0700</pubDate>
+    <lastBuildDate>Wed, 02 Mar 2016 23:43:55 +0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -204,6 +204,8 @@
         <guid isPermaLink="true">/java-puzzlers/</guid>
         
         
+        <category>java</category>
+        
       </item>
     
       <item>
@@ -302,17 +304,6 @@
       </item>
     
       <item>
-        <title>Programming Pearls</title>
-        <description>
-</description>
-        <pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/programming-pearls/</link>
-        <guid isPermaLink="true">/programming-pearls/</guid>
-        
-        
-      </item>
-    
-      <item>
         <title>Enterprise Integration Patterns</title>
         <description>
 </description>
@@ -320,6 +311,8 @@
         <link>/enterprise-integration-patterns/</link>
         <guid isPermaLink="true">/enterprise-integration-patterns/</guid>
         
+        
+        <category>patterns</category>
         
       </item>
     
@@ -332,47 +325,20 @@
         <guid isPermaLink="true">/ejb/</guid>
         
         
+        <category>java-ee</category>
+        
       </item>
     
       <item>
-        <title>Software Architectures</title>
-        <description>&lt;h1 id=&quot;the-java-ee-architects-handbook-2nd-edition&quot;&gt;The Java EE Architect’s Handbook, 2nd edition&lt;/h1&gt;
-
-&lt;h2 id=&quot;chapter-4-designing-external-application-interfaces&quot;&gt;Chapter 4: Designing external application interfaces&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;External application interfaces define how our application interacts with the external ones.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Strategies to fetch external data
-    &lt;ul&gt;
-      &lt;li&gt;Read the database of the external application directly&lt;/li&gt;
-      &lt;li&gt;Read the operational data store created from the external data. The data in these data stores can also be in a vendor-independent format so that changing the data stores will not affect our application.&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Use JAX-WS web services supported by the external applications. The most important advantage of using web services is that it is platform-independent. Two applications written in different technologies can still talk to each other via web services. One disadvantage of JAX-WS is that it is not optimized to receive big data.&lt;/p&gt;
-
-        &lt;blockquote&gt;
-          &lt;p&gt;It is usually advisable to segregate code consuming or publishing web services from the rest of your application.&lt;/p&gt;
-        &lt;/blockquote&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Use JAX-RS web services. One disadvantage is that it does not hava a standard specification yet, as opposed to JAX-WS whose specification can be written in WSDL files.&lt;/li&gt;
-      &lt;li&gt;Use messaging services, which are asynchronous communication methods. These services can be implemented by message-driven beans in Java EE. Main advantage is the asynchronousity, which can provide guaranteeed dilivery because we can retry if the calls were failed.&lt;/li&gt;
-      &lt;li&gt;Use EJBs, but this limits the participants to use Java.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Common mistakes
-    &lt;ul&gt;
-      &lt;li&gt;Use database or file system as message broker. This means that the messages are put into the database or file system, and then there is another process which will read these messages from the database or file system and handle them.&lt;/li&gt;
-      &lt;li&gt;Use asynchronous methods when their responses are required&lt;/li&gt;
-      &lt;li&gt;Not tested on production environment&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+        <title>Programming Pearls</title>
+        <description>
 </description>
-        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/software-architectures/</link>
-        <guid isPermaLink="true">/software-architectures/</guid>
+        <pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/programming-pearls/</link>
+        <guid isPermaLink="true">/programming-pearls/</guid>
         
+        
+        <category>algorithms</category>
         
       </item>
     
@@ -385,16 +351,20 @@
         <guid isPermaLink="true">/patterns-of-enterprise-application-architecture/</guid>
         
         
+        <category>patterns</category>
+        
       </item>
     
       <item>
-        <title>Microservices</title>
+        <title>Java Interview</title>
         <description>
 </description>
         <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/microservices/</link>
-        <guid isPermaLink="true">/microservices/</guid>
+        <link>/java-interview/</link>
+        <guid isPermaLink="true">/java-interview/</guid>
         
+        
+        <category>java</category>
         
       </item>
     
@@ -407,6 +377,8 @@
         <guid isPermaLink="true">/jax-ws-in-practice/</guid>
         
         
+        <category>java-ee</category>
+        
       </item>
     
       <item>
@@ -418,6 +390,21 @@
         <link>/jax-rs-in-practice/</link>
         <guid isPermaLink="true">/jax-rs-in-practice/</guid>
         
+        
+        <category>java-ee</category>
+        
+      </item>
+    
+      <item>
+        <title>Java EE patterns</title>
+        <description>
+</description>
+        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/java-ee-patterns/</link>
+        <guid isPermaLink="true">/java-ee-patterns/</guid>
+        
+        
+        <category>java-ee</category>
         
       </item>
     

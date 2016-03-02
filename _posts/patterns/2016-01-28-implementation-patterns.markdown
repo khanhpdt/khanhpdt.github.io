@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Implementation Patterns
+category: patterns
 ---
 
 - Encapsulated collection (http://martinfowler.com/bliki/EncapsulatedCollection.html)

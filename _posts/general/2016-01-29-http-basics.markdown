@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HTTP basics
+category: general
 ---
 
 # Reference

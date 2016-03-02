@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Java puzzlers
+category: java
 ---
 
 # Expressive Puzzlers

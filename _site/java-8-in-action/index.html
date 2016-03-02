@@ -267,11 +267,11 @@ TargetReference::methodName</li>
 Integer f(a,b,c,d) {
     // do something
 }
-  
+
 void g(a,b) {
     return (c,d) -&gt; f(a,b,c,d);
 }
-  
+
 // client code
 BiFunction&lt;Integer, Integer, Integer&gt; f12 = g(1,2);
 int c = 3; int d = 4;

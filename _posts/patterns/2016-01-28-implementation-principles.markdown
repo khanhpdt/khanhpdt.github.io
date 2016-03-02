@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Implementation Principles
+category: patterns
 ---
 - SOLID
   - Single Responsibility
@@ -10,27 +11,27 @@ title: Implementation Principles
   - Dependency Inversion
 
     [source](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
- 
+
 - Tell, don't ask
 
     > Rather than asking an object for data and acting on that data, we should instead tell an object what to do.
 
 	[source](http://martinfowler.com/bliki/TellDontAsk.html)
- 
+
 - Don't repeat yourself (DRY)
- 
+
     > Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.
-	
+
 	[source](http://c2.com/cgi/wiki?DontRepeatYourself)
 
 - Law of Demeter, or more general The principle of least knowledge
 
     > Only talk to your friends.
-	
+
 	[source](http://www.ccs.neu.edu/home/lieber/LoD.html)
- 
+
 - Encapsulation and Information hiding
- 
+
     [link](http://www.javaworld.com/article/2075271/core-java/encapsulation-is-not-information-hiding.html)
 
 - Single level of abstraction (SLAP)

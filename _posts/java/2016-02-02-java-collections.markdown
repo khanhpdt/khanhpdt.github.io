@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Java Collections
+category: java
 ---
 # Chapter 10
 - Java Collections Framework: java.util and java.util.concurrent
@@ -37,4 +38,3 @@ title: Java Collections
   - Thread-safe
 - EnumSet
   - Operations are bit-wise, thus they are fast
-	

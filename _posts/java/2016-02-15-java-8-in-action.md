@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Java 8 in action
+category: java
 ---
 
 # Reference: Book Java 8 in action
@@ -11,7 +12,7 @@ title: Java 8 in action
   - Passing code to methods
   - Default methods in interfaces
 - While collections are mostly about storing and accessing data, streams are mostly about how to perform computations on the data. Streams allows and encourages to process the data in parallel.
-  
+
 ## Chapter 2
 - Behavior parameterization by passing code (which performs the behavior) around
 - Predicate: a function which returns a boolean value
@@ -50,9 +51,9 @@ title: Java 8 in action
 - Streams
   - "A sequence of elements from a source that supports data processing operations"
   - Designed to provide a declarative way to process collections (like the way SQL processes records): you specify _what_ you want to achieve
-  - Supports pipelining 
+  - Supports pipelining
 - Streams vs. Collections
-  - Lazily constructed, i.e., elements are computed on demand. This is opposed to conventional collections, which are eagerly constructed or their elements are computed before being added to the collections. 
+  - Lazily constructed, i.e., elements are computed on demand. This is opposed to conventional collections, which are eagerly constructed or their elements are computed before being added to the collections.
   - A stream can only be iterated _once_ during its life-time.
   - Internal iterations, rather than external iterations which are used on collections. This internal iteration encapsulates the iterating implementation from the client code, thus giving more flexibility in how the iteration is done.
 - Stream operations
@@ -62,7 +63,7 @@ title: Java 8 in action
   - A data source
   - Intermediate operations
   - Terminal operations
-  
+
 ## Chapter 5: Working with streams
 - Stream operations
   - Stateless
@@ -92,7 +93,7 @@ title: Java 8 in action
   - Start with the `default` modifier
   - Defined inside interface
    - Can have body
-   - The implementations of the interface do not need to override. 
+   - The implementations of the interface do not need to override.
 - Typical usages
   - Optional methods in the interface hierarchy
   - Simulate multiple inheritance because a class can implement multiple interfaces
@@ -120,11 +121,11 @@ title: Java 8 in action
   Integer f(a,b,c,d) {
 	  // do something
   }
-  
+
   void g(a,b) {
 	  return (c,d) -> f(a,b,c,d);
   }
-  
+
   // client code
   BiFunction<Integer, Integer, Integer> f12 = g(1,2);
   int c = 3; int d = 4;
