@@ -15,7 +15,7 @@ title: Effective Java
   - Exposure of internals, e.g., `private` fields or methods can be accessed and modified
 - General rule
   - Should always try to avoid using reflection in normal applications
-  - If it is unavoidable, refelection should be used very cautiously. One acceptable way to use reflection is to create an instance, but after that normal invocation should be used on the created instance.
+  - If it is unavoidable, reflection should be used very cautiously. One acceptable way of using reflection is to create an instance, but after that normal invocation should be used on the created instance.
 - References
   - [1] Item 53, Effective Java 2nd, Joshua Bloch
   - [2] https://docs.oracle.com/javase/tutorial/reflect/

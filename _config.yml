@@ -16,3 +16,7 @@ github_username: khanhpdt
 
 # Build settings
 # markdown: redcarpet
+
+include: ["_pages"]
+
+permalink: /:title/

@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="Notes on my daily work as a software developer.">
+  <title>Implementation Principles</title>
+  <meta name="description" content="  SOLID          Single Responsibility      Open-Closed      Liskov Substitution      Interface Segregation      Dependency Inversion      ">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/about/">
+  <link rel="canonical" href="/implementation-principles/">
   <link rel="alternate" type="application/rss+xml" title="Software development notes" href="/feed.xml">
 </head>
 
@@ -54,14 +54,73 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">Implementation Principles</h1>
+    <p class="post-meta"><time datetime="2016-01-28T00:00:00+07:00" itemprop="datePublished">Jan 28, 2016</time></p>
   </header>
 
-  <div class="post-content">
-    <p>I’m a young software developer and currently working on Java most of the time. I enjoy writing about what I have learned during my work, partly because I’m afraid that someday I will forget all about what I have read :).</p>
+  <div class="post-content" itemprop="articleBody">
+    <ul>
+  <li>SOLID
+    <ul>
+      <li>Single Responsibility</li>
+      <li>Open-Closed</li>
+      <li>Liskov Substitution</li>
+      <li>Interface Segregation</li>
+      <li>
+        <p>Dependency Inversion</p>
+
+        <p><a href="http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">source</a></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Tell, don’t ask</p>
+
+    <blockquote>
+      <p>Rather than asking an object for data and acting on that data, we should instead tell an object what to do.</p>
+    </blockquote>
+
+    <p><a href="http://martinfowler.com/bliki/TellDontAsk.html">source</a></p>
+  </li>
+  <li>
+    <p>Don’t repeat yourself (DRY)</p>
+
+    <blockquote>
+      <p>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.</p>
+    </blockquote>
+
+    <p><a href="http://c2.com/cgi/wiki?DontRepeatYourself">source</a></p>
+  </li>
+  <li>
+    <p>Law of Demeter, or more general The principle of least knowledge</p>
+
+    <blockquote>
+      <p>Only talk to your friends.</p>
+    </blockquote>
+
+    <p><a href="http://www.ccs.neu.edu/home/lieber/LoD.html">source</a></p>
+  </li>
+  <li>
+    <p>Encapsulation and Information hiding</p>
+
+    <p><a href="http://www.javaworld.com/article/2075271/core-java/encapsulation-is-not-information-hiding.html">link</a></p>
+  </li>
+  <li>
+    <p>Single level of abstraction (SLAP)</p>
+
+    <p><a href="http://clean-code-developer.com/Orange-Grade.ashx">link</a></p>
+  </li>
+  <li>Design principles from Head First Design Patterns
+    <ul>
+      <li>Identify what vary and encapsulate them from what don’t</li>
+      <li>Program to an interface, not an implementation</li>
+      <li>Favor composition over inheritance</li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 

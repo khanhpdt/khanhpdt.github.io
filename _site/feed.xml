@@ -5,9 +5,206 @@
     <description>Notes on my daily work as a software developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Mar 2016 01:38:23 +0700</pubDate>
-    <lastBuildDate>Tue, 01 Mar 2016 01:38:23 +0700</lastBuildDate>
+    <pubDate>Wed, 02 Mar 2016 22:55:54 +0700</pubDate>
+    <lastBuildDate>Wed, 02 Mar 2016 22:55:54 +0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Java puzzlers</title>
+        <description>&lt;h1 id=&quot;expressive-puzzlers&quot;&gt;Expressive Puzzlers&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Puzzle 2
+    &lt;ul&gt;
+      &lt;li&gt;Not all decimals can be represented exactly using binary floating-point&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 8
+    &lt;ul&gt;
+      &lt;li&gt;Conditional operator&lt;/li&gt;
+      &lt;li&gt;Should always avoid mixed-type computations&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 9
+    &lt;ul&gt;
+      &lt;li&gt;Compound assignment (e.g., a += b) contains an implicit cast&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;puzzlers-with-characters&quot;&gt;Puzzlers with characters&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Puzzle 13
+    &lt;ul&gt;
+      &lt;li&gt;String interning&lt;/li&gt;
+      &lt;li&gt;Object comparison by equals() and ==&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 18
+    &lt;ul&gt;
+      &lt;li&gt;The conversion between String and byte[] always involves using a specific charset&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;loopy-puzzlers&quot;&gt;Loopy puzzlers&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Puzzle 25
+    &lt;ul&gt;
+      &lt;li&gt;Postfix increment operator&lt;/li&gt;
+      &lt;li&gt;Do not assign a variable more than once in a single expression&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 28
+    &lt;ul&gt;
+      &lt;li&gt;Infinity&lt;/li&gt;
+      &lt;li&gt;Floating-point operations return the floating-point value that is closest to their exact mathematical result.&lt;/li&gt;
+      &lt;li&gt;Binary floating point arithmetics in Java&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;exceptional-puzzlers&quot;&gt;Exceptional puzzlers&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Puzzle 36
+    &lt;ul&gt;
+      &lt;li&gt;The try statement 14.20 (Java Language Specification Java SE 7 (JLS7))&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 37
+    &lt;ul&gt;
+      &lt;li&gt;Exception checking 11.2.3 (JLS7)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 38
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Compile-time checking of exceptions 11.2 JLS7&lt;/p&gt;
+
+        &lt;blockquote&gt;
+          &lt;p&gt;When interfaces are involved, more than one method declaration may be overridden by a single overriding declaration. In this case, the overriding declaration must have a throws clause that is compatible with all the overridden declarations (§9.4.1).&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 39
+    &lt;ul&gt;
+      &lt;li&gt;The System.exit method halts the execution of the current thread and all others dead in their tracks.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 40
+    &lt;ul&gt;
+      &lt;li&gt;Initialization of classes and interfaces 12.4 JLS7&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 42
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;table&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&amp;amp; and&lt;/td&gt;
+              &lt;td&gt;can be used as &amp;amp;&amp;amp; and&lt;/td&gt;
+              &lt;td&gt; &lt;/td&gt;
+              &lt;td&gt;for boolean values, but they do not support short-circuit evaluation.&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 43
+    &lt;ul&gt;
+      &lt;li&gt;It’s possible that an undeclared exception can be thrown out. Examples:
+        &lt;ul&gt;
+          &lt;li&gt;newInstance()&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Generics
+        &lt;ul&gt;
+          &lt;li&gt;Java exception checking is a compile-time facility, not a JVM feature.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;classy-puzzlers&quot;&gt;Classy puzzlers&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Puzzle 46
+    &lt;ul&gt;
+      &lt;li&gt;If more than one methods are applicable to an invocation, the most specific one is chosen.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 47
+    &lt;ul&gt;
+      &lt;li&gt;Static fields are shared by their declaring class and any &lt;em&gt;subclasses&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 48
+    &lt;ul&gt;
+      &lt;li&gt;No dynamic dispatch on static methods (15.12.4.4 JLS7)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 49
+    &lt;ul&gt;
+      &lt;li&gt;The static initializers and class variable initializers are executed in textual order (12.4.1 JLS7)&lt;/li&gt;
+      &lt;li&gt;Be very careful of circularity in class initialization&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 50
+    &lt;ul&gt;
+      &lt;li&gt;instanceof and cast operators
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;null&lt;/code&gt; is a subtype of every type. However, &lt;code class=&quot;highlighter-rouge&quot;&gt;null instanceof Type&lt;/code&gt; always returns false.&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;instanceof&lt;/code&gt; requires two operands must be in the same hierarchy. Otherwise, there’ll be compile errors.&lt;/li&gt;
+          &lt;li&gt;cast operator throws exception at run-time if the types are not convertable.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 51
+    &lt;ul&gt;
+      &lt;li&gt;Be very careful of circularity in class instance initialization&lt;/li&gt;
+      &lt;li&gt;Should never call overridable (especially overridden) methods in constructors&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 52
+    &lt;ul&gt;
+      &lt;li&gt;Be consistent: either use eager or lazy initialization, not both&lt;/li&gt;
+      &lt;li&gt;Default values are set in the preparation phase, while the field initializers are executed in the initialization phase, which occurs after the preparation phase. For more details, see &lt;a href=&quot;http://docs.oracle.com/javase/specs/jls/se8/html/jls-12.html#jls-12.1&quot;&gt;JVM Startup&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 53
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;From &lt;a href=&quot;http://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.8.7&quot;&gt;JLS8&lt;/a&gt;&lt;/p&gt;
+
+        &lt;blockquote&gt;
+          &lt;p&gt;If a constructor body does not begin with an explicit constructor invocation and the constructor being declared is not part of the primordial class Object, then the constructor body implicitly begins with a superclass constructor invocation “super();”&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Private constructor capture pattern&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Workaround to be able to do both things: passing a value to the superclass constructor, while also storing the value at the class itself. Without this pattern, doing these two things is not possible due to rules on constructors.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Puzzle 54&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 02 Mar 2016 00:00:00 +0700</pubDate>
+        <link>/java-puzzlers/</link>
+        <guid isPermaLink="true">/java-puzzlers/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Public Key Infrastructure (PKI)</title>
@@ -98,8 +295,8 @@
 &lt;p&gt;[3] &lt;a href=&quot;http://www.amazon.com/Understanding-PKI-Standards-Deployment-Considerations/dp/0321743091/ref=sr_1_1?ie=UTF8&amp;amp;qid=1456768907&amp;amp;sr=8-1&amp;amp;keywords=understanding+pki&quot;&gt;Understanding PKI: Concepts, Standards, and Deployment Considerations&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/25/public-key-infrastructure.html</link>
-        <guid isPermaLink="true">/2016/02/25/public-key-infrastructure.html</guid>
+        <link>/public-key-infrastructure/</link>
+        <guid isPermaLink="true">/public-key-infrastructure/</guid>
         
         
       </item>
@@ -109,8 +306,8 @@
         <description>
 </description>
         <pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/24/programming-pearls.html</link>
-        <guid isPermaLink="true">/2016/02/24/programming-pearls.html</guid>
+        <link>/programming-pearls/</link>
+        <guid isPermaLink="true">/programming-pearls/</guid>
         
         
       </item>
@@ -120,19 +317,19 @@
         <description>
 </description>
         <pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/24/enterprise-integration-patterns.html</link>
-        <guid isPermaLink="true">/2016/02/24/enterprise-integration-patterns.html</guid>
+        <link>/enterprise-integration-patterns/</link>
+        <guid isPermaLink="true">/enterprise-integration-patterns/</guid>
         
         
       </item>
     
       <item>
         <title>EJB</title>
-        <description>&lt;p&gt;x&lt;/p&gt;
+        <description>
 </description>
         <pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/24/ejb.html</link>
-        <guid isPermaLink="true">/2016/02/24/ejb.html</guid>
+        <link>/ejb/</link>
+        <guid isPermaLink="true">/ejb/</guid>
         
         
       </item>
@@ -151,8 +348,13 @@
     &lt;ul&gt;
       &lt;li&gt;Read the database of the external application directly&lt;/li&gt;
       &lt;li&gt;Read the operational data store created from the external data. The data in these data stores can also be in a vendor-independent format so that changing the data stores will not affect our application.&lt;/li&gt;
-      &lt;li&gt;Use JAX-WS web services supported by the external applications. The most important advantage of using web services is that it is platform-independent. Two applications written in different technologies can still talk to each other via web services. One disadvantage of JAX-WS is that it is not optimized to receive big data.
-&amp;gt; It is usually advisable to segregate code consuming or publishing web services from the rest of your application.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Use JAX-WS web services supported by the external applications. The most important advantage of using web services is that it is platform-independent. Two applications written in different technologies can still talk to each other via web services. One disadvantage of JAX-WS is that it is not optimized to receive big data.&lt;/p&gt;
+
+        &lt;blockquote&gt;
+          &lt;p&gt;It is usually advisable to segregate code consuming or publishing web services from the rest of your application.&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
       &lt;li&gt;Use JAX-RS web services. One disadvantage is that it does not hava a standard specification yet, as opposed to JAX-WS whose specification can be written in WSDL files.&lt;/li&gt;
       &lt;li&gt;Use messaging services, which are asynchronous communication methods. These services can be implemented by message-driven beans in Java EE. Main advantage is the asynchronousity, which can provide guaranteeed dilivery because we can retry if the calls were failed.&lt;/li&gt;
       &lt;li&gt;Use EJBs, but this limits the participants to use Java.&lt;/li&gt;
@@ -166,11 +368,21 @@
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
         <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/23/software-architectures.html</link>
-        <guid isPermaLink="true">/2016/02/23/software-architectures.html</guid>
+        <link>/software-architectures/</link>
+        <guid isPermaLink="true">/software-architectures/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Patterns of Enterprise Application Architecture</title>
+        <description>
+</description>
+        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
+        <link>/patterns-of-enterprise-application-architecture/</link>
+        <guid isPermaLink="true">/patterns-of-enterprise-application-architecture/</guid>
         
         
       </item>
@@ -180,8 +392,8 @@
         <description>
 </description>
         <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/23/microservices.html</link>
-        <guid isPermaLink="true">/2016/02/23/microservices.html</guid>
+        <link>/microservices/</link>
+        <guid isPermaLink="true">/microservices/</guid>
         
         
       </item>
@@ -191,8 +403,8 @@
         <description>
 </description>
         <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/23/jax-ws-in-practice.html</link>
-        <guid isPermaLink="true">/2016/02/23/jax-ws-in-practice.html</guid>
+        <link>/jax-ws-in-practice/</link>
+        <guid isPermaLink="true">/jax-ws-in-practice/</guid>
         
         
       </item>
@@ -203,30 +415,8 @@
 &lt;p&gt;[1] RESTful Java with JAX-RS 2.0, Bill Burke&lt;/p&gt;
 </description>
         <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/23/jax-rs-in-practice.html</link>
-        <guid isPermaLink="true">/2016/02/23/jax-rs-in-practice.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Java Interview</title>
-        <description>
-</description>
-        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/23/java-interview.html</link>
-        <guid isPermaLink="true">/2016/02/23/java-interview.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Java EE patterns</title>
-        <description>
-</description>
-        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/2016/02/23/java-ee-patterns.html</link>
-        <guid isPermaLink="true">/2016/02/23/java-ee-patterns.html</guid>
+        <link>/jax-rs-in-practice/</link>
+        <guid isPermaLink="true">/jax-rs-in-practice/</guid>
         
         
       </item>

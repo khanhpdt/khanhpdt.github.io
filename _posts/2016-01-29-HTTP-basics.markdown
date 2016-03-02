@@ -13,7 +13,7 @@ title: HTTP basics
   - Proxy
   - Cache
   - Gateway
-  - Tunnel 
+  - Tunnel
   - Agent
 
 # Resources
@@ -71,7 +71,7 @@ title: HTTP basics
 - Can be used with encrypted transmission (e.g., SSL) to avoid leaking identification information.
 
 # Digest authentication
-- One of the two official HTTP authentication protocol. 
+- One of the two official HTTP authentication protocol.
 - Much more secure than Basic authentication, but less widely-used. However, it is designed to replace Basic authentication in the future.
 - How it works
   - Never send password over the network. Instead, the fingerprint or digest of the password is sent. The digest is calculated by digest algorithm (e.g., MD5).

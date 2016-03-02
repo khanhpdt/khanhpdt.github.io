@@ -22,12 +22,9 @@ title: Implementation Patterns
 
 - Double dispatch
   - Messages are dispatched by two-level. After receiving the message, the first receiver will dispatch another message to the second receiver along with its information. The second receiver is the one that actually performs the job. See Visitor pattern for an application of this technique.
-  
-- Decoposing messages
-  - If a message is too complicated (e.g., needs a long list of parameters), it is sometimes better to split the message into multiple ones, each of which handles an related aspects of the message.
-  
-- 
-  
+
+- Decomposing messages
+  - If a message is too complicated (e.g., needs a long list of parameters), it is sometimes better to split the message into multiple ones, each of which handles an related aspects of the message.  
 
 ## Chapter 8: Methods
 - Method name should be written from the client's perspective.
@@ -39,7 +36,7 @@ title: Implementation Patterns
 
 - Factory method
   - A (static) method used to create an instance of the class.
-  - Should be used with care, as it implies that there's something special inside the method that a simple constructor would not suffice to do. 
+  - Should be used with care, as it implies that there's something special inside the method that a simple constructor would not suffice to do.
   - For example, factory methods should be used when the name is important, or when the return type is dynamic.
 
 - Internal factory
@@ -67,7 +64,7 @@ title: Implementation Patterns
 - Safe copy
   - Alias problem is when two different objects get control of the same other object without being aware of each other.
   - This pattern is only a palliative one, as it does not actually solve the alias problem, which is likely to be a design problem.
-  
+
 ## Chapter 9: Collections
 - Express one of the most fundamental variations in programming, the variation in cardinality (the other variation is in behavior)
 
@@ -80,7 +77,7 @@ title: Implementation Patterns
 - Use the possibly simplest collection implementation first. Later we can change to more specialized implementation if needed.
 
 - Some kinds of collections
-  - Array	
+  - Array
 	 - Built-in feature in Java
 	 - Most efficient
 	 - Fixed size

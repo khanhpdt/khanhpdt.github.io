@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="Notes on my daily work as a software developer.">
+  <title>Software Architectures</title>
+  <meta name="description" content="The Java EE Architect’s Handbook, 2nd edition">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/about/">
+  <link rel="canonical" href="/software-architectures/">
   <link rel="alternate" type="application/rss+xml" title="Software development notes" href="/feed.xml">
 </head>
 
@@ -54,14 +54,46 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">Software Architectures</h1>
+    <p class="post-meta"><time datetime="2016-02-23T00:00:00+07:00" itemprop="datePublished">Feb 23, 2016</time></p>
   </header>
 
-  <div class="post-content">
-    <p>I’m a young software developer and currently working on Java most of the time. I enjoy writing about what I have learned during my work, partly because I’m afraid that someday I will forget all about what I have read :).</p>
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="the-java-ee-architects-handbook-2nd-edition">The Java EE Architect’s Handbook, 2nd edition</h1>
+
+<h2 id="chapter-4-designing-external-application-interfaces">Chapter 4: Designing external application interfaces</h2>
+
+<ul>
+  <li>
+    <p>External application interfaces define how our application interacts with the external ones.</p>
+  </li>
+  <li>Strategies to fetch external data
+    <ul>
+      <li>Read the database of the external application directly</li>
+      <li>Read the operational data store created from the external data. The data in these data stores can also be in a vendor-independent format so that changing the data stores will not affect our application.</li>
+      <li>
+        <p>Use JAX-WS web services supported by the external applications. The most important advantage of using web services is that it is platform-independent. Two applications written in different technologies can still talk to each other via web services. One disadvantage of JAX-WS is that it is not optimized to receive big data.</p>
+
+        <blockquote>
+          <p>It is usually advisable to segregate code consuming or publishing web services from the rest of your application.</p>
+        </blockquote>
+      </li>
+      <li>Use JAX-RS web services. One disadvantage is that it does not hava a standard specification yet, as opposed to JAX-WS whose specification can be written in WSDL files.</li>
+      <li>Use messaging services, which are asynchronous communication methods. These services can be implemented by message-driven beans in Java EE. Main advantage is the asynchronousity, which can provide guaranteeed dilivery because we can retry if the calls were failed.</li>
+      <li>Use EJBs, but this limits the participants to use Java.</li>
+    </ul>
+  </li>
+  <li>Common mistakes
+    <ul>
+      <li>Use database or file system as message broker. This means that the messages are put into the database or file system, and then there is another process which will read these messages from the database or file system and handle them.</li>
+      <li>Use asynchronous methods when their responses are required</li>
+      <li>Not tested on production environment</li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 

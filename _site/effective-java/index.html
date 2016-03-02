@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
-  <meta name="description" content="Notes on my daily work as a software developer.">
+  <title>Effective Java</title>
+  <meta name="description" content="Reflection  Pros:          Provides a programmatic way to introspect a class      Provides an “abnormal” and unique way to                  Invoke class meth...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/about/">
+  <link rel="canonical" href="/effective-java/">
   <link rel="alternate" type="application/rss+xml" title="Software development notes" href="/feed.xml">
 </head>
 
@@ -54,14 +54,48 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title" itemprop="name headline">Effective Java</h1>
+    <p class="post-meta"><time datetime="2016-02-15T00:00:00+07:00" itemprop="datePublished">Feb 15, 2016</time></p>
   </header>
 
-  <div class="post-content">
-    <p>I’m a young software developer and currently working on Java most of the time. I enjoy writing about what I have learned during my work, partly because I’m afraid that someday I will forget all about what I have read :).</p>
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="reflection">Reflection</h1>
+<ul>
+  <li>Pros:
+    <ul>
+      <li>Provides a programmatic way to introspect a class</li>
+      <li>Provides an “abnormal” and unique way to
+        <ul>
+          <li>Invoke class methods and constructors</li>
+          <li>Access and modify class fields</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Cons:
+    <ul>
+      <li>Performance overhead over non-reflective counterparts</li>
+      <li>Loss of compile-time type checking</li>
+      <li>Exposure of internals, e.g., <code class="highlighter-rouge">private</code> fields or methods can be accessed and modified</li>
+    </ul>
+  </li>
+  <li>General rule
+    <ul>
+      <li>Should always try to avoid using reflection in normal applications</li>
+      <li>If it is unavoidable, reflection should be used very cautiously. One acceptable way of using reflection is to create an instance, but after that normal invocation should be used on the created instance.</li>
+    </ul>
+  </li>
+  <li>References
+    <ul>
+      <li>[1] Item 53, Effective Java 2nd, Joshua Bloch</li>
+      <li>[2] https://docs.oracle.com/javase/tutorial/reflect/</li>
+      <li>[3] http://www.javaworld.com/article/2077015/java-se/take-an-in-depth-look-at-the-java-reflection-api.html</li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 
