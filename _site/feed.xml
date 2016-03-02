@@ -5,9 +5,205 @@
     <description>Notes on my daily work as a software developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 Mar 2016 23:43:55 +0700</pubDate>
-    <lastBuildDate>Wed, 02 Mar 2016 23:43:55 +0700</lastBuildDate>
+    <pubDate>Thu, 03 Mar 2016 00:40:36 +0700</pubDate>
+    <lastBuildDate>Thu, 03 Mar 2016 00:40:36 +0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Visitor pattern</title>
+        <description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Defines new operations for a class hierarchy &lt;em&gt;without&lt;/em&gt; modifying the hierarchy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;structure&quot;&gt;Structure&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/patterns/design-patterns/visitor/structure.png&quot; alt=&quot;visitor-pattern-structure&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In the diagram, the accept(Visitor v) method just simply calls v.visit(this), which will implement the necessary operation on the given Component. This is the /double dispatch/ technique, in which the result of the call depends on the request and the types of /two/ receivers.&lt;/li&gt;
+  &lt;li&gt;New operations for the Component class hierarchy can be created by adding new Visitors, which means that we don’t need to modify the Component class hierarchy to define its new operations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;applicability&quot;&gt;Applicability&lt;/h1&gt;
+
+&lt;p&gt;This pattern should be used when:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The class hierarchy rarely changes, while its operations usually does. This is because adding new operations is quite simple as we only need to add new visitors. On the other hand, adding new class into the hierarchy will make us to add new visit() method to the Visitor interface, which means we have to change all the exisiting visitors.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;risk&quot;&gt;Risk&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The pattern is quite complicated to understand, which means that applying this pattern might make other team members find it hard to understand the code, especially when they see the code for the first time.&lt;/li&gt;
+  &lt;li&gt;If this pattern is used with the Composite pattern and the Composite contains a cycle in it, then the accept-visit loop might be repeated forever.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Visitor, GOF book&lt;/li&gt;
+  &lt;li&gt;Visitor, Chapter 29, Design Patterns In Java&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
+        <link>/visitor/</link>
+        <guid isPermaLink="true">/visitor/</guid>
+        
+        <category>visitor</category>
+        
+        
+        <category>patterns</category>
+        
+      </item>
+    
+      <item>
+        <title>Strategy pattern</title>
+        <description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Defines a family of algorithms (or strategies) /and/ encapsulates them from the clients.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;structure&quot;&gt;Structure&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/patterns/design-patterns/strategy/structure.png&quot; alt=&quot;strategy-pattern-structure&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Each strategy is encapsulated in each own class.&lt;/li&gt;
+  &lt;li&gt;The clients are insulated from the strategy details, and only need to know which strategy it should use.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;applicability&quot;&gt;Applicability&lt;/h1&gt;
+
+&lt;p&gt;Use this pattern when:
+- There are multiple variants of an algorithm and you want to decouple the client from the algorithm details. The reasons for decoupling might be that you don’t want to complicate the client, or the algorithm needs some data that the client cannot reach, or it’s more likely that the algorithm details will change and you don’t want the change to affect the client.
+- A conditional statement appears /multiple/ times, and you want to replace them by using polymorphism with the strategy hierarchy.&lt;/p&gt;
+
+&lt;h1 id=&quot;risk&quot;&gt;Risk&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Might complicate the code base, as this pattern needs a new class hierarchy.&lt;/li&gt;
+  &lt;li&gt;Increased number of objects.&lt;/li&gt;
+  &lt;li&gt;It’s not gonna be easy to design the strategy interface in case the algorithm variants needs different kinds of input. For example, when adding a new strategy to an existing strategy hierarchy and that new one needs more data than the existing ones, then either we have to change the whole strategy interface or we have to introduce the new data to the strategy request (if it’s an DTO).&lt;/li&gt;
+  &lt;li&gt;There might be communication overhead for certain algorithms which do not make use of all the input data, which is defined to satisfy /all/ the algorithms.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Strategy, GOF book&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
+        <link>/strategy/</link>
+        <guid isPermaLink="true">/strategy/</guid>
+        
+        <category>strategy</category>
+        
+        
+        <category>patterns</category>
+        
+      </item>
+    
+      <item>
+        <title>Decorator pattern</title>
+        <description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Attach&lt;/em&gt; additional responsibilities to an object dynamically and transparently.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;structure&quot;&gt;Structure&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/patterns/design-patterns/decorator/structure.png&quot; alt=&quot;decorator-pattern-structure&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Decorator can also be an interface or abstract class.&lt;/li&gt;
+  &lt;li&gt;The Decorator conforms to the interface of its decorated Component to make it transparent to the clients of the Component.&lt;/li&gt;
+  &lt;li&gt;The Decorator keeps a reference to its decorated Component, so that it can attach additional responsibilities to the object at run-time.&lt;/li&gt;
+  &lt;li&gt;The Decorator does not alter the behaviors of its decorated object, but instead it attaches other behaviors to the object. In other words, the Decorator changes the /skin/ of an object, not its /guts/.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;applicability&quot;&gt;Applicability&lt;/h1&gt;
+
+&lt;p&gt;This pattern can be used when:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You want to add new behaviors to before or after performing an operation of the decorated object.&lt;/li&gt;
+  &lt;li&gt;You want to introduce new behaviors but for some reasons you don’t want to do that with inheritance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;risk&quot;&gt;Risk&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Because the decorator extends its decorated type, it might be expensive to introduce new decorators if the decorated type is heavy-weight.&lt;/li&gt;
+  &lt;li&gt;Even thought the decorator extends its decorated type, the developers must be aware that the decorator does /not/ actually belong to the type hierarchy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Decorator, GOF book&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
+        <link>/decorator/</link>
+        <guid isPermaLink="true">/decorator/</guid>
+        
+        <category>decorator</category>
+        
+        
+        <category>patterns</category>
+        
+      </item>
+    
+      <item>
+        <title>Command pattern</title>
+        <description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Encapsulates a request &lt;em&gt;as&lt;/em&gt; an object.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;structure&quot;&gt;Structure&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/patterns/design-patterns/command/structure.png&quot; alt=&quot;command-pattern-structure&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All information needed to carry out the request is encapsulated in the Command object. In other words, the Command objects contain the input data for the request and know how to handle the request.&lt;/p&gt;
+
+&lt;p&gt;The Command objects might handle the requests themselves or delegate the tasks to appropriate Receivers.&lt;/p&gt;
+
+&lt;h1 id=&quot;applicability&quot;&gt;Applicability&lt;/h1&gt;
+
+&lt;p&gt;This pattern can be used when:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You want to parameterize the request handling, because you can get different handlings by using different Command objects.&lt;/li&gt;
+  &lt;li&gt;You want to decouple the request invoker and the request handler. They are decoupled because they don’t know about each other but only about the Command objects which act as intermediate objects between them.&lt;/li&gt;
+  &lt;li&gt;The time when the request is created and when it is handled is independent. For example, the time when a request is handled is determined by a queue manager, but the time when it is created is by a client. In this case, you should let the client create a Command object and pass it to the queue manager. Then, when the time comes, the queue manager will simply invoke the Command object to carry out the request.&lt;/li&gt;
+  &lt;li&gt;You want to support a set of related operations and you don’t want to scatter them in different places. The most common case is to support both do() and undo() operations in a Command object.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Command, GOF book&lt;/li&gt;
+  &lt;li&gt;Command, Chaper 24, Design Patterns In Java&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
+        <link>/command/</link>
+        <guid isPermaLink="true">/command/</guid>
+        
+        <category>command</category>
+        
+        
+        <category>patterns</category>
+        
+      </item>
     
       <item>
         <title>Java puzzlers</title>
@@ -352,59 +548,6 @@
         
         
         <category>patterns</category>
-        
-      </item>
-    
-      <item>
-        <title>Java Interview</title>
-        <description>
-</description>
-        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/java-interview/</link>
-        <guid isPermaLink="true">/java-interview/</guid>
-        
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>JAX-WS in practice</title>
-        <description>
-</description>
-        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/jax-ws-in-practice/</link>
-        <guid isPermaLink="true">/jax-ws-in-practice/</guid>
-        
-        
-        <category>java-ee</category>
-        
-      </item>
-    
-      <item>
-        <title>JAX-RS in practice</title>
-        <description>&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
-&lt;p&gt;[1] RESTful Java with JAX-RS 2.0, Bill Burke&lt;/p&gt;
-</description>
-        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/jax-rs-in-practice/</link>
-        <guid isPermaLink="true">/jax-rs-in-practice/</guid>
-        
-        
-        <category>java-ee</category>
-        
-      </item>
-    
-      <item>
-        <title>Java EE patterns</title>
-        <description>
-</description>
-        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/java-ee-patterns/</link>
-        <guid isPermaLink="true">/java-ee-patterns/</guid>
-        
-        
-        <category>java-ee</category>
         
       </item>
     
