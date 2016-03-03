@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Decorator pattern</title>
+  <title>Visitor pattern</title>
   <meta name="description" content="Intent">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/decorator-pattern/">
+  <link rel="canonical" href="/visitor-pattern/">
   <link rel="alternate" type="application/rss+xml" title="Software development notes" href="/feed.xml">
 </head>
 
@@ -57,7 +57,7 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Decorator pattern</h1>
+    <h1 class="post-title" itemprop="name headline">Visitor pattern</h1>
     <p class="post-meta"><time datetime="2016-03-03T00:00:00+07:00" itemprop="datePublished">Mar 3, 2016</time></p>
   </header>
 
@@ -65,40 +65,44 @@
     <h1 id="intent">Intent</h1>
 
 <ul>
-  <li><em>Attaches</em> additional responsibilities to an object dynamically and transparently.</li>
+  <li>Defines new operations for a class hierarchy <em>without</em> modifying the hierarchy.</li>
 </ul>
 
 <h1 id="structure">Structure</h1>
 
-<p><img src="/assets/imgs/patterns/design-patterns/decorator/structure.png" alt="decorator-pattern-structure" /></p>
+<p><img src="/assets/imgs/patterns/design-patterns/visitor/structure.png" alt="visitor-pattern-structure" /></p>
 
 <ul>
-  <li>The Decorator can also be an interface or abstract class.</li>
-  <li>The Decorator conforms to the interface of its decorated Component to make it transparent to the clients of the Component.</li>
-  <li>The Decorator keeps a reference to its decorated Component, so that it can attach additional responsibilities to the object at run-time.</li>
-  <li>The Decorator does not alter the behaviors of its decorated object, but instead it attaches other behaviors to the object. In other words, the Decorator changes the /skin/ of an object, not its /guts/.</li>
+  <li>In the diagram, the <code class="highlighter-rouge">accept(Visitor v)</code> method just simply calls <code class="highlighter-rouge">v.visit(this)</code>, which implements the necessary operation on the given <code class="highlighter-rouge">Component</code>. This is the <em>double dispatch</em> technique, where the result of the call depends on the request and the types of <em>two</em> receivers.</li>
+  <li>New operations for the <code class="highlighter-rouge">Component</code> class hierarchy can be created by adding new <code class="highlighter-rouge">Visitor</code>. Thus, it’s not necessary to modify the <code class="highlighter-rouge">Component</code> class hierarchy to define its new operations.</li>
 </ul>
 
 <h1 id="applicability">Applicability</h1>
 
-<p>This pattern can be used when:</p>
+<p>This pattern should be used when:</p>
 
 <ul>
-  <li>You want to add new behaviors to before or after performing an operation of the decorated object.</li>
-  <li>You want to introduce new behaviors but for some reasons you don’t want to do that with inheritance.</li>
+  <li>The class hierarchy rarely changes, while its operations usually does. This is because adding new operations can be simply done by adding new visitors. On the other hand, adding new classes into the hierarchy leads to adding new <code class="highlighter-rouge">visit()</code> method to the <code class="highlighter-rouge">Visitor</code> interface, which leads to modifying <em>all</em> the existing visitors.</li>
 </ul>
 
 <h1 id="risk">Risk</h1>
 
 <ul>
-  <li>Because the decorator extends its decorated type, it might be expensive to introduce new decorators if the decorated type is heavy-weight.</li>
-  <li>Even thought the decorator extends its decorated type, the developers must be aware that the decorator does /not/ actually belong to the type hierarchy.</li>
+  <li>The pattern is quite complicated to understand. Using this pattern might make it hard for other team members to get familiar with the code.</li>
+  <li>If this pattern is used with the Composite pattern and the Composite contains a cycle in it, the accept-visit loop might be repeated forever.</li>
+</ul>
+
+<h1 id="code-example">Code example</h1>
+
+<ul>
+  <li>See <a href="https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/visitor">github/Visitor</a>.</li>
 </ul>
 
 <h1 id="reference">Reference</h1>
 
 <ul>
-  <li>Decorator, GOF book</li>
+  <li>Visitor, GOF book</li>
+  <li>Visitor, Chapter 29, Design Patterns In Java</li>
 </ul>
 
   </div>

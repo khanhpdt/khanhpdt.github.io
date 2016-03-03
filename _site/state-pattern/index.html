@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Decorator pattern</title>
+  <title>State pattern</title>
   <meta name="description" content="Intent">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/decorator-pattern/">
+  <link rel="canonical" href="/state-pattern/">
   <link rel="alternate" type="application/rss+xml" title="Software development notes" href="/feed.xml">
 </head>
 
@@ -57,26 +57,24 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Decorator pattern</h1>
+    <h1 class="post-title" itemprop="name headline">State pattern</h1>
     <p class="post-meta"><time datetime="2016-03-03T00:00:00+07:00" itemprop="datePublished">Mar 3, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
     <h1 id="intent">Intent</h1>
 
-<ul>
-  <li><em>Attaches</em> additional responsibilities to an object dynamically and transparently.</li>
-</ul>
+<p>Allows an object to adjust its behavior based on its state.</p>
 
 <h1 id="structure">Structure</h1>
 
-<p><img src="/assets/imgs/patterns/design-patterns/decorator/structure.png" alt="decorator-pattern-structure" /></p>
+<p><img src="/assets/imgs/patterns/design-patterns/state/structure.png" alt="state-pattern-structure" /></p>
 
 <ul>
-  <li>The Decorator can also be an interface or abstract class.</li>
-  <li>The Decorator conforms to the interface of its decorated Component to make it transparent to the clients of the Component.</li>
-  <li>The Decorator keeps a reference to its decorated Component, so that it can attach additional responsibilities to the object at run-time.</li>
-  <li>The Decorator does not alter the behaviors of its decorated object, but instead it attaches other behaviors to the object. In other words, the Decorator changes the /skin/ of an object, not its /guts/.</li>
+  <li>The client is decoupled from the object states. It does not know about the states as well as the associations between the states and the object behaviors.</li>
+  <li>The behaviors are now handled by the corresponding state objects.</li>
+  <li>The state transition method can be centralized in the <code class="highlighter-rouge">Object</code> or distributed over the concrete states.</li>
+  <li>The <code class="highlighter-rouge">Object</code> can also pass itself as an argument to the operations of the state objects. This helps the state objects to access the information in the <code class="highlighter-rouge">Object</code>.</li>
 </ul>
 
 <h1 id="applicability">Applicability</h1>
@@ -84,21 +82,31 @@
 <p>This pattern can be used when:</p>
 
 <ul>
-  <li>You want to add new behaviors to before or after performing an operation of the decorated object.</li>
-  <li>You want to introduce new behaviors but for some reasons you don’t want to do that with inheritance.</li>
+  <li>You want to modify the object’s behavior at run-time depending on its state.</li>
+  <li>You want to eliminate the duplications of the conditional clause on the object’s states which scatter over different places.</li>
+  <li>You want to emphasize the transitions between states.</li>
+  <li>You want to emphasize the associations between states and behaviors.</li>
+  <li>There appear to have a lot of logics around the object states, and the states can themselves transform to different states. In these cases, it’ll be more convenient to make the states objects and move the logics inside the states.</li>
 </ul>
 
 <h1 id="risk">Risk</h1>
 
 <ul>
-  <li>Because the decorator extends its decorated type, it might be expensive to introduce new decorators if the decorated type is heavy-weight.</li>
-  <li>Even thought the decorator extends its decorated type, the developers must be aware that the decorator does /not/ actually belong to the type hierarchy.</li>
+  <li>Increasing number of classes, as each state is now a class itself.</li>
+  <li>Increasing number of objects. But this risk can be reduced by reusing the same instance of the state (if possible).</li>
+  <li>Complicates the code.</li>
+</ul>
+
+<h1 id="code-example">Code example</h1>
+
+<ul>
+  <li>See <a href="https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/state">github/State</a>.</li>
 </ul>
 
 <h1 id="reference">Reference</h1>
 
 <ul>
-  <li>Decorator, GOF book</li>
+  <li>State, GOF book</li>
 </ul>
 
   </div>

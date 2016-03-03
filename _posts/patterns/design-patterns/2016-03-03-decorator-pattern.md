@@ -7,7 +7,7 @@ tags: decorator
 
 # Intent
 
-- _Attach_ additional responsibilities to an object dynamically and transparently.
+- _Attaches_ additional responsibilities to an object dynamically and transparently.
 
 # Structure
 

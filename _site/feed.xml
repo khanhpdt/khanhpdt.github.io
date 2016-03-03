@@ -5,8 +5,8 @@
     <description>Notes on my daily work as a software developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Mar 2016 00:40:36 +0700</pubDate>
-    <lastBuildDate>Thu, 03 Mar 2016 00:40:36 +0700</lastBuildDate>
+    <pubDate>Fri, 04 Mar 2016 01:29:30 +0700</pubDate>
+    <lastBuildDate>Fri, 04 Mar 2016 01:29:30 +0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -22,8 +22,8 @@
 &lt;p&gt;&lt;img src=&quot;/assets/imgs/patterns/design-patterns/visitor/structure.png&quot; alt=&quot;visitor-pattern-structure&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;In the diagram, the accept(Visitor v) method just simply calls v.visit(this), which will implement the necessary operation on the given Component. This is the /double dispatch/ technique, in which the result of the call depends on the request and the types of /two/ receivers.&lt;/li&gt;
-  &lt;li&gt;New operations for the Component class hierarchy can be created by adding new Visitors, which means that we don’t need to modify the Component class hierarchy to define its new operations.&lt;/li&gt;
+  &lt;li&gt;In the diagram, the &lt;code class=&quot;highlighter-rouge&quot;&gt;accept(Visitor v)&lt;/code&gt; method just simply calls &lt;code class=&quot;highlighter-rouge&quot;&gt;v.visit(this)&lt;/code&gt;, which implements the necessary operation on the given &lt;code class=&quot;highlighter-rouge&quot;&gt;Component&lt;/code&gt;. This is the &lt;em&gt;double dispatch&lt;/em&gt; technique, where the result of the call depends on the request and the types of &lt;em&gt;two&lt;/em&gt; receivers.&lt;/li&gt;
+  &lt;li&gt;New operations for the &lt;code class=&quot;highlighter-rouge&quot;&gt;Component&lt;/code&gt; class hierarchy can be created by adding new &lt;code class=&quot;highlighter-rouge&quot;&gt;Visitor&lt;/code&gt;. Thus, it’s not necessary to modify the &lt;code class=&quot;highlighter-rouge&quot;&gt;Component&lt;/code&gt; class hierarchy to define its new operations.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;applicability&quot;&gt;Applicability&lt;/h1&gt;
@@ -31,14 +31,20 @@
 &lt;p&gt;This pattern should be used when:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;The class hierarchy rarely changes, while its operations usually does. This is because adding new operations is quite simple as we only need to add new visitors. On the other hand, adding new class into the hierarchy will make us to add new visit() method to the Visitor interface, which means we have to change all the exisiting visitors.&lt;/li&gt;
+  &lt;li&gt;The class hierarchy rarely changes, while its operations usually does. This is because adding new operations can be simply done by adding new visitors. On the other hand, adding new classes into the hierarchy leads to adding new &lt;code class=&quot;highlighter-rouge&quot;&gt;visit()&lt;/code&gt; method to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Visitor&lt;/code&gt; interface, which leads to modifying &lt;em&gt;all&lt;/em&gt; the existing visitors.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;risk&quot;&gt;Risk&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;The pattern is quite complicated to understand, which means that applying this pattern might make other team members find it hard to understand the code, especially when they see the code for the first time.&lt;/li&gt;
-  &lt;li&gt;If this pattern is used with the Composite pattern and the Composite contains a cycle in it, then the accept-visit loop might be repeated forever.&lt;/li&gt;
+  &lt;li&gt;The pattern is quite complicated to understand. Using this pattern might make it hard for other team members to get familiar with the code.&lt;/li&gt;
+  &lt;li&gt;If this pattern is used with the Composite pattern and the Composite contains a cycle in it, the accept-visit loop might be repeated forever.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;code-example&quot;&gt;Code example&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;See &lt;a href=&quot;https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/visitor&quot;&gt;github/Visitor&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
@@ -49,8 +55,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
-        <link>/visitor/</link>
-        <guid isPermaLink="true">/visitor/</guid>
+        <link>/visitor-pattern/</link>
+        <guid isPermaLink="true">/visitor-pattern/</guid>
         
         <category>visitor</category>
         
@@ -98,10 +104,70 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
-        <link>/strategy/</link>
-        <guid isPermaLink="true">/strategy/</guid>
+        <link>/strategy-pattern/</link>
+        <guid isPermaLink="true">/strategy-pattern/</guid>
         
         <category>strategy</category>
+        
+        
+        <category>patterns</category>
+        
+      </item>
+    
+      <item>
+        <title>State pattern</title>
+        <description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
+
+&lt;p&gt;Allows an object to adjust its behavior based on its state.&lt;/p&gt;
+
+&lt;h1 id=&quot;structure&quot;&gt;Structure&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/patterns/design-patterns/state/structure.png&quot; alt=&quot;state-pattern-structure&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The client is decoupled from the object states. It does not know about the states as well as the associations between the states and the object behaviors.&lt;/li&gt;
+  &lt;li&gt;The behaviors are now handled by the corresponding state objects.&lt;/li&gt;
+  &lt;li&gt;The state transition method can be centralized in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Object&lt;/code&gt; or distributed over the concrete states.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Object&lt;/code&gt; can also pass itself as an argument to the operations of the state objects. This helps the state objects to access the information in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Object&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;applicability&quot;&gt;Applicability&lt;/h1&gt;
+
+&lt;p&gt;This pattern can be used when:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You want to modify the object’s behavior at run-time depending on its state.&lt;/li&gt;
+  &lt;li&gt;You want to eliminate the duplications of the conditional clause on the object’s states which scatter over different places.&lt;/li&gt;
+  &lt;li&gt;You want to emphasize the transitions between states.&lt;/li&gt;
+  &lt;li&gt;You want to emphasize the associations between states and behaviors.&lt;/li&gt;
+  &lt;li&gt;There appear to have a lot of logics around the object states, and the states can themselves transform to different states. In these cases, it’ll be more convenient to make the states objects and move the logics inside the states.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;risk&quot;&gt;Risk&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Increasing number of classes, as each state is now a class itself.&lt;/li&gt;
+  &lt;li&gt;Increasing number of objects. But this risk can be reduced by reusing the same instance of the state (if possible).&lt;/li&gt;
+  &lt;li&gt;Complicates the code.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;code-example&quot;&gt;Code example&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;See &lt;a href=&quot;https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/state&quot;&gt;github/State&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;State, GOF book&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
+        <link>/state-pattern/</link>
+        <guid isPermaLink="true">/state-pattern/</guid>
+        
+        <category>state</category>
         
         
         <category>patterns</category>
@@ -113,7 +179,7 @@
         <description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Attach&lt;/em&gt; additional responsibilities to an object dynamically and transparently.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Attaches&lt;/em&gt; additional responsibilities to an object dynamically and transparently.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;structure&quot;&gt;Structure&lt;/h1&gt;
@@ -150,8 +216,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
-        <link>/decorator/</link>
-        <guid isPermaLink="true">/decorator/</guid>
+        <link>/decorator-pattern/</link>
+        <guid isPermaLink="true">/decorator-pattern/</guid>
         
         <category>decorator</category>
         
@@ -195,8 +261,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
-        <link>/command/</link>
-        <guid isPermaLink="true">/command/</guid>
+        <link>/command-pattern/</link>
+        <guid isPermaLink="true">/command-pattern/</guid>
         
         <category>command</category>
         
@@ -535,19 +601,6 @@
         
         
         <category>algorithms</category>
-        
-      </item>
-    
-      <item>
-        <title>Patterns of Enterprise Application Architecture</title>
-        <description>
-</description>
-        <pubDate>Tue, 23 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/patterns-of-enterprise-application-architecture/</link>
-        <guid isPermaLink="true">/patterns-of-enterprise-application-architecture/</guid>
-        
-        
-        <category>patterns</category>
         
       </item>
     

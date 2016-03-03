@@ -73,8 +73,8 @@
 <p><img src="/assets/imgs/patterns/design-patterns/visitor/structure.png" alt="visitor-pattern-structure" /></p>
 
 <ul>
-  <li>In the diagram, the accept(Visitor v) method just simply calls v.visit(this), which will implement the necessary operation on the given Component. This is the /double dispatch/ technique, in which the result of the call depends on the request and the types of /two/ receivers.</li>
-  <li>New operations for the Component class hierarchy can be created by adding new Visitors, which means that we don’t need to modify the Component class hierarchy to define its new operations.</li>
+  <li>In the diagram, the <code class="highlighter-rouge">accept(Visitor v)</code> method just simply calls <code class="highlighter-rouge">v.visit(this)</code>, which implements the necessary operation on the given <code class="highlighter-rouge">Component</code>. This is the <em>double dispatch</em> technique, where the result of the call depends on the request and the types of <em>two</em> receivers.</li>
+  <li>New operations for the <code class="highlighter-rouge">Component</code> class hierarchy can be created by adding new <code class="highlighter-rouge">Visitor</code>. Thus, it’s not necessary to modify the <code class="highlighter-rouge">Component</code> class hierarchy to define its new operations.</li>
 </ul>
 
 <h1 id="applicability">Applicability</h1>
@@ -82,14 +82,20 @@
 <p>This pattern should be used when:</p>
 
 <ul>
-  <li>The class hierarchy rarely changes, while its operations usually does. This is because adding new operations is quite simple as we only need to add new visitors. On the other hand, adding new class into the hierarchy will make us to add new visit() method to the Visitor interface, which means we have to change all the exisiting visitors.</li>
+  <li>The class hierarchy rarely changes, while its operations usually does. This is because adding new operations can be simply done by adding new visitors. On the other hand, adding new classes into the hierarchy leads to adding new <code class="highlighter-rouge">visit()</code> method to the <code class="highlighter-rouge">Visitor</code> interface, which leads to modifying <em>all</em> the existing visitors.</li>
 </ul>
 
 <h1 id="risk">Risk</h1>
 
 <ul>
-  <li>The pattern is quite complicated to understand, which means that applying this pattern might make other team members find it hard to understand the code, especially when they see the code for the first time.</li>
-  <li>If this pattern is used with the Composite pattern and the Composite contains a cycle in it, then the accept-visit loop might be repeated forever.</li>
+  <li>The pattern is quite complicated to understand. Using this pattern might make it hard for other team members to get familiar with the code.</li>
+  <li>If this pattern is used with the Composite pattern and the Composite contains a cycle in it, the accept-visit loop might be repeated forever.</li>
+</ul>
+
+<h1 id="code-example">Code example</h1>
+
+<ul>
+  <li>See <a href="https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/visitor">github/Visitor</a>.</li>
 </ul>
 
 <h1 id="reference">Reference</h1>
