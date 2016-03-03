@@ -19,8 +19,9 @@ tags: strategy
 # Applicability
 
 Use this pattern when:
+
 - There are multiple variants of an algorithm and you want to decouple the client from the algorithm details. The reasons for decoupling might be that you don't want to complicate the client, or the algorithm needs some data that the client cannot reach, or it's more likely that the algorithm details will change and you don't want the change to affect the client.
-- A conditional statement appears /multiple/ times, and you want to replace them by using polymorphism with the strategy hierarchy.
+- A conditional statement appears _multiple_ times, and you want to replace them by using polymorphism with the strategy hierarchy.
 
 # Risk
 
