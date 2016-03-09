@@ -1,17 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Software development notes</title>
-    <description>Notes on my daily work as a software developer.</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 07 Mar 2016 22:44:15 +0700</pubDate>
-    <lastBuildDate>Mon, 07 Mar 2016 22:44:15 +0700</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
-    
-      <item>
-        <title>Visitor pattern</title>
-        <description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
+	<channel>
+		<title>Software Dev Notes</title>
+		<description>Notes on my daily work.</description>
+		<link></link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Arrays</title>
+				<description>&lt;h1 id=&quot;arrays-in-general&quot;&gt;Arrays in general&lt;/h1&gt;
+
+&lt;p&gt;An array is a fixed-size data structure used to store a collection of elements which are accessed by their indexes in the array.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pros
+    &lt;ul&gt;
+      &lt;li&gt;Fast random access, because the memory is allocated for an array such that the addresses of its elements can be quickly computed [4].&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Cons
+    &lt;ul&gt;
+      &lt;li&gt;Fixed size.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;arrays-in-java&quot;&gt;Arrays in Java&lt;/h1&gt;
+
+&lt;p&gt;Arrays are first-class objects.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// a variable is created, but the array is not yet created
+int[] a;
+
+// An array object is actually created in the heap. The array variable points to
+// that object, which holds references to the array elements.
+a = new int[] {1, 2, 3, 4};
+
+// shortcut to initialize arrays
+int[b] = {1, 2, 3, 4};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;comparison-with-other-containers&quot;&gt;Comparison with other containers&lt;/h2&gt;
+
+&lt;p&gt;The differences between arrays and other containers are [5]:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Arrays offer a faster random access (as it is well-known for)&lt;/li&gt;
+  &lt;li&gt;But array size is fixed&lt;/li&gt;
+  &lt;li&gt;Arrays can contain either object references or primitive values, while containers can only hold object references.&lt;/li&gt;
+  &lt;li&gt;Containers offer much more utilities to work on them.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+
+&lt;p&gt;[1] https://en.wikipedia.org/wiki/Array_data_structure&lt;/p&gt;
+
+&lt;p&gt;[2] http://www.algolist.net/Data_structures/Array&lt;/p&gt;
+
+&lt;p&gt;[3] https://en.wikiversity.org/wiki/Data_Structures_and_Algorithms/Arrays,_Lists_and_Vectors&lt;/p&gt;
+
+&lt;p&gt;[4] http://cslibrary.stanford.edu/103/LinkedListBasics.pdf&lt;/p&gt;
+
+&lt;p&gt;[5] Thinking in Java, 4th&lt;/p&gt;
+
+&lt;p&gt;[6] https://docs.oracle.com/javase/specs/jls/se8/html/jls-10.html&lt;/p&gt;
+</description>
+				<pubDate>Tue, 08 Mar 2016 00:00:00 +0700</pubDate>
+				<link>/2016/03/arrays</link>
+				<guid isPermaLink="true">/2016/03/arrays</guid>
+			</item>
+		
+			<item>
+				<title>Algorithms</title>
+				<description>&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+&lt;p&gt;Algorithms 4th, Robert Sedgewick and Keven Wayne&lt;/p&gt;
+
+&lt;h1 id=&quot;chapter-11-basic-programming-model&quot;&gt;Chapter 1.1: Basic programming model&lt;/h1&gt;
+</description>
+				<pubDate>Mon, 07 Mar 2016 00:00:00 +0700</pubDate>
+				<link>/2016/03/algorithms</link>
+				<guid isPermaLink="true">/2016/03/algorithms</guid>
+			</item>
+		
+			<item>
+				<title>Visitor pattern</title>
+				<description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Defines new operations for a class hierarchy &lt;em&gt;without&lt;/em&gt; modifying the hierarchy.&lt;/li&gt;
@@ -54,20 +128,14 @@
   &lt;li&gt;Visitor, Chapter 29, Design Patterns In Java&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
-        <link>/visitor-pattern/</link>
-        <guid isPermaLink="true">/visitor-pattern/</guid>
-        
-        <category>visitor</category>
-        
-        
-        <category>patterns</category>
-        
-      </item>
-    
-      <item>
-        <title>Strategy pattern</title>
-        <description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
+				<pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
+				<link>/2016/03/visitor-pattern</link>
+				<guid isPermaLink="true">/2016/03/visitor-pattern</guid>
+			</item>
+		
+			<item>
+				<title>Strategy pattern</title>
+				<description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Defines a family of algorithms (or strategies) /and/ encapsulates them from the clients.&lt;/li&gt;
@@ -106,20 +174,14 @@
   &lt;li&gt;Strategy, GOF book&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
-        <link>/strategy-pattern/</link>
-        <guid isPermaLink="true">/strategy-pattern/</guid>
-        
-        <category>strategy</category>
-        
-        
-        <category>patterns</category>
-        
-      </item>
-    
-      <item>
-        <title>State pattern</title>
-        <description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
+				<pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
+				<link>/2016/03/strategy-pattern</link>
+				<guid isPermaLink="true">/2016/03/strategy-pattern</guid>
+			</item>
+		
+			<item>
+				<title>State pattern</title>
+				<description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
 
 &lt;p&gt;Allows an object to adjust its behavior based on its state.&lt;/p&gt;
 
@@ -166,20 +228,14 @@
   &lt;li&gt;State, GOF book&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
-        <link>/state-pattern/</link>
-        <guid isPermaLink="true">/state-pattern/</guid>
-        
-        <category>state</category>
-        
-        
-        <category>patterns</category>
-        
-      </item>
-    
-      <item>
-        <title>Decorator pattern</title>
-        <description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
+				<pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
+				<link>/2016/03/state-pattern</link>
+				<guid isPermaLink="true">/2016/03/state-pattern</guid>
+			</item>
+		
+			<item>
+				<title>Decorator pattern</title>
+				<description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;em&gt;Attaches&lt;/em&gt; additional responsibilities to an object dynamically and transparently.&lt;/li&gt;
@@ -218,20 +274,14 @@
   &lt;li&gt;Decorator, GOF book&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
-        <link>/decorator-pattern/</link>
-        <guid isPermaLink="true">/decorator-pattern/</guid>
-        
-        <category>decorator</category>
-        
-        
-        <category>patterns</category>
-        
-      </item>
-    
-      <item>
-        <title>Command pattern</title>
-        <description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
+				<pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
+				<link>/2016/03/decorator-pattern</link>
+				<guid isPermaLink="true">/2016/03/decorator-pattern</guid>
+			</item>
+		
+			<item>
+				<title>Command pattern</title>
+				<description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Encapsulates a request &lt;em&gt;as&lt;/em&gt; an object.&lt;/li&gt;
@@ -263,20 +313,14 @@
   &lt;li&gt;Command, Chaper 24, Design Patterns In Java&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
-        <link>/command-pattern/</link>
-        <guid isPermaLink="true">/command-pattern/</guid>
-        
-        <category>command</category>
-        
-        
-        <category>patterns</category>
-        
-      </item>
-    
-      <item>
-        <title>Java puzzlers</title>
-        <description>&lt;h1 id=&quot;expressive-puzzlers&quot;&gt;Expressive Puzzlers&lt;/h1&gt;
+				<pubDate>Thu, 03 Mar 2016 00:00:00 +0700</pubDate>
+				<link>/2016/03/command-pattern</link>
+				<guid isPermaLink="true">/2016/03/command-pattern</guid>
+			</item>
+		
+			<item>
+				<title>Java puzzlers</title>
+				<description>&lt;h1 id=&quot;expressive-puzzlers&quot;&gt;Expressive Puzzlers&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Puzzle 2
@@ -464,18 +508,14 @@
   &lt;li&gt;Puzzle 54&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Wed, 02 Mar 2016 00:00:00 +0700</pubDate>
-        <link>/java-puzzlers/</link>
-        <guid isPermaLink="true">/java-puzzlers/</guid>
-        
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>Public Key Infrastructure (PKI)</title>
-        <description>&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+				<pubDate>Wed, 02 Mar 2016 00:00:00 +0700</pubDate>
+				<link>/2016/03/java-puzzlers</link>
+				<guid isPermaLink="true">/2016/03/java-puzzlers</guid>
+			</item>
+		
+			<item>
+				<title>Public Key Infrastructure (PKI)</title>
+				<description>&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
 &lt;p&gt;PKI is the security infrastructure which provides all necessary services to implement public-key cryptography on open networks and thus enables secure communication using public-key cryptography on those networks.&lt;/p&gt;
 
@@ -571,51 +611,19 @@
 
 &lt;p&gt;[3] &lt;a href=&quot;http://www.amazon.com/Understanding-PKI-Standards-Deployment-Considerations/dp/0321743091/ref=sr_1_1?ie=UTF8&amp;amp;qid=1456768907&amp;amp;sr=8-1&amp;amp;keywords=understanding+pki&quot;&gt;Understanding PKI: Concepts, Standards, and Deployment Considerations&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Thu, 25 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/public-key-infrastructure/</link>
-        <guid isPermaLink="true">/public-key-infrastructure/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Enterprise Integration Patterns</title>
-        <description>
+				<pubDate>Thu, 25 Feb 2016 00:00:00 +0700</pubDate>
+				<link>/2016/02/public-key-infrastructure</link>
+				<guid isPermaLink="true">/2016/02/public-key-infrastructure</guid>
+			</item>
+		
+			<item>
+				<title>Enterprise Integration Patterns</title>
+				<description>
 </description>
-        <pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/enterprise-integration-patterns/</link>
-        <guid isPermaLink="true">/enterprise-integration-patterns/</guid>
-        
-        
-        <category>patterns</category>
-        
-      </item>
-    
-      <item>
-        <title>EJB</title>
-        <description>
-</description>
-        <pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/ejb/</link>
-        <guid isPermaLink="true">/ejb/</guid>
-        
-        
-        <category>java-ee</category>
-        
-      </item>
-    
-      <item>
-        <title>Programming Pearls</title>
-        <description>
-</description>
-        <pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
-        <link>/programming-pearls/</link>
-        <guid isPermaLink="true">/programming-pearls/</guid>
-        
-        
-        <category>algorithms</category>
-        
-      </item>
-    
-  </channel>
+				<pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
+				<link>/2016/02/enterprise-integration-patterns</link>
+				<guid isPermaLink="true">/2016/02/enterprise-integration-patterns</guid>
+			</item>
+		
+	</channel>
 </rss>

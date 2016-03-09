@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Implementation Patterns
-category: patterns
+tags: [software-engineering, clean-code]
 ---
 
 - Encapsulated collection (http://martinfowler.com/bliki/EncapsulatedCollection.html)

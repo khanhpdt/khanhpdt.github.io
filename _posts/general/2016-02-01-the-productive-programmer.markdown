@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The productive programmer
-category: general
+tags: [software-engineering]
 ---
 # Reference
 The productive programmer, Neal Ford

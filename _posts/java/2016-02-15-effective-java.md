@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Effective Java
-category: java
+tags: [software-engineering, java]
 ---
 
 # Reflection

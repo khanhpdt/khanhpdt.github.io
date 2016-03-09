@@ -1,5 +1,5 @@
 ---
 layout: post
 title: Coding Interview
-category: algorithms
+tags: [algorithms, interview]
 ---

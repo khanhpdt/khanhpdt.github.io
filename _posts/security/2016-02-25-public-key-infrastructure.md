@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Public Key Infrastructure (PKI)
+tags: [security, pki]
 ---
 # Overview
 

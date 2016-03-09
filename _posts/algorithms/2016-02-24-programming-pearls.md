@@ -1,5 +1,5 @@
 ---
 layout: post
 title: Programming Pearls
-category: algorithms
+tags: [algorithms]
 ---

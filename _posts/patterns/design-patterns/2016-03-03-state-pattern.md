@@ -1,8 +1,7 @@
 ---
 layout: post
 title: State pattern
-category: patterns
-tags: state
+tags: [software-engineering, design-patterns]
 ---
 
 # Intent

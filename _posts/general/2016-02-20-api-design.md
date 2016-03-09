@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to design API
-category: general
+tags: [api-design]
 ---
 # [Oracle Java tutorials](https://docs.oracle.com/javase/tutorial/collections/interoperability/api-design.html)
 - Parameters

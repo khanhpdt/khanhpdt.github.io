@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Visitor pattern
-category: patterns
-tags: visitor
+tags: [software-engineering, design-patterns]
 ---
 
 # Intent

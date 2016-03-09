@@ -1,5 +1,5 @@
 ---
 layout: post
 title: Java Interview
-category: java
+tags: [java, interview]
 ---

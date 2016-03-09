@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HTTP basics
-category: general
+tags: http
 ---
 
 # Reference

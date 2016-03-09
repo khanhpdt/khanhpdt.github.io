@@ -1,5 +1,5 @@
 ---
 layout: post
 title: Enterprise Integration Patterns
-category: patterns
+tags: [software-engineering, enterprise-patterns]
 ---

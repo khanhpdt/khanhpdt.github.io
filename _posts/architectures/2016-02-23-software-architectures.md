@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Software Architectures
-category: architectures
+tags: [architectures]
 ---
 # The Java EE Architect's Handbook, 2nd edition
 

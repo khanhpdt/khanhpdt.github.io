@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java 8 in action
-category: java
+tags: [java, java8]
 ---
 
 # Reference: Book Java 8 in action

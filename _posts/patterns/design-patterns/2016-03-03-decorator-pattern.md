@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Decorator pattern
-category: patterns
-tags: decorator
+tags: [software-engineering, design-patterns]
 ---
 
 # Intent
