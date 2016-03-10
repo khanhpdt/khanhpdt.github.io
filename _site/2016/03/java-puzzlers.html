@@ -1,0 +1,378 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Software Dev Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/toc.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/theme.css" rel="stylesheet">
+  <link href="/css/syntax.css" rel="stylesheet">
+  <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  
+
+  
+
+
+ <script type="text/javascript">
+  WebFontConfig = {
+    google: {
+      families: ['Ubuntu::latin']
+    }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Software Dev Notes</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">/home</a></li>
+          <li><a href="/archive.html">/archive</a></li>
+          <li><a href="/tags.html">/tags</a></li>
+          <li><a href="/about.html">/about</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="wrapper">
+  <div class="content">
+    <div class="container container-center">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="article">
+            <div class="well">
+              <h1><a href="/2016/03/java-puzzlers">Java puzzlers</a></h1>
+              <div class="post-meta">
+                <div class="post-time">
+                  <i class="fa fa-calendar"></i>
+                  <time>02 Mar 2016</time>
+                </div>
+                <ul>
+                  
+                    <li><a href="/tag/java">java</a></li>
+                  
+                </ul>
+              </div>
+              <div class="post-content">
+                <div id="toc" class="toc"></div>
+                <h1 id="expressive-puzzlers">Expressive Puzzlers</h1>
+
+<ul>
+  <li>Puzzle 2
+    <ul>
+      <li>Not all decimals can be represented exactly using binary floating-point</li>
+    </ul>
+  </li>
+  <li>Puzzle 8
+    <ul>
+      <li>Conditional operator</li>
+      <li>Should always avoid mixed-type computations</li>
+    </ul>
+  </li>
+  <li>Puzzle 9
+    <ul>
+      <li>Compound assignment (e.g., a += b) contains an implicit cast</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="puzzlers-with-characters">Puzzlers with characters</h1>
+
+<ul>
+  <li>Puzzle 13
+    <ul>
+      <li>String interning</li>
+      <li>Object comparison by equals() and ==</li>
+    </ul>
+  </li>
+  <li>Puzzle 18
+    <ul>
+      <li>The conversion between String and byte[] always involves using a specific charset</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="loopy-puzzlers">Loopy puzzlers</h1>
+
+<ul>
+  <li>Puzzle 25
+    <ul>
+      <li>Postfix increment operator</li>
+      <li>Do not assign a variable more than once in a single expression</li>
+    </ul>
+  </li>
+  <li>Puzzle 28
+    <ul>
+      <li>Infinity</li>
+      <li>Floating-point operations return the floating-point value that is closest to their exact mathematical result.</li>
+      <li>Binary floating point arithmetics in Java</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="exceptional-puzzlers">Exceptional puzzlers</h1>
+
+<ul>
+  <li>Puzzle 36
+    <ul>
+      <li>The try statement 14.20 (Java Language Specification Java SE 7 (JLS7))</li>
+    </ul>
+  </li>
+  <li>Puzzle 37
+    <ul>
+      <li>Exception checking 11.2.3 (JLS7)</li>
+    </ul>
+  </li>
+  <li>Puzzle 38
+    <ul>
+      <li>
+        <p>Compile-time checking of exceptions 11.2 JLS7</p>
+
+        <blockquote>
+          <p>When interfaces are involved, more than one method declaration may be overridden by a single overriding declaration. In this case, the overriding declaration must have a throws clause that is compatible with all the overridden declarations (§9.4.1).</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>Puzzle 39
+    <ul>
+      <li>The System.exit method halts the execution of the current thread and all others dead in their tracks.</li>
+    </ul>
+  </li>
+  <li>Puzzle 40
+    <ul>
+      <li>Initialization of classes and interfaces 12.4 JLS7</li>
+    </ul>
+  </li>
+  <li>Puzzle 42
+    <ul>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>&amp; and</td>
+              <td>can be used as &amp;&amp; and</td>
+              <td> </td>
+              <td>for boolean values, but they do not support short-circuit evaluation.</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </li>
+  <li>Puzzle 43
+    <ul>
+      <li>It’s possible that an undeclared exception can be thrown out. Examples:
+        <ul>
+          <li>newInstance()</li>
+        </ul>
+      </li>
+      <li>Generics
+        <ul>
+          <li>Java exception checking is a compile-time facility, not a JVM feature.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="classy-puzzlers">Classy puzzlers</h1>
+
+<ul>
+  <li>Puzzle 46
+    <ul>
+      <li>If more than one methods are applicable to an invocation, the most specific one is chosen.</li>
+    </ul>
+  </li>
+  <li>Puzzle 47
+    <ul>
+      <li>Static fields are shared by their declaring class and any <em>subclasses</em>.</li>
+    </ul>
+  </li>
+  <li>Puzzle 48
+    <ul>
+      <li>No dynamic dispatch on static methods (15.12.4.4 JLS7)</li>
+    </ul>
+  </li>
+  <li>Puzzle 49
+    <ul>
+      <li>The static initializers and class variable initializers are executed in textual order (12.4.1 JLS7)</li>
+      <li>Be very careful of circularity in class initialization</li>
+    </ul>
+  </li>
+  <li>Puzzle 50
+    <ul>
+      <li>instanceof and cast operators
+        <ul>
+          <li><code class="highlighter-rouge">null</code> is a subtype of every type. However, <code class="highlighter-rouge">null instanceof Type</code> always returns false.</li>
+          <li><code class="highlighter-rouge">instanceof</code> requires two operands must be in the same hierarchy. Otherwise, there’ll be compile errors.</li>
+          <li>cast operator throws exception at run-time if the types are not convertable.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Puzzle 51
+    <ul>
+      <li>Be very careful of circularity in class instance initialization</li>
+      <li>Should never call overridable (especially overridden) methods in constructors</li>
+    </ul>
+  </li>
+  <li>Puzzle 52
+    <ul>
+      <li>Be consistent: either use eager or lazy initialization, not both</li>
+      <li>Default values are set in the preparation phase, while the field initializers are executed in the initialization phase, which occurs after the preparation phase. For more details, see <a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-12.html#jls-12.1">JVM Startup</a></li>
+    </ul>
+  </li>
+  <li>Puzzle 53
+    <ul>
+      <li>
+        <p>From <a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.8.7">JLS8</a></p>
+
+        <blockquote>
+          <p>If a constructor body does not begin with an explicit constructor invocation and the constructor being declared is not part of the primordial class Object, then the constructor body implicitly begins with a superclass constructor invocation “super();”</p>
+        </blockquote>
+      </li>
+      <li>
+        <p>Private constructor capture pattern</p>
+        <ul>
+          <li>Workaround to be able to do both things: passing a value to the superclass constructor, while also storing the value at the class itself. Without this pattern, doing these two things is not possible due to rules on constructors.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Puzzle 54</li>
+</ul>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <div class="sidebar ">
+  <h2>Recent Posts</h2>
+  <ul>
+    
+    <li><a href="/2016/03/abstract-factory-pattern">Abstract Factory pattern</a></li>
+    
+    <li><a href="/2016/03/arrays">Arrays</a></li>
+    
+    <li><a href="/2016/03/algorithms">Algorithms</a></li>
+    
+    <li><a href="/2016/03/visitor-pattern">Visitor pattern</a></li>
+    
+    <li><a href="/2016/03/strategy-pattern">Strategy pattern</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Tags</h2>
+  <ul>
+    
+      <li><a href="/tag/algorithms">algorithms</a></li>
+    
+      <li><a href="/tag/interview">interview</a></li>
+    
+      <li><a href="/tag/software-engineering">software-engineering</a></li>
+    
+      <li><a href="/tag/clean-code">clean-code</a></li>
+    
+      <li><a href="/tag/principles">principles</a></li>
+    
+      <li><a href="/tag/http">http</a></li>
+    
+      <li><a href="/tag/java">java</a></li>
+    
+      <li><a href="/tag/java8">java8</a></li>
+    
+      <li><a href="/tag/api-design">api-design</a></li>
+    
+      <li><a href="/tag/architectures">architectures</a></li>
+    
+      <li><a href="/tag/java-ee">java-ee</a></li>
+    
+      <li><a href="/tag/jax-rs">jax-rs</a></li>
+    
+      <li><a href="/tag/jax-ws">jax-ws</a></li>
+    
+      <li><a href="/tag/enterprise-patterns">enterprise-patterns</a></li>
+    
+      <li><a href="/tag/ejb">ejb</a></li>
+    
+      <li><a href="/tag/security">security</a></li>
+    
+      <li><a href="/tag/pki">pki</a></li>
+    
+      <li><a href="/tag/design-patterns">design-patterns</a></li>
+    
+      <li><a href="/tag/data-structures">data-structures</a></li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+      <footer class="footer-distributed">
+      <div class="container">
+        <div class="footer">
+          <h6>Follow me</h6>
+
+<ul class="social-media">
+
+  
+    <li>
+      <a title="khanhpdt on Github" href="https://github.com/khanhpdt" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+          <p>&copy Theme by <a href="http://pavelmakhov.com/jekyll-clean-dark/">Pavel Makhov</a><p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+</div>

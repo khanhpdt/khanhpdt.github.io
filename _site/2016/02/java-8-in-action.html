@@ -1,0 +1,425 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Software Dev Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/toc.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/theme.css" rel="stylesheet">
+  <link href="/css/syntax.css" rel="stylesheet">
+  <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  
+
+  
+
+
+ <script type="text/javascript">
+  WebFontConfig = {
+    google: {
+      families: ['Ubuntu::latin']
+    }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Software Dev Notes</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">/home</a></li>
+          <li><a href="/archive.html">/archive</a></li>
+          <li><a href="/tags.html">/tags</a></li>
+          <li><a href="/about.html">/about</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="wrapper">
+  <div class="content">
+    <div class="container container-center">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="article">
+            <div class="well">
+              <h1><a href="/2016/02/java-8-in-action">Java 8 in action</a></h1>
+              <div class="post-meta">
+                <div class="post-time">
+                  <i class="fa fa-calendar"></i>
+                  <time>15 Feb 2016</time>
+                </div>
+                <ul>
+                  
+                    <li><a href="/tag/java">java</a></li>
+                  
+                    <li><a href="/tag/java8">java8</a></li>
+                  
+                </ul>
+              </div>
+              <div class="post-content">
+                <div id="toc" class="toc"></div>
+                <h1 id="reference-book-java-8-in-action">Reference: Book Java 8 in action</h1>
+
+<h2 id="chapter-1">Chapter 1</h2>
+<ul>
+  <li>Java 8 new features
+    <ul>
+      <li>Streams API</li>
+      <li>Passing code to methods</li>
+      <li>Default methods in interfaces</li>
+    </ul>
+  </li>
+  <li>While collections are mostly about storing and accessing data, streams are mostly about how to perform computations on the data. Streams allows and encourages to process the data in parallel.</li>
+</ul>
+
+<h2 id="chapter-2">Chapter 2</h2>
+<ul>
+  <li>Behavior parameterization by passing code (which performs the behavior) around</li>
+  <li>Predicate: a function which returns a boolean value</li>
+</ul>
+
+<h2 id="chapter-3-lambda-expressions">Chapter 3: Lambda expressions</h2>
+<ul>
+  <li>Functional interface
+    <ul>
+      <li>An interface with <em>exactly</em> one abstract method. The inheriting methods (not from Object) also count. The signature of the abstract method is also called the function descriptor.</li>
+      <li>Because it’s only required for a function interface to have exactly one method, the number of default methods in the interface does not matter.</li>
+    </ul>
+  </li>
+  <li>Lambda expression
+    <ul>
+      <li>An anonymous function which can be passed around</li>
+      <li>Syntax:<br />
+(parameters) -&gt; expression<br />
+(parameter) -&gt; { statements }</li>
+      <li>Used in the context of a functional interface, and must have the same signature as the function descriptor of the interface.</li>
+    </ul>
+  </li>
+  <li>Compile-time type checking
+    <ul>
+      <li>Also performed on lambda expresion by relying on the context in which lambda is used (i.e., the client code and the function descriptor)</li>
+      <li>Special case: If the lambda body has only one statement, then its return type is compatible to both void and the type of the statement result.</li>
+    </ul>
+  </li>
+  <li>Type inference
+    <ul>
+      <li>The types of the parameters in lambda can be inferred by the compiler, just like the type infererence in the diamond operator.</li>
+    </ul>
+  </li>
+  <li>If the lambda uses local variables that are not defined inside the lambda, the variables must be either declaratively or effectively <em>final</em>.</li>
+  <li>Closure
+    <ul>
+      <li>Loosely speaking, closure is a programming mechanism in which functions can access and modify variables defined outside of their scopes</li>
+      <li>Lambda is different with Closure in that it can only access but are not allowed to modify local variables in the enclosing method.</li>
+    </ul>
+  </li>
+  <li>Method reference
+    <ul>
+      <li>Syntactic sugar for lambdas</li>
+      <li>Syntax<br />
+TargetReference::methodName</li>
+      <li>Main types</li>
+      <li>Static method: Type::methodName</li>
+      <li>Instance method of a type: Type::methodName</li>
+      <li>Instance method of an object: object::methodName</li>
+      <li>Constructor: Type::new</li>
+      <li>Usually combined with other utility methods to make code more concise</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="chapter-4-streams">Chapter 4: Streams</h2>
+<ul>
+  <li>Streams
+    <ul>
+      <li>“A sequence of elements from a source that supports data processing operations”</li>
+      <li>Designed to provide a declarative way to process collections (like the way SQL processes records): you specify <em>what</em> you want to achieve</li>
+      <li>Supports pipelining</li>
+    </ul>
+  </li>
+  <li>Streams vs. Collections
+    <ul>
+      <li>Lazily constructed, i.e., elements are computed on demand. This is opposed to conventional collections, which are eagerly constructed or their elements are computed before being added to the collections.</li>
+      <li>A stream can only be iterated <em>once</em> during its life-time.</li>
+      <li>Internal iterations, rather than external iterations which are used on collections. This internal iteration encapsulates the iterating implementation from the client code, thus giving more flexibility in how the iteration is done.</li>
+    </ul>
+  </li>
+  <li>Stream operations
+    <ul>
+      <li>Intermediate operations that can be pipelined. These operations do not return any result and are actually performed only when a terminal operation is invoked. This enables the loop fusion techniques.</li>
+      <li>Terminal operations that terminate the pipeline, close the stream, and return values or void.</li>
+    </ul>
+  </li>
+  <li>Working with streams usually involves three pieces
+    <ul>
+      <li>A data source</li>
+      <li>Intermediate operations</li>
+      <li>Terminal operations</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="chapter-5-working-with-streams">Chapter 5: Working with streams</h2>
+<ul>
+  <li>Stream operations
+    <ul>
+      <li>Stateless</li>
+      <li>Stateful</li>
+    </ul>
+  </li>
+  <li>Short-circuiting: A computation terminates as soon as the result is found.</li>
+</ul>
+
+<h2 id="chapter-6-collecting-data">Chapter 6: Collecting data</h2>
+<ul>
+  <li>Collectors
+    <ul>
+      <li>Implements Collector interface</li>
+      <li>Applies transforming operation on stream elements and then collects these transformed elements into a specified data structure to produce the desired output.</li>
+    </ul>
+  </li>
+  <li>Collect vs. Reduce
+    <ul>
+      <li>Reduce always creates a new value for each element when processed</li>
+      <li>Collect does not create new value, instead it acts directly on the element. Thus it can also modify the elements during the process.</li>
+    </ul>
+  </li>
+  <li>Main collector usages
+    <ul>
+      <li>Reducing and summarizing</li>
+      <li>Grouping
+        <ul>
+          <li>Also supports multi-level grouping</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Multi-level collector
+    <ul>
+      <li>Inner collector is passed as an argument of the outer collector. The inner collector will act upon the result of the outer collector.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="chapter-9-default-methods">Chapter 9: Default methods</h2>
+<ul>
+  <li>Three kinds of compatibility in Java code
+    <ul>
+      <li>Binary</li>
+      <li>Source</li>
+      <li>Behavior</li>
+    </ul>
+  </li>
+  <li>Default methods
+    <ul>
+      <li>Start with the <code class="highlighter-rouge">default</code> modifier</li>
+      <li>Defined inside interface</li>
+      <li>Can have body</li>
+      <li>The implementations of the interface do not need to override.</li>
+    </ul>
+  </li>
+  <li>Typical usages
+    <ul>
+      <li>Optional methods in the interface hierarchy</li>
+      <li>Simulate multiple inheritance because a class can implement multiple interfaces</li>
+    </ul>
+  </li>
+  <li>Resolution rules when a class implement multiple interfaces which happen to have the same default methods
+    <ul>
+      <li>Methods in ordinary classes win</li>
+      <li>Methods in the most specific interface win</li>
+      <li>Otherwise, conflicts occur. One solution is to let the current class override the default methods and then explicitly call the overriding methods.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="chapter-13-thinking-functionally">Chapter 13: Thinking functionally</h2>
+<ul>
+  <li>Ideas from functional programming
+    <ul>
+      <li>Functions as first-class citizens (in Java 8, functions are equivalent to methods and lambdas)</li>
+      <li>Pure functions: functions cause no side-effects (or observable effects).</li>
+      <li>Declarative programming: focus on the what, not the how, i.e., specify the desireed result, not how it should be done to achieve the result</li>
+      <li>Referential transparency: A method always produces the same result for the same arguments, regardless of the context in which it is called. Thus referential-transparency methods can be characterized by their inputs and outputs.</li>
+    </ul>
+  </li>
+  <li>Pure functional programming vs. Functional-style programming
+    <ul>
+      <li>Pure functional programming: methods are pure functions, which do not alter state of their enclosing class as well as all other objects.</li>
+      <li>Functional-style programming: methods can change state of some objects, as long as these changes are not observable by the callers. For example, methods ony change their local variables, or they change the state of some object but also revert the change before terminating.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="chapter-14-functional-programming-techniques">Chapter 14: Functional programming techniques</h2>
+<ul>
+  <li>Functions
+    <ul>
+      <li>First-class citizens. Functions are treated as values, e.g., they can be passed around as arguments</li>
+      <li>No side-effect</li>
+      <li>Currying: a technique to reduce the number of parameters. For example, let say you have a legacy function with 4 parameters f(a,b,c,d), but for some reason you don’t want to pass all 4 arguments everytime you call the function but only 2 at a time. The following code shows one way to do that</li>
+    </ul>
+    <pre><code class="java">
+Integer f(a,b,c,d) {
+    // do something
+}
+
+void g(a,b) {
+    return (c,d) -&gt; f(a,b,c,d);
+}
+
+// client code
+BiFunction&lt;Integer, Integer, Integer&gt; f12 = g(1,2);
+int c = 3; int d = 4;
+f12(c,d);
+</code></pre>
+  </li>
+  <li>Persistent data structures
+    <ul>
+      <li>Persisting data structures means that they are isolated and thus not affected by changes happenning around them.</li>
+      <li>One way to achieve persistent data structures is to clone the existing data structures and operate upon the clone. Because the operations are performed only at the creation time, it does not count that the data structures are altered.</li>
+    </ul>
+  </li>
+  <li>Lazy evaluation with streams
+    <ul>
+      <li>e.g., lazy evaluation of stream elements</li>
+    </ul>
+  </li>
+  <li>Pattern matching</li>
+  <li>Memoization or caching</li>
+</ul>
+
+<h1 id="reference-book-java-8-lambdas-oreilly">Reference: Book Java 8 Lambdas, O’Reilly</h1>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <div class="sidebar ">
+  <h2>Recent Posts</h2>
+  <ul>
+    
+    <li><a href="/2016/03/abstract-factory-pattern">Abstract Factory pattern</a></li>
+    
+    <li><a href="/2016/03/arrays">Arrays</a></li>
+    
+    <li><a href="/2016/03/algorithms">Algorithms</a></li>
+    
+    <li><a href="/2016/03/visitor-pattern">Visitor pattern</a></li>
+    
+    <li><a href="/2016/03/strategy-pattern">Strategy pattern</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Tags</h2>
+  <ul>
+    
+      <li><a href="/tag/algorithms">algorithms</a></li>
+    
+      <li><a href="/tag/interview">interview</a></li>
+    
+      <li><a href="/tag/software-engineering">software-engineering</a></li>
+    
+      <li><a href="/tag/clean-code">clean-code</a></li>
+    
+      <li><a href="/tag/principles">principles</a></li>
+    
+      <li><a href="/tag/http">http</a></li>
+    
+      <li><a href="/tag/java">java</a></li>
+    
+      <li><a href="/tag/java8">java8</a></li>
+    
+      <li><a href="/tag/api-design">api-design</a></li>
+    
+      <li><a href="/tag/architectures">architectures</a></li>
+    
+      <li><a href="/tag/java-ee">java-ee</a></li>
+    
+      <li><a href="/tag/jax-rs">jax-rs</a></li>
+    
+      <li><a href="/tag/jax-ws">jax-ws</a></li>
+    
+      <li><a href="/tag/enterprise-patterns">enterprise-patterns</a></li>
+    
+      <li><a href="/tag/ejb">ejb</a></li>
+    
+      <li><a href="/tag/security">security</a></li>
+    
+      <li><a href="/tag/pki">pki</a></li>
+    
+      <li><a href="/tag/design-patterns">design-patterns</a></li>
+    
+      <li><a href="/tag/data-structures">data-structures</a></li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+      <footer class="footer-distributed">
+      <div class="container">
+        <div class="footer">
+          <h6>Follow me</h6>
+
+<ul class="social-media">
+
+  
+    <li>
+      <a title="khanhpdt on Github" href="https://github.com/khanhpdt" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+          <p>&copy Theme by <a href="http://pavelmakhov.com/jekyll-clean-dark/">Pavel Makhov</a><p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+</div>

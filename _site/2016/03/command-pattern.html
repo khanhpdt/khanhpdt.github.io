@@ -1,0 +1,224 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Software Dev Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/toc.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/theme.css" rel="stylesheet">
+  <link href="/css/syntax.css" rel="stylesheet">
+  <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  
+
+  
+
+
+ <script type="text/javascript">
+  WebFontConfig = {
+    google: {
+      families: ['Ubuntu::latin']
+    }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Software Dev Notes</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">/home</a></li>
+          <li><a href="/archive.html">/archive</a></li>
+          <li><a href="/tags.html">/tags</a></li>
+          <li><a href="/about.html">/about</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="wrapper">
+  <div class="content">
+    <div class="container container-center">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="article">
+            <div class="well">
+              <h1><a href="/2016/03/command-pattern">Command pattern</a></h1>
+              <div class="post-meta">
+                <div class="post-time">
+                  <i class="fa fa-calendar"></i>
+                  <time>03 Mar 2016</time>
+                </div>
+                <ul>
+                  
+                    <li><a href="/tag/software-engineering">software-engineering</a></li>
+                  
+                    <li><a href="/tag/design-patterns">design-patterns</a></li>
+                  
+                </ul>
+              </div>
+              <div class="post-content">
+                <div id="toc" class="toc"></div>
+                <h1 id="intent">Intent</h1>
+
+<ul>
+  <li>Encapsulates a request <em>as</em> an object.</li>
+</ul>
+
+<h1 id="structure">Structure</h1>
+
+<p><img src="/assets/imgs/patterns/design-patterns/command/structure.png" alt="command-pattern-structure" /></p>
+
+<p>All information needed to carry out the request is encapsulated in the Command object. In other words, the Command objects contain the input data for the request and know how to handle the request.</p>
+
+<p>The Command objects might handle the requests themselves or delegate the tasks to appropriate Receivers.</p>
+
+<h1 id="applicability">Applicability</h1>
+
+<p>This pattern can be used when:</p>
+
+<ul>
+  <li>You want to parameterize the request handling, because you can get different handlings by using different Command objects.</li>
+  <li>You want to decouple the request invoker and the request handler. They are decoupled because they don’t know about each other but only about the Command objects which act as intermediate objects between them.</li>
+  <li>The time when the request is created and when it is handled is independent. For example, the time when a request is handled is determined by a queue manager, but the time when it is created is by a client. In this case, you should let the client create a Command object and pass it to the queue manager. Then, when the time comes, the queue manager will simply invoke the Command object to carry out the request.</li>
+  <li>You want to support a set of related operations and you don’t want to scatter them in different places. The most common case is to support both do() and undo() operations in a Command object.</li>
+</ul>
+
+<h1 id="reference">Reference</h1>
+
+<ul>
+  <li>Command, GOF book</li>
+  <li>Command, Chaper 24, Design Patterns In Java</li>
+</ul>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <div class="sidebar ">
+  <h2>Recent Posts</h2>
+  <ul>
+    
+    <li><a href="/2016/03/abstract-factory-pattern">Abstract Factory pattern</a></li>
+    
+    <li><a href="/2016/03/arrays">Arrays</a></li>
+    
+    <li><a href="/2016/03/algorithms">Algorithms</a></li>
+    
+    <li><a href="/2016/03/visitor-pattern">Visitor pattern</a></li>
+    
+    <li><a href="/2016/03/strategy-pattern">Strategy pattern</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Tags</h2>
+  <ul>
+    
+      <li><a href="/tag/algorithms">algorithms</a></li>
+    
+      <li><a href="/tag/interview">interview</a></li>
+    
+      <li><a href="/tag/software-engineering">software-engineering</a></li>
+    
+      <li><a href="/tag/clean-code">clean-code</a></li>
+    
+      <li><a href="/tag/principles">principles</a></li>
+    
+      <li><a href="/tag/http">http</a></li>
+    
+      <li><a href="/tag/java">java</a></li>
+    
+      <li><a href="/tag/java8">java8</a></li>
+    
+      <li><a href="/tag/api-design">api-design</a></li>
+    
+      <li><a href="/tag/architectures">architectures</a></li>
+    
+      <li><a href="/tag/java-ee">java-ee</a></li>
+    
+      <li><a href="/tag/jax-rs">jax-rs</a></li>
+    
+      <li><a href="/tag/jax-ws">jax-ws</a></li>
+    
+      <li><a href="/tag/enterprise-patterns">enterprise-patterns</a></li>
+    
+      <li><a href="/tag/ejb">ejb</a></li>
+    
+      <li><a href="/tag/security">security</a></li>
+    
+      <li><a href="/tag/pki">pki</a></li>
+    
+      <li><a href="/tag/design-patterns">design-patterns</a></li>
+    
+      <li><a href="/tag/data-structures">data-structures</a></li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+      <footer class="footer-distributed">
+      <div class="container">
+        <div class="footer">
+          <h6>Follow me</h6>
+
+<ul class="social-media">
+
+  
+    <li>
+      <a title="khanhpdt on Github" href="https://github.com/khanhpdt" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+          <p>&copy Theme by <a href="http://pavelmakhov.com/jekyll-clean-dark/">Pavel Makhov</a><p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+</div>

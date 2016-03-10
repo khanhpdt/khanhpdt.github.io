@@ -1,0 +1,253 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Software Dev Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/toc.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/theme.css" rel="stylesheet">
+  <link href="/css/syntax.css" rel="stylesheet">
+  <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  
+
+  
+
+
+ <script type="text/javascript">
+  WebFontConfig = {
+    google: {
+      families: ['Ubuntu::latin']
+    }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Software Dev Notes</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">/home</a></li>
+          <li><a href="/archive.html">/archive</a></li>
+          <li><a href="/tags.html">/tags</a></li>
+          <li><a href="/about.html">/about</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="wrapper">
+  <div class="content">
+    <div class="container container-center">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="article">
+            <div class="well">
+              <h1><a href="/2016/02/java-collections">Java Collections</a></h1>
+              <div class="post-meta">
+                <div class="post-time">
+                  <i class="fa fa-calendar"></i>
+                  <time>02 Feb 2016</time>
+                </div>
+                <ul>
+                  
+                    <li><a href="/tag/java">java</a></li>
+                  
+                </ul>
+              </div>
+              <div class="post-content">
+                <div id="toc" class="toc"></div>
+                <h1 id="chapter-10">Chapter 10</h1>
+<ul>
+  <li>Java Collections Framework: java.util and java.util.concurrent</li>
+  <li>Figure 10-1: The main interfaces of Java Collections Framework</li>
+</ul>
+
+<h1 id="chapter-11">Chapter 11</h1>
+<ul>
+  <li>Iterator
+    <ul>
+      <li>Provides a <em>uniform</em> way to access collection elements sequentially</li>
+      <li>foreach loop can be used with arrays or any collections implementing Iterable</li>
+      <li>fail-fast behavior</li>
+    </ul>
+  </li>
+  <li>Three basic operations:
+    <ul>
+      <li>Insertion and removal of elements by position</li>
+      <li>Retrieval elements by their contents</li>
+      <li>Iteration over all elements</li>
+    </ul>
+  </li>
+  <li>Amortized cost</li>
+  <li>Concurrent collections are preferred over synchronized collections
+    <ul>
+      <li>See Java concurrency in practice for more details on concurrent collections</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="chapter-12">Chapter 12</h1>
+
+<h1 id="chapter-13">Chapter 13</h1>
+
+<h2 id="set">Set</h2>
+<ul>
+  <li>No duplicate</li>
+  <li>HashSet
+    <ul>
+      <li>Implemented by a hash table</li>
+      <li>Pros: basic operations like add, remove, check items</li>
+      <li>Cons: iterating</li>
+    </ul>
+  </li>
+  <li>LinkedHashSet
+    <ul>
+      <li>Order when adding is reserved</li>
+      <li>Pros: next() operation</li>
+      <li>Cons: overhead in maintaining references to the previous and next elements</li>
+    </ul>
+  </li>
+  <li>CopyOnWriteArraySet
+    <ul>
+      <li>Thread-safe</li>
+    </ul>
+  </li>
+  <li>EnumSet
+    <ul>
+      <li>Operations are bit-wise, thus they are fast</li>
+    </ul>
+  </li>
+</ul>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <div class="sidebar ">
+  <h2>Recent Posts</h2>
+  <ul>
+    
+    <li><a href="/2016/03/abstract-factory-pattern">Abstract Factory pattern</a></li>
+    
+    <li><a href="/2016/03/arrays">Arrays</a></li>
+    
+    <li><a href="/2016/03/algorithms">Algorithms</a></li>
+    
+    <li><a href="/2016/03/visitor-pattern">Visitor pattern</a></li>
+    
+    <li><a href="/2016/03/strategy-pattern">Strategy pattern</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Tags</h2>
+  <ul>
+    
+      <li><a href="/tag/algorithms">algorithms</a></li>
+    
+      <li><a href="/tag/interview">interview</a></li>
+    
+      <li><a href="/tag/software-engineering">software-engineering</a></li>
+    
+      <li><a href="/tag/clean-code">clean-code</a></li>
+    
+      <li><a href="/tag/principles">principles</a></li>
+    
+      <li><a href="/tag/http">http</a></li>
+    
+      <li><a href="/tag/java">java</a></li>
+    
+      <li><a href="/tag/java8">java8</a></li>
+    
+      <li><a href="/tag/api-design">api-design</a></li>
+    
+      <li><a href="/tag/architectures">architectures</a></li>
+    
+      <li><a href="/tag/java-ee">java-ee</a></li>
+    
+      <li><a href="/tag/jax-rs">jax-rs</a></li>
+    
+      <li><a href="/tag/jax-ws">jax-ws</a></li>
+    
+      <li><a href="/tag/enterprise-patterns">enterprise-patterns</a></li>
+    
+      <li><a href="/tag/ejb">ejb</a></li>
+    
+      <li><a href="/tag/security">security</a></li>
+    
+      <li><a href="/tag/pki">pki</a></li>
+    
+      <li><a href="/tag/design-patterns">design-patterns</a></li>
+    
+      <li><a href="/tag/data-structures">data-structures</a></li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+      <footer class="footer-distributed">
+      <div class="container">
+        <div class="footer">
+          <h6>Follow me</h6>
+
+<ul class="social-media">
+
+  
+    <li>
+      <a title="khanhpdt on Github" href="https://github.com/khanhpdt" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+          <p>&copy Theme by <a href="http://pavelmakhov.com/jekyll-clean-dark/">Pavel Makhov</a><p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+</div>

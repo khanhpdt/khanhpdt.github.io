@@ -1,0 +1,270 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Software Dev Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/toc.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/theme.css" rel="stylesheet">
+  <link href="/css/syntax.css" rel="stylesheet">
+  <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  
+
+  
+
+
+ <script type="text/javascript">
+  WebFontConfig = {
+    google: {
+      families: ['Ubuntu::latin']
+    }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Software Dev Notes</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">/home</a></li>
+          <li><a href="/archive.html">/archive</a></li>
+          <li><a href="/tags.html">/tags</a></li>
+          <li><a href="/about.html">/about</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="wrapper">
+  <div class="content">
+    <div class="container container-center">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="article">
+            <div class="well">
+              <h1><a href="/2016/03/arrays">Arrays</a></h1>
+              <div class="post-meta">
+                <div class="post-time">
+                  <i class="fa fa-calendar"></i>
+                  <time>08 Mar 2016</time>
+                </div>
+                <ul>
+                  
+                    <li><a href="/tag/data-structures">data-structures</a></li>
+                  
+                    <li><a href="/tag/java">java</a></li>
+                  
+                </ul>
+              </div>
+              <div class="post-content">
+                <div id="toc" class="toc"></div>
+                <h1 id="arrays-in-general">Arrays in general</h1>
+
+<p>An array is a fixed-size data structure used to store a collection of elements which are accessed by their indexes in the array.</p>
+
+<ul>
+  <li>Pros
+    <ul>
+      <li>Fast random access, because the memory is allocated for an array such that the addresses of its elements can be quickly computed [4].</li>
+    </ul>
+  </li>
+  <li>Cons
+    <ul>
+      <li>Fixed size.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>An array is called <em>ragged</em> or <em>jagged</em> array if it is an array of arrays which are of different sizes.</p>
+
+<h1 id="arrays-in-java">Arrays in Java</h1>
+
+<p>Arrays are first-class objects.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// a variable is created, but the array is not yet created</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">;</span>
+
+<span class="c1">// An array object is actually created in the heap. The array variable points to</span>
+<span class="c1">// that object, which holds references to the array elements.</span>
+<span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">};</span>
+
+<span class="c1">// shortcut to initialize arrays</span>
+<span class="kt">int</span><span class="o">[</span><span class="n">b</span><span class="o">]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">};</span></code></pre></figure>
+
+<p>The differences between arrays and other containers are [5]:</p>
+
+<ul>
+  <li>Arrays offer a faster random access (as it is well-known for)</li>
+  <li>But array size is fixed</li>
+  <li>Arrays can contain either object references or primitive values, while containers can only hold object references.</li>
+  <li>Containers offer much more utilities to work on them.</li>
+</ul>
+
+<p>It is a compile-time error if the component type of the array being initialized is not reifiable [6]. But it is only a warning if the array is being created, not initialized.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// compile error</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[]</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[]</span> <span class="o">{</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">2</span><span class="o">)};</span>
+
+<span class="c1">// a workaround to still guarantee type safe when using the array</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[]</span> <span class="n">a</span> <span class="o">=</span> <span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;[])</span> <span class="k">new</span> <span class="n">List</span><span class="o">[]</span> <span class="o">{</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">2</span><span class="o">)};</span></code></pre></figure>
+
+<p>Arrays subject to <em>covariant</em> subtyping, i.e., <code class="highlighter-rouge">S[]</code> is a subtype of <code class="highlighter-rouge">T[]</code> if <code class="highlighter-rouge">S</code> is a subtype of <code class="highlighter-rouge">T</code> [7]. This is in contrast to the <em>invariant</em> subtyping used for the Java containers. Invariant subtyping means, for example, <code class="highlighter-rouge">List&lt;S&gt;</code> is not a subtype of <code class="highlighter-rouge">List&lt;T&gt;</code> even if <code class="highlighter-rouge">S</code> is a subtype of <code class="highlighter-rouge">T</code>.</p>
+
+<p>Every array is associated with a <code class="highlighter-rouge">Class</code> object, and arrays with the same component type are associated with the same <code class="highlighter-rouge">Class</code> object [6].</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[]</span> <span class="n">a1</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">};</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">b1</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">};</span>
+<span class="k">assert</span> <span class="n">a1</span><span class="o">.</span><span class="na">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="n">b1</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+
+<span class="n">Integer</span><span class="o">[]</span> <span class="n">a2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">[]{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">};</span>
+<span class="n">Integer</span><span class="o">[]</span> <span class="n">b2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">[]{</span><span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">};</span>
+<span class="k">assert</span> <span class="n">a2</span><span class="o">.</span><span class="na">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="n">b2</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span></code></pre></figure>
+
+<h1 id="references">References</h1>
+
+<p>[1] https://en.wikipedia.org/wiki/Array_data_structure</p>
+
+<p>[2] http://www.algolist.net/Data_structures/Array</p>
+
+<p>[3] https://en.wikiversity.org/wiki/Data_Structures_and_Algorithms/Arrays,_Lists_and_Vectors</p>
+
+<p>[4] http://cslibrary.stanford.edu/103/LinkedListBasics.pdf</p>
+
+<p>[5] Book “Thinking in Java, 4th edition”</p>
+
+<p>[6] https://docs.oracle.com/javase/specs/jls/se8/html/jls-10.html</p>
+
+<p>[7] Book “Java Generics and Collections”</p>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <div class="sidebar ">
+  <h2>Recent Posts</h2>
+  <ul>
+    
+    <li><a href="/2016/03/abstract-factory-pattern">Abstract Factory pattern</a></li>
+    
+    <li><a href="/2016/03/arrays">Arrays</a></li>
+    
+    <li><a href="/2016/03/algorithms">Algorithms</a></li>
+    
+    <li><a href="/2016/03/visitor-pattern">Visitor pattern</a></li>
+    
+    <li><a href="/2016/03/strategy-pattern">Strategy pattern</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Tags</h2>
+  <ul>
+    
+      <li><a href="/tag/algorithms">algorithms</a></li>
+    
+      <li><a href="/tag/interview">interview</a></li>
+    
+      <li><a href="/tag/software-engineering">software-engineering</a></li>
+    
+      <li><a href="/tag/clean-code">clean-code</a></li>
+    
+      <li><a href="/tag/principles">principles</a></li>
+    
+      <li><a href="/tag/http">http</a></li>
+    
+      <li><a href="/tag/java">java</a></li>
+    
+      <li><a href="/tag/java8">java8</a></li>
+    
+      <li><a href="/tag/api-design">api-design</a></li>
+    
+      <li><a href="/tag/architectures">architectures</a></li>
+    
+      <li><a href="/tag/java-ee">java-ee</a></li>
+    
+      <li><a href="/tag/jax-rs">jax-rs</a></li>
+    
+      <li><a href="/tag/jax-ws">jax-ws</a></li>
+    
+      <li><a href="/tag/enterprise-patterns">enterprise-patterns</a></li>
+    
+      <li><a href="/tag/ejb">ejb</a></li>
+    
+      <li><a href="/tag/security">security</a></li>
+    
+      <li><a href="/tag/pki">pki</a></li>
+    
+      <li><a href="/tag/design-patterns">design-patterns</a></li>
+    
+      <li><a href="/tag/data-structures">data-structures</a></li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+      <footer class="footer-distributed">
+      <div class="container">
+        <div class="footer">
+          <h6>Follow me</h6>
+
+<ul class="social-media">
+
+  
+    <li>
+      <a title="khanhpdt on Github" href="https://github.com/khanhpdt" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+          <p>&copy Theme by <a href="http://pavelmakhov.com/jekyll-clean-dark/">Pavel Makhov</a><p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+</div>

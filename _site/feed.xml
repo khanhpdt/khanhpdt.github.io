@@ -7,6 +7,23 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Abstract Factory pattern</title>
+				<description>&lt;h1 id=&quot;intent&quot;&gt;Intent&lt;/h1&gt;
+
+&lt;h1 id=&quot;structure&quot;&gt;Structure&lt;/h1&gt;
+
+&lt;h1 id=&quot;applicability&quot;&gt;Applicability&lt;/h1&gt;
+
+&lt;h1 id=&quot;risk&quot;&gt;Risk&lt;/h1&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+</description>
+				<pubDate>Wed, 09 Mar 2016 00:00:00 +0700</pubDate>
+				<link>/2016/03/abstract-factory-pattern</link>
+				<guid isPermaLink="true">/2016/03/abstract-factory-pattern</guid>
+			</item>
+		
+			<item>
 				<title>Arrays</title>
 				<description>&lt;h1 id=&quot;arrays-in-general&quot;&gt;Arrays in general&lt;/h1&gt;
 
@@ -634,15 +651,6 @@
 				<pubDate>Thu, 25 Feb 2016 00:00:00 +0700</pubDate>
 				<link>/2016/02/public-key-infrastructure</link>
 				<guid isPermaLink="true">/2016/02/public-key-infrastructure</guid>
-			</item>
-		
-			<item>
-				<title>Enterprise Integration Patterns</title>
-				<description>
-</description>
-				<pubDate>Wed, 24 Feb 2016 00:00:00 +0700</pubDate>
-				<link>/2016/02/enterprise-integration-patterns</link>
-				<guid isPermaLink="true">/2016/02/enterprise-integration-patterns</guid>
 			</item>
 		
 	</channel>
