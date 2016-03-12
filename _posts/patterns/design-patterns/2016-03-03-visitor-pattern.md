@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visitor pattern
-tags: [software-engineering, design-patterns]
+tags: [design-patterns]
 ---
 
 # Intent
@@ -26,9 +26,9 @@ This pattern should be used when:
 - The pattern is quite complicated to understand. Using this pattern might make it hard for other team members to get familiar with the code.
 - If this pattern is used with the Composite pattern and the Composite contains a cycle in it, the accept-visit loop might be repeated forever.
 
-# Code example
+# Implementation
 
-- See [github/Visitor](https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/visitor).
+- See [github/Visitor](https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/visitor) for an example.
 
 # Reference
 

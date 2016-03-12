@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State pattern
-tags: [software-engineering, design-patterns]
+tags: [design-patterns]
 ---
 
 # Intent
@@ -33,9 +33,9 @@ This pattern can be used when:
 - Increasing number of objects. But this risk can be reduced by reusing the same instance of the state (if possible).
 - Complicates the code.
 
-# Code example
+# Implementation
 
-- See [github/State](https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/state).
+- See [github/State](https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/state) for an example.
 
 # Reference
 

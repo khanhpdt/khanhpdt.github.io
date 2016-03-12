@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strategy pattern
-tags: [software-engineering, design-patterns]
+tags: [design-patterns]
 ---
 
 # Intent

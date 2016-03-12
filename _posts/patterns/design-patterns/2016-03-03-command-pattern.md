@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Command pattern
-tags: [software-engineering, design-patterns]
+tags: [design-patterns]
 ---
 
 # Intent
