@@ -24,7 +24,7 @@ This pattern can be used when
 
 # Implementation
 
-- See [github/AbstractFactory](https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/factorymethod) for an example.
+- See [github/FactoryMethod](https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/factorymethod) for an example.
 
 # Reference
 
