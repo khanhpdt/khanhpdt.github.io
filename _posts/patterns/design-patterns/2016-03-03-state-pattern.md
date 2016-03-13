@@ -6,7 +6,7 @@ tags: [design-patterns]
 
 # Intent
 
-Allows an object to adjust its behavior based on its state.
+- Allows an object to adjust its behavior based on its state.
 
 # Structure
 

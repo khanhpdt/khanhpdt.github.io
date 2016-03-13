@@ -6,7 +6,7 @@ tags: [design-patterns]
 
 # Intent
 
-- Defines a family of algorithms (or strategies) /and/ encapsulates them from the clients.
+- Defines a family of algorithms (or strategies) and encapsulates them from the clients.
 
 # Structure
 
@@ -27,7 +27,7 @@ Use this pattern when:
 - Might complicate the code base, as this pattern needs a new class hierarchy.
 - Increased number of objects.
 - It's not gonna be easy to design the strategy interface in case the algorithm variants needs different kinds of input. For example, when adding a new strategy to an existing strategy hierarchy and that new one needs more data than the existing ones, then either we have to change the whole strategy interface or we have to introduce the new data to the strategy request (if it's an DTO).
-- There might be communication overhead for certain algorithms which do not make use of all the input data, which is defined to satisfy /all/ the algorithms.
+- There might be communication overhead for certain algorithms which do not make use of all the input data, which is defined to satisfy _all_ the algorithms.
 
 # Reference
 
