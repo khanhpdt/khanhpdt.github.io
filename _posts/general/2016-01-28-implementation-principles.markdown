@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Implementation Principles
-tags: [software-engineering, principles]
+tags: [writing-code]
 ---
 - SOLID
   - Single Responsibility

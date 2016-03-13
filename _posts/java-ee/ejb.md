@@ -1,5 +1,4 @@
 ---
 layout: post
 title: EJB
-tags: [java-ee, ejb]
 ---
