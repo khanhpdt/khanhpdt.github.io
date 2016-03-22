@@ -67,7 +67,7 @@ Requirements of the second hash function:
 
 For example, if the collision occurs at slot `x` for the key `k`, this probing probes slots `x + h2(k)`, `x + 2*h2(k)`, `x + 3*h2(k)`, ... until it finds a vacant slot, where `h2(k)` is the second hash function.
 
-A popular example of a hash function is `h2(k) = CONSTANT - (k % CONSTANT)`.
+A popular example of the second hash function is `h2(k) = CONSTANT - (k % CONSTANT)`.
 
 ## Separate chaining
 
