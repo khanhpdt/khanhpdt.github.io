@@ -302,3 +302,19 @@ nav.shrink .navbar-toggle {
   margin: 2px 3px;
   padding: 0px 5px;
 }
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:2px solid #292929;
+}
+
+th{
+    border:2px solid #292929;
+    padding: 4px;
+}
+
+td{
+    border:1px solid #292929;
+    padding: 4px;
+}
