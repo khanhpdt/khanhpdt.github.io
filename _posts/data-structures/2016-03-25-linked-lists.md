@@ -10,7 +10,7 @@ A linked list is a data structure in which each item links to some other items i
 
 Linked lists do not support random access. To get an item in the list, one has to traverse the list until reaching the item holding a link to the target item. This is the main disadvantage of linked lists.
 
-Linked lists vs. Arrays
+### Linked lists vs. Arrays
 
 | Linked lists | Arrays |
 | :------------- | :------------- |
