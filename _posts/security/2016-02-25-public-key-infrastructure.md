@@ -3,15 +3,18 @@ layout: post
 title: Public Key Infrastructure (PKI)
 tags: [security]
 ---
-# Overview
+
+## Overview
 
 PKI is the security infrastructure which provides all necessary services to implement public-key cryptography on open networks and thus enables secure communication using public-key cryptography on those networks.
 
-# Main concepts
+## Main concepts
 
-## Public-key cryptography
+### Public-key cryptography
 
 The main idea of public-key cryptography is to use different keys for encryption and decryption. The encryption key is made public and thus also called public key, while the decryption key is kept private and thus also called private key.
+
+<!--break-->
 
 Two important requirements on public-key cryptography are:
 
@@ -24,7 +27,7 @@ Using public-key cryptography, the encrypted messages can only be decrypted by u
 
 The first and most widely used public-key cryptosystem is RSA, which is named after its inventors Ron Rivest, Adi Shamir, and Leonard Adleman.
 
-## Digital signatures
+### Digital signatures
 
 Digital signatures are analogous to hand-written signatures in that they are used to prove the authenticity of a message.
 
@@ -36,7 +39,7 @@ It is important to note that the signature must always be associated with the me
 
 The most widely used digital signature is the RSA signature scheme.
 
-## Digital certificates
+### Digital certificates
 
 Digital certificates are used to prove the authenticity of public keys by binding public keys to their owners. Without certificates, public-key cryptography can easily be the victim of the man-in-the-middle attacks. For example, if Oscar somehow replaces Alice's public key by his, then every messages encrypted with the compromised Alice's public key can be decrypted by Oscar when he intercepts the messages.
 
@@ -48,11 +51,11 @@ The certificate contains the signature which must be signed by a certificate aut
 
 One commonly used certificate standard is X.509.
 
-## Certificate authority (CA)
+### Certificate authority (CA)
 
 Certificate authorities are trusted third-parties who are responsible for managing the certificates, e.g., issuing and revoking certificates.
 
-# Main services
+## Main services
 
 The main services provided by PKI include:
 
@@ -76,7 +79,7 @@ The main services provided by PKI include:
   - Prevents involved entities from denying that they have performed some actions, e.g., some harmful actions.
   - By digital signatures
 
-# References
+## References
 
 [1] [Introduction to Public Key Infrastructures](http://www.amazon.com/Introduction-Public-Infrastructures-Johannes-Buchmann/dp/3642406564/ref=sr_1_1?ie=UTF8&qid=1456768775&sr=8-1&keywords=introduction+to+pki)
 

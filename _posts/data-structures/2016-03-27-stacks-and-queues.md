@@ -12,6 +12,8 @@ A stack is a last-in-first-out (LIFO) data structure where both insertion and de
 
 Two basic operations on a stack are push and pop. Push is to add an item into the stack, and pop is to remove an item from the stack.
 
+<!--break-->
+
 ## Queues
 
 An ordinary queue is a first-in-first-out (FIFO) data structure where insertion takes places at one end and deletion at the other end of the queue.
@@ -26,7 +28,8 @@ A priority queue is a queue where the highest (or lowest) priority is always at 
 
 ## Code samples
 
-- See [github/stacks](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/stacks) and [github/queues](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/queues).
+- [github/stacks](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/stacks) 
+- [github/queues](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/queues)
 
 ## References
 

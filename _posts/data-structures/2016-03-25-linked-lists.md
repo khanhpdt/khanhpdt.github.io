@@ -10,6 +10,8 @@ A linked list is a data structure in which each item links to some other items i
 
 Linked lists do not support random access. To get an item in the list, one has to traverse the list until reaching the item holding a link to the target item. This is the main disadvantage of linked lists.
 
+<!--break-->
+
 ### Linked lists vs. Arrays
 
 | Linked lists | Arrays |
@@ -40,7 +42,7 @@ A circular linked list is a linked list in which the last item holds a link to t
 
 ## Code samples
 
-- See [github/linkedlists](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/linkedlists)
+- [github/linkedlists](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/linkedlists)
 
 ## References
 

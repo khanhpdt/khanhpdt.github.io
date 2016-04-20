@@ -12,6 +12,8 @@ A binary tree is a tree where each node has at most two edges.
 
 A binary search tree (BST) is a binary tree where the key of each node is larger than or equal to the keys of all the nodes in that node's left subtree and smaller than or equal to the keys of all the nodes in that node's right subtree. In other words, if the key of node `y` is `y.key`, then `x.key <= y.key <= z.key` for any node `x` in `y`'s left subtree and any node `z` in `y`'s right subtree.
 
+<!--break-->
+
 ## Binary tree traversals
 
 - In-order traversals
@@ -44,7 +46,7 @@ Because the basic operations on a BST depend on its height, a balanced BST offer
 
 ## Code samples
 
-- See [github/BST](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/trees).
+- [github/BST](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/trees).
 
 ## References
 
