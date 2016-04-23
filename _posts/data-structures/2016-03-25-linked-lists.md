@@ -40,10 +40,10 @@ A doubly linked list is a linked list in which each item holds references to its
 
 A circular linked list is a linked list in which the last item holds a link to the first item. Although circularity makes it more convenient to traverse the whole list starting from any item in the list, it demands different implementations to handle basic operations (e.g., search, remove) because if the same implementations as in other non-circular list are used, the loop over the list might take forever as the last item now points to the first item instead of a sentinel item which signals the end of the list.
 
-## Code samples
+## Source code
 
-- [github/linkedlists](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/linkedlists)
+- [github/linkedlists](https://github.com/khanhpdt/datastructures-algorithms/tree/master/data-structures/src/main/java/org/khanhpdt/playgrounds/datastructures/linkedlists)
 
 ## References
 
-[1] Data structures and algorithms in Java
+[1] [Data structures and algorithms in Java](http://www.amazon.com/Data-Structures-Algorithms-Java-2nd/dp/0672324539/ref=sr_1_4?s=books&ie=UTF8&qid=1461439850&sr=1-4&keywords=data+structures+and+algorithms+in+java)

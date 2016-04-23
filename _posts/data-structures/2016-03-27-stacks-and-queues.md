@@ -26,11 +26,11 @@ A circular queue is an ordinary queue which allows to move the pointers (front a
 
 A priority queue is a queue where the highest (or lowest) priority is always at the front.
 
-## Code samples
+## Source code
 
-- [github/stacks](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/stacks) 
-- [github/queues](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/queues)
+- [github/stacks](https://github.com/khanhpdt/datastructures-algorithms/tree/master/data-structures/src/main/java/org/khanhpdt/playgrounds/datastructures/stacks) 
+- [github/queues](https://github.com/khanhpdt/datastructures-algorithms/tree/master/data-structures/src/main/java/org/khanhpdt/playgrounds/datastructures/queues)
 
 ## References
 
-[1] Data structures and algorithms in Java, 2nd edition, SAMS
+[1] [Data structures and algorithms in Java](http://www.amazon.com/Data-Structures-Algorithms-Java-2nd/dp/0672324539/ref=sr_1_4?s=books&ie=UTF8&qid=1461439850&sr=1-4&keywords=data+structures+and+algorithms+in+java)

@@ -79,8 +79,8 @@ Because each slot in the table points to a list, this resolution allows the load
 
 ## References
 
-[1] Introduction to algorithms, 3rd edition, MIT press
-[2] Data structures and algorithms in Java, 2nd edition, SAMS
+[1] [Introduction to algorithms](http://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/ref=sr_1_1?s=books&ie=UTF8&qid=1461439930&sr=1-1&keywords=introduction+to+algorithms)
+[2] [Data structures and algorithms in Java](http://www.amazon.com/Data-Structures-Algorithms-Java-2nd/dp/0672324539/ref=sr_1_4?s=books&ie=UTF8&qid=1461439850&sr=1-4&keywords=data+structures+and+algorithms+in+java)
 
 ## Further readings
 

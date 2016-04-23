@@ -34,8 +34,8 @@ B-trees are especially suited for storing data in external storage, where the co
 
 ## References
 
-[1] https://en.wikipedia.org/wiki/K-ary_tree
+[1] [https://en.wikipedia.org/wiki/K-ary_tree](http://www.refactoring.com/catalog/replaceRecursionWithIteration.html)
 
-[2] https://en.wikipedia.org/wiki/Search_tree
+[2] [https://en.wikipedia.org/wiki/Search_tree](https://en.wikipedia.org/wiki/Search_tree)
 
-[3] Chapter 18, Introduction to algorithms, 3rd
+[3] [Introduction to algorithms](http://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/ref=sr_1_1?s=books&ie=UTF8&qid=1461439930&sr=1-1&keywords=introduction+to+algorithms)

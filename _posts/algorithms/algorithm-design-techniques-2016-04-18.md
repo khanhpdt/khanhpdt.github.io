@@ -2,7 +2,7 @@
 
 ## Divide-and-conquer
 
-Divide-and-conquer is a technique which solves a problem by dividing the problem into subproblems and then conquering each of the subproblems. The technique involves three steps:
+Divide-and-conquer is a technique to solve a problem by dividing it into subproblems and then independently conquering each of them. The technique involves three steps:
 
   - _Divide_ the problem into subproblems.
   - _Conquer_ each subproblem typically by calling the algorithm recursively.

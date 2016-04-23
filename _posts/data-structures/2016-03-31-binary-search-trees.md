@@ -44,16 +44,16 @@ Two well-known examples of balanced BSTs are red-black and AVL trees.
 
 Because the basic operations on a BST depend on its height, a balanced BST offers a better performance than the normal one in the worst case. More specifically, basic operations on BSTs run in `O(h)` time. More specifically, in the worst case, the height of a normal BST can be the same as the number of nodes, but the height of a red-black tree is always upper-bounded by `2*lg(n+1)`, where `n` is the number of the internal nodes in the tree [2, Lemma 13.1].
 
-## Code samples
+## Source code
 
-- [github/BST](https://github.com/khanhpdt/java-playground/tree/master/src/main/java/org/khanhpdt/javaplayground/datastructures/trees).
+- [github/BST](https://github.com/khanhpdt/datastructures-algorithms/blob/master/data-structures/src/main/java/org/khanhpdt/playgrounds/datastructures/trees/BinarySearchTree.java).
 
 ## References
 
-[1] Data structures and algorithms, 2nd, SAMS
-[2] Chapter 12 and 13, Introduction to algorithms, 3rd
-[3] Algorithms, 4th
-[4] https://en.wikipedia.org/wiki/Tree_traversal
-[5] http://www.refactoring.com/catalog/replaceRecursionWithIteration.html
+[1] [Data structures and algorithms in Java](http://www.amazon.com/Data-Structures-Algorithms-Java-2nd/dp/0672324539/ref=sr_1_4?s=books&ie=UTF8&qid=1461439850&sr=1-4&keywords=data+structures+and+algorithms+in+java)
+[2] [Introduction to algorithms](http://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/ref=sr_1_1?s=books&ie=UTF8&qid=1461439930&sr=1-1&keywords=introduction+to+algorithms)
+[3] [Algorithms](http://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X/ref=sr_1_2?ie=UTF8&qid=1461440135&sr=8-2&keywords=algorithms)
+[4] [https://en.wikipedia.org/wiki/Tree_traversal](https://en.wikipedia.org/wiki/Tree_traversal)
+[5] [http://www.refactoring.com/catalog/replaceRecursionWithIteration.html](http://www.refactoring.com/catalog/replaceRecursionWithIteration.html)
 [6] [Looping versus recursion for improved application performance](http://www.ibm.com/developerworks/websphere/techjournal/1307_col_paskin/1307_col_paskin.html)
 [7] [Self-balancing binary search tree](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree)
