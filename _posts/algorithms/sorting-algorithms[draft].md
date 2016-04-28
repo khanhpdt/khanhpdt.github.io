@@ -4,7 +4,7 @@ title: Sorting algorithms
 tags: [algorithms]
 ---
 
-Let assume that the algorithms are used to sort a given array in _ascending_ order.
+This post summarizes the main idea and the steps of some fundamental sorting algorithms. Let first assume that the algorithms sort a given array in _ascending_ order.
 
 ## Selection sort
 
@@ -50,14 +50,37 @@ What this algorithm actually does is to organize a sequence of merges in such a 
 
 ## Heap sort
 
+This algorithm sorts by using the data structure _heap_ and its special heap property. Let just consider max heaps where the heap property says that each node in the heap is equal to or larger than its children. Because of this max-heap property, the largest element is always the root of the heap. 
+
+For each iteration, this algorithm swaps the largest element (which currently is the root of heap) with the last element in the array. After this step, the largest element is considered sorted and thus ignored for later iterations. However, because the swap might break the max-heap property, the algorithm must restructure the heap (but without considering the sorted elements) to preserve the property.
+
 ## Quick sort
+
+Like merge sort, this algorithm follows the divide-and-conquer technique. 
+
+The algorithm divides the input array into three parts: two subarrays and a pivot element, which must satisfy the following properties:
+    
+- The pivot element stays between the two subarrays, i.e., the structure of the array after the divide step is `[first_subarray, pivot_element, second_subarray]`.
+- All elements in `first_subarray` <= `pivot_element` < all elements in `second_subarray`
+
+After the divide step, the algorithm continues with the conquer step to sort each of the two subarrays recursively. As the pivot element is already in its correct position, it will not be considered by the algorithm anymore. 
+
+The combine step is not necessary as the two subarrays and the pivot element are already in their correct positions.
+
+The crux of this algorithm is the divide step, which is commonly referred to as the partition step. This step is the one that actually does the sorting. Conceptually, this algorithm can be viewed as a sequence of partitionings.
+
+The performance of this algorithm is mainly influenced by the balance between the partitions created in the divide step. The worst case is when one of the partitions is empty, and the best case is when the two partitions have approximately the same size. 
+
+The performances of the algorithm in the worst and best case can be intuitively calculated as follows. The partitioning cost is the same in two cases, i.e., `O(n)`. In the worst case, the algorithm is recursively called `O(n)` times, whereas in the best case only `O(lg(n))`. So, in total, the worst case takes `O(n^2)` time, whereas the best case `O(n*lg(n))` time.
 
 ## Complexity comparisons
 
 ## Source code
 
+- [github/sortings](https://github.com/khanhpdt/datastructures-algorithms/tree/master/algorithms/src/main/java/org/khanhpdt/playgrounds/algorithms/sortings)
+
 ## References
 
-[1] Algorithms, 4th
-[2] Introduction to algorithms, 3rd
-[3] The art of computer programming, Vol. 3
+[1] [Algorithms](http://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X/ref=sr_1_2?ie=UTF8&qid=1461440135&sr=8-2&keywords=algorithms)
+[2] [Introduction to algorithms](http://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/ref=sr_1_1?s=books&ie=UTF8&qid=1461439930&sr=1-1&keywords=introduction+to+algorithms)
+[3] [The art of computer programming, Vol. 3](http://www.amazon.com/Art-Computer-Programming-Sorting-Searching/dp/0201896850/ref=sr_1_9?s=books&ie=UTF8&qid=1461485952&sr=1-9&keywords=the+art+of+computer+programming)

@@ -16,7 +16,7 @@ tags: [architectures]
 
     > It is usually advisable to segregate code consuming or publishing web services from the rest of your application.
 
-  - Use JAX-RS web services. One disadvantage is that it does not hava a standard specification yet, as opposed to JAX-WS whose specification can be written in WSDL files.
+  - Use JAX-RS web services. One disadvantage is that it does not have a standard specification yet, as opposed to JAX-WS whose specification can be written in WSDL files.
   - Use messaging services, which are asynchronous communication methods. These services can be implemented by message-driven beans in Java EE. Main advantage is the asynchronousity, which can provide guaranteeed dilivery because we can retry if the calls were failed.
   - Use EJBs, but this limits the participants to use Java.
 
