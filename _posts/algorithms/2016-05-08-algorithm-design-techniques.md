@@ -1,3 +1,10 @@
+---
+layout: post
+title: Algorithm design techniques
+tags:
+  - algorithms
+---
+
 ## Divide-and-conquer
 
 Divide-and-conquer is a technique to solve a problem by dividing it into subproblems and then independently conquering each of them. The technique involves three steps:
@@ -8,17 +15,17 @@ Divide-and-conquer is a technique to solve a problem by dividing it into subprob
 
 A well-known example of using divide-and-conquer technique is the merge-sort algorithm.
 
+<!--break-->
+
 Computing the complexity of divide-and-conquer algorithms usually involves solving recurrences. There are three main techniques to solve recurrences [1, Chapter 4]:
 
   - The substitution method
   - The recursion-tree method
   - The master method
 
-<!--break-->
-
 ## Dynamic programming
 
-Dynamic programming is similar to divide-and-conquer technique in that it also splits the problem into subproblems and then tries to solve each subproblem recursively. However, the main difference arises when the subproblems _overlap_. In this situation, the divide-and-conquer technique is unaware of the overlapping and thus will solve the overlapped subproblems multiple times. On the contrary,  dynamic programming is aware of the overlapping. Thus, it only solves the overlapped problems once and then simply looks up the solutions when the overlapped subproblems are encountered again.
+Dynamic programming is similar to divide-and-conquer technique in that it also splits the problem into subproblems and then tries to solve each subproblem recursively. However, the main difference arises when the subproblems _overlap_. In this situation, the divide-and-conquer technique is unaware of the overlapping and thus will solve the overlapped subproblems multiple times. On the contrary, dynamic programming is aware of the overlapping. Thus, it only solves the overlapped problems once and then simply looks up the solutions when the overlapped subproblems are encountered again.
 
 The "programming" in "dynamic programming" refers to the look up, not to writing code. As dynamic programming stores the solutions so that it does not need to recompute them again, it is a typical example of the classic trade-off between computational time and memory.
 
@@ -36,7 +43,11 @@ There are two approaches to implementing dynamic programming algorithms:
   - Top-down: The algorithm is implemented as a normal recursive algorithm, but when a solution to a subproblem is found, it is saved so that it can be looked up later when the same subproblem is encountered.
   - Bottom-up: The subproblems are solved in the order of their sizes with the smallest first, so that when a subproblem is encountered, it is guaranteed that all of its subproblems are already solved.
 
-## Greedy heuristics
+## Greedy heuristic
+
+Greedy heuristic is usually used to solve optimization problems. At each decision point, this heuristic always chooses the direction that seems best at the moment. In other words, it always chooses the _best_ option for the _current_ situation.
+
+Because the heuristic considers only locally-best solutions, it cannot guarantee optimal solutions; however, sometimes it still leads to one.
 
 ## Randomization
 
