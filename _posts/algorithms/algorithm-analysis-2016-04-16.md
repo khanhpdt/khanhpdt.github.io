@@ -33,20 +33,20 @@ The asymptotic notations are commonly used to represent the order of growth beca
 
 ### Best-case analysis
 
-Concentrates on the shortest time that an algorithm might take for a given input size.
+This analysis focuses on the shortest time an algorithm might take for a given input size.
 
 ### Worst-case analysis
 
-Concentrates on the longest time that an algorithm might take for a given input size.
+This analysis focuses on the longest time an algorithm might take for a given input size.
 
 ### Average-case analysis
 
-Concentrates on the time an algorithm might take on average for a given input size. It typically uses probabilistic analysis to analyze the average computational time.
-
-### Probabilistic analysis
+This analysis focuses on the average time an algorithm might take for a given input size. It typically uses probability to analyze the average time.
 
 ### Amortized analysis
 
+
+
 ## References
 
-[1] Introduction to algorithms, 3rd
+[1] [Introduction to algorithms](http://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/ref=sr_1_1?s=books&ie=UTF8&qid=1461439930&sr=1-1&keywords=introduction+to+algorithms)

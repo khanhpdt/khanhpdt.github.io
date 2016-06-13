@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Strings
-tags: [java]
+title: Strings in Java
+tags: [data-structures, java]
 ---
 
 ## Immutability
