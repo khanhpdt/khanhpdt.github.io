@@ -6,9 +6,9 @@ tags : [data-structures]
 
 ## Overview
 
-A linked list is a data structure in which each item links to some other items in the list.
+A linked list is a data structure in which each item is linked to other items in the list.
 
-Linked lists do not support random access. To get an item in the list, one has to traverse the list until reaching the item holding a link to the target item. This is the main disadvantage of linked lists.
+Linked lists do not support random access. To get an item in the list, one has to sequentially traverse the list until reaching the item. This sequential access is also the main disadvantage of using linked lists.
 
 <!--break-->
 
@@ -19,30 +19,29 @@ Linked lists do not support random access. To get an item in the list, one has t
 | - Easy to expand | - Hard to expand       |
 | - Sequential access | - Random access by index |
 | - Use just as much memory as needed | - Memory preallocated, so might be either too much or too little |
-| - Insertion takes O(1) time | - Same |
-| - Not required  | - Deleting or inserting requires to rearrange items, which can take much time if the item is big |
+| - No rearrangement required  | - Deleting or inserting might require to rearrange items, which can take much time if the items are big |
 
 ## Types of linked lists
 
 ### Singly linked lists
 
-A singly linked lists is an ordinary linked list in which each item holds a link to its next item.
+A singly linked list is an ordinary linked list in which each item holds a link to its next item.
 
 ### Double-ended linked lists
 
-A double-ended list is a singly linked list in which the list object holds two links to the first and last items of the list. This makes accesses to the end of the list more efficient. For example, adding an item to the end of the list is just as simple as to the beginning. However, it makes it more complicated when removing items from the list, as not only the head but also the tail needs to be carefully updated because the removed items can be either of them.
+A double-ended linked list is a singly linked list in which the list object holds the links to both the first and last items of the list. This helps accesses to the list end more efficient. For example, adding an item to the end of the list is just as simple as to the beginning. However, it makes it more complicated when removing items from the list, as not only the head but also the tail needs to be carefully updated because the removed items can be either of them.
 
 ### Doubly linked lists
 
-A doubly linked list is a linked list in which each item holds references to its next and previous ones. The advantage is that is makes it convenient to traverse backward, but the disadvantages are that it requires more memory to store the link to the previous item and also it leads to more processing on basic operations (e.g., insertion, deletion) because they have to deal with more links than in singly linked lists.
+A doubly linked list is a linked list in which each item holds references to its next and previous items. The backward link makes it convenient to traverse backward, but it needs more memory and makes basic operations (e.g., insertion, deletion) more complicated because they have to deal with more links than in singly linked lists.
 
 ### Circular linked lists
 
-A circular linked list is a linked list in which the last item holds a link to the first item. Although circularity makes it more convenient to traverse the whole list starting from any item in the list, it demands different implementations to handle basic operations (e.g., search, remove) because if the same implementations as in other non-circular list are used, the loop over the list might take forever as the last item now points to the first item instead of a sentinel item which signals the end of the list.
+A circular linked list is a linked list in which the last item holds a link to the first item. Although circularity makes it more convenient to traverse the whole list starting from any item in the list, it demands different implementations to handle basic operations (e.g., search, remove). This is because if the same implementations as in other non-circular lists are used, the loop over circular lists might take forever as the last items now points to the first items instead of the sentinel items which signal the end of the lists.
 
 ## Source code
 
-- [github/linkedlists](https://github.com/khanhpdt/datastructures-algorithms/tree/master/data-structures/src/main/java/org/khanhpdt/playgrounds/datastructures/linkedlists)
+- [github/linkedlists](https://github.com/khanhpdt/datastructures-algorithms/tree/master/data-structures/src/main/java/vn/khanhpdt/playgrounds/datastructures/linkedlists)
 
 ## References
 
