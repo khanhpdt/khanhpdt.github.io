@@ -7,11 +7,13 @@ tags:
 
 ## Divide-and-conquer
 
-Divide-and-conquer is a technique to solve a problem by dividing it into subproblems and then independently conquering each of them. The technique involves three steps:
+Divide-and-conquer technique solves a problem by continually dividing the given problem into subproblems until each of those subproblems is simple enough to be conquered easily. Then, it combines the solutions to those subproblems into the solution for the original problem.
 
-  - _Divide_ the problem into subproblems.
-  - _Conquer_ each subproblem typically by calling the algorithm recursively.
-  - _Combine_ the solutions to the subproblems into the one to the original problem.
+This technique typically involves three steps:
+
+  * _Divide_ the problem until the subproblems are simple enough
+  * _Conquer_ each subproblem
+  * _Combine_ the solutions to the subproblems into the one for the original problem.
 
 A well-known example of using divide-and-conquer technique is the merge-sort algorithm.
 
@@ -19,9 +21,9 @@ A well-known example of using divide-and-conquer technique is the merge-sort alg
 
 Computing the complexity of divide-and-conquer algorithms usually involves solving recurrences. There are three main techniques to solve recurrences [1, Chapter 4]:
 
-  - The substitution method
-  - The recursion-tree method
-  - The master method
+  * The substitution method
+  * The recursion-tree method
+  * The master method
 
 ## Dynamic programming
 
