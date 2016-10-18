@@ -23,8 +23,7 @@ Rule: `x | y == 1` if `x` or `y` is `1`.
 Example:
 
 ```java
-System.out.println(Integer.toBinaryString(0b1010111 | 0b1000010)); 
-// 1010111
+0b1010111 | 0b1000010 == 0b1010111
 ```
 
 ### AND
@@ -34,8 +33,7 @@ Rule: `x & y == 1` if both `x` and `y` are `1`.
 Example:
 
 ```java
-System.out.println(Integer.toBinaryString(0b1010111 & 0b1000010)); 
-// 1000010
+0b1010111 & 0b1000010 == 0b1000010
 ```
 
 ### XOR
@@ -45,8 +43,7 @@ Rule: `x ^ y == 1` if either `x` or `y` is `1` but not both.
 Example:
 
 ```java
-System.out.println(Integer.toBinaryString(0b1010111 ^ 0b1000010)); 
-// 10101
+0b1010111 ^ 0b1000010 == 0b10101
 ```
 
 ## Complement operator
@@ -56,8 +53,7 @@ The result of `~ x` is obtained by flipping all the bits in `x`.
 Example:
 
 ```java
-System.out.println(Integer.toBinaryString(~0b1010111)); 
-// 11111111111111111111111110101000
+~ 0b1010111 == 0b11111111111111111111111110101000
 ```
 
 Note that unary numeric promotion is applied before this operator is performed. If the operand is of type `long`, it remains unchanged; otherwise, it is converted to `int`. This promoted type is also the type of the result.
@@ -73,8 +69,7 @@ The result of `x << y` is `x` after shifting its bits `y` positions to the left 
 Example:
 
 ```java
-System.out.println(Integer.toBinaryString(0b1010111 << 3));
-// 1010111000
+0b1010111 << 3 == 0b1010111000
 ```
 
 ### Signed right shift
@@ -84,15 +79,10 @@ The result of `x >> y` is `x` after shifting its bits `y` positions to the right
 Example:
 
 ```java
-System.out.println(Integer.toBinaryString(21));
-// 10101
-System.out.println(Integer.toBinaryString(21 >> 3));
-// 10
-
-System.out.println(Integer.toBinaryString(-101));
-// 11111111111111111111111110011011
-System.out.println(Integer.toBinaryString(-101 >> 3));
-// 11111111111111111111111111110011
+// 0b10101 = 21
+0b10101 >> 3 == 0b10
+// 0b11111111111111111111111110011011 = -101
+0b11111111111111111111111110011011 >> 3 = 0b11111111111111111111111111110011
 ```
 
 ### Unsigned right shift
@@ -102,10 +92,7 @@ Same as `>>` except that the inserted bits are always zeroes.
 Example:
 
 ```java
-System.out.println(Integer.toBinaryString(21 >>> 3));
-// 10
-System.out.println(Integer.toBinaryString(-101 >>> 3));
-// 00011111111111111111111111110011
+0b11111111111111111111111110011011 >>> 3 == 0b00011111111111111111111111110011
 ```
 
 ## Idioms
@@ -115,28 +102,26 @@ Let `n` denote an integer, and `b` denote the `i`th bit in `n` couting from the 
   * Clear all but `b`: `n & (1 << i)`
   
 ```java
-System.out.println(Integer.toBinaryString(31)); // 11111
-System.out.println(Integer.toBinaryString(31 & (1 << 2))); // 00100
+0b11111 & (1 << 2) == 0b00100
 ```
 
   * Turn `b` off: `n & (~ (1 << i))`
   
 ```java
-System.out.println(Integer.toBinaryString(31 & (~(1 << 2)))); // 11011
+0b1111 & (~(1 << 2)) == 0b11011
 ```
 
   * Turn `b` on: `n | (1 << i)`
   
 ```java
-System.out.println(Integer.toBinaryString(24)); // 11000
-System.out.println(Integer.toBinaryString(24 | (1 << 2))); // 11100
+0b11000 | (1 << 2) == 0b11100
 ```
   
   * Set `b` to bit `a`: `(n & (~ (1 << i))) | (a << i)`
 
 ```java
-System.out.println(Integer.toBinaryString((31 & (~ (1 << 2))) | (0 << 2))); // 11011
-System.out.println(Integer.toBinaryString((24 & (~ (1 << 2))) | (1 << 2))); // 11100
+0b11111 & ((~ (1 << 2)) | (0 << 2)) == 0b11011
+0b11011 & ((~ (1 << 2)) | (1 << 2)) == 0b11111
 ```
 
 ## Further reading
