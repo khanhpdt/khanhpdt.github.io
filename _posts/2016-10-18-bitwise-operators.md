@@ -131,6 +131,14 @@ Let `n` denote an integer, and `b` denote the `i`th bit in `n` couting from the 
 (1 << 10) - 1 == 0b1111111111
 ```
 
+  * Clear the right most bit `1`: `n & (n - 1)`
+  
+```java
+0b111011_1 & (0b111011_1 - 1) == 0b111011_0
+0b11101_100 & (0b11101_100 -1) == 0b11101_000
+0b1_000000 & (0b1_000000 - 1) == 0
+```
+
 ## Further reading
 
 [1] Bitwise operators, Thinking in Java, 4th
