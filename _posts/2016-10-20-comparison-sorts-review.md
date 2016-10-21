@@ -5,13 +5,13 @@ tags:
   - algorithms
 ---
 
-This post reviews the basic ideas of the fundamental comparison-sort algorithms, namely the sorting algorithms where the order between two elements are determined by _comparing_ them.
+This post reviews the basic ideas of well-known comparison-sort algorithms, namely the sorting algorithms determining the order between two objects by _comparing_ them. It is known that the complexity of this type of sorting algorithms is lower bounded by `O(n*logn)` [2].
 
-The sorting order is assumed to be ascending.
+Before reviewing the algorithms, let assume that the sorting order is ascending.
 
 ## Selection sort
 
-During sorting, this algorithm splits the array to two areas: the sorted area containing elements in sorted order and the unsorted area containing the remaining unsorted elements. Let call the sorted area __S__ and the unsorted area __U__. Initially, __S__ is empty and __U__ is the whole array. If the sorting is in-place, then __S__ stands before __U__ in the array.
+During sorting, this algorithm splits the array into two areas: the sorted area containing elements in sorted order and the unsorted area containing the remaining unsorted elements. Let call the sorted area __S__ and the unsorted area __U__. Initially, __S__ is empty and __U__ is the whole array. If the sorting is in-place, then __S__ stands before __U__ in the array.
 
 For each iteration, this algorithm _selects_ the minimum element from __U__ and then adds it into the tail of __S__. Thus, after each iteration, __U__ is shrinked, whereas __S__ is expanded. The iteration continues until __U__ is empty, meaning all items are sorted.
 
