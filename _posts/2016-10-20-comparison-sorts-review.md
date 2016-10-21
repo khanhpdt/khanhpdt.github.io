@@ -17,7 +17,7 @@ For each iteration, this algorithm _selects_ the minimum element from __U__ and 
 
 <!--break-->
 
-Because this algorithm always looks for the mininum element in __U__, its performance is insensitive to whether the input is sorted or not.
+Because this algorithm always looks for the mininum element in __U__, its performance is insensitive to whether the input is sorted or not. 
 
 [Complexity:](https://en.wikipedia.org/wiki/Selection_sort)
 
