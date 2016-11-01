@@ -1,1 +1,1 @@
-# [My blog on software engineering](khanhpdt.github.io)
+# [My blog on software engineering](http://khanhpdt.github.io)
