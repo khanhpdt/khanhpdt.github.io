@@ -1,37 +1,59 @@
-# Dependencies
-markdown:         kramdown
-kramdown:
-  input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
-  hard_wrap: true
+# Site wide configuration
 
-# pygments:         true
+title: Notes on software engineering
+locale: en_US
+# description: My personal notes on software development
+# logo: site-logo.png
+search: true
+url: khanhpdt.github.io
 
-# Permalinks
-permalink:        pretty
+# Jekyll configuration
 
-# Setup
-title:            Software Dev Notes
-tagline:          ''
-description:      'My personal notes on software development.'
-url:              http://khanhpdt.github.io
-
-author:
-  name:           'Khanh Pham'
-  email:          'tungkhanh.a2@gmail.com'
-  url:            https://github.com/khanhpdt
-
-paginate:         5
-paginate_path:    '/page/:num'
-
-# Custom vars
-# version:          2.0.0
-
-github:
-  repo:           https://github.com/khanhpdt/khanhpdt.github.io
-
+permalink:   /:categories/:year/:month/:day/:title/
+markdown:    kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
 gems:
-  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
 
-google_analytics_key: 'UA-75448631-1'
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
 
-exclude: ['README.md', 'LICENSE']
+mathjax: true
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+
+# Site owner
+owner:
+  name: Khanh Pham
+  avatar: #bio-photo.jpg
+  email: khanhpdtvn@gmail.com
+  disqus-shortname:
+  twitter: #username
+  facebook: #username
+  github: khanhpdt
+  stackexchange: #http://stackoverflow.com/users/123456/username
+  linkedin: #username
+  instagram: #username
+  flickr: #username
+  tumblr: #username
+  pinterest: #username
+  weibo: #userid
+  google:
+    plus: #username
+    analytics: UA-75448631-1
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:

@@ -1,3 +1,1 @@
-# khanhpdt.github.io
-
-This blog is about what I have learnt during my software development career.
+# [My blog on software engineering](khanhpdt.github.io)
