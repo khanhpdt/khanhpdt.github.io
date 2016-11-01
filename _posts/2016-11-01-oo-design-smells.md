@@ -14,6 +14,8 @@ A design is rigid when changing code in one place causes changes to many other p
 
 Rigidity makes it expensive to change software because even a simple change can cause a lot of unexpected changes.
 
+<!--break-->
+
 ## Fragility
 
 A design is fragile when changing code in one place can break code in other places that might not be related to the changed code at all. 
