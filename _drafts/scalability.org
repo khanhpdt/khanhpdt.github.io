@@ -1,0 +1,3 @@
+* Scalability with Java
+
+** http://www.theserverside.com/news/1363681/Scaling-Your-Java-EE-Applications
