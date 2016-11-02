@@ -1,8 +1,3 @@
----
-layout: post
-title: Java Collections
-tags: [java]
----
 # Chapter 10
 - Java Collections Framework: java.util and java.util.concurrent
 - Figure 10-1: The main interfaces of Java Collections Framework
