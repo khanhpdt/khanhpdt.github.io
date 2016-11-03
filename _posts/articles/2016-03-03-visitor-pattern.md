@@ -8,31 +8,36 @@ tags: [design-patterns]
 
 ## Intent
 
-- Defines new operations for a class hierarchy _without_ modifying the hierarchy.
+- Allow to define new operations for a class hierarchy _without_ modifying the hierarchy
 
 ## Structure
 
 ![visitor-pattern-structure]({{ site.url }}/images/patterns/design-patterns/visitor/structure.png)
 
-- In the diagram, the `accept(Visitor v)` method just simply calls `v.visit(this)`, which implements the necessary operation on the given `Component`. This is the _double dispatch_ technique, where the result of the call depends on the request and the types of _two_ receivers.
-- New operations for the `Component` class hierarchy can be created by adding new `Visitor`. Thus, it's not necessary to modify the `Component` class hierarchy to define its new operations.
+- The concrete implementations of `accept(Visitor v)` methods only need to call `v.visit(this)`, then the callee `Visitor` will carry out the necessary operation on the caller `Component`. This is the _double dispatch_ technique, where the result of the call depends on the request and the types of _two_ receivers, e.g., `Component` and `Visitor` in this case.
+- Each `Visitor` supports a specific group of operations on the `Component` class hierarchy. Thus, new group of operations can be added via new `Visitor` without changing the `Component` hierarchy at all.
 
-# Applicability
+# Applicable contexts
 
-This pattern should be used when:
+- A class hierarchy rarely changes, but its services usually do.
 
-- The class hierarchy rarely changes, while its operations usually does. This is because adding new operations can be simply done by adding new visitors. On the other hand, adding new classes into the hierarchy leads to adding new `visit()` method to the `Visitor` interface, which leads to modifying _all_ the existing visitors.
+# Benefits
+
+- Allow to extend the services of a whole class hierarchy without changing the hierarchy, because the extension can be done by adding new visitors
+- Allow to modify the services of a whole class hierarchy without changing the hierarchy, because the modification can be done by adapting the corresponding visitors
 
 # Risks
 
 - The pattern is quite complicated to understand. Using this pattern might make it hard for other team members to get familiar with the code.
+- Adding new classes to the hierarchy causes changes to the whole visitor hierarchy, because new classes require new `visit()` methods in the `Visitor` interface and thus in all the existing visitors
 - If this pattern is used with the Composite pattern and the Composite contains a cycle in it, the accept-visit loop might be repeated forever.
 
-# Implementation
+# Example
 
-- [github/Visitor](https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/org/khanhpdt/designpatterns/visitor) for an example.
+- [github/Visitor](https://github.com/khanhpdt/design-patterns/tree/master/src/main/java/vn/khanhpdt/playgrounds/designpatterns/visitor)
 
 # References
 
-- Visitor, GOF book
-- Visitor, Chapter 29, Design Patterns In Java
+[1] Visitor, [The GOF book](https://amzn.com/0201633612)
+
+[2] Visitor, Chapter 29, [Design Patterns In Java](https://amzn.com/0321333020)
