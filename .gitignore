@@ -42,3 +42,7 @@ node_modules
 bower_components
 
 .sass-cache/
+
+# Visual Paradigm temporary files
+*.vpp.*
+*.vbak

@@ -4,22 +4,22 @@ title: Abstract Factory pattern
 excerpt: ""
 categories: articles
 tags: [design-patterns]
+modified: 2016-11-02
 ---
 
 ## Intent
 
-- Provides a single place to (dynamically) create a family of related objects.
+- Provide a single place to dynamically create a family of related objects.
 
 ## Structure
 
 ![abstract-factory-pattern-structure]({{ site.url }}/images/patterns/design-patterns/abstract-factory/structure.png)
 
-In the diagram, `AbstractFactory` acts as the single place providing services to create two related products A and B. Users of those services, e.g., `Client`, do not need to know how the products are implemented or how they are created; instead, they only need to know the right factory for its need, which they might create themselves or receive from another source.
+In the diagram, `AbstractFactory` acts as the single place providing services to create two related products A and B. Users of those services do not need to know how the products are implemented or how they are created; instead, they only need to know the right factory for its need, which they might create themselves or receive from another source.
 
 ## Applicable contexts
 
-- There are objects related to each other, each of which has different forms, and they are usually created together.
-- You want to centralize the creation of some objects and to decouple that creation details from the users of those objects.
+- There exist objects that are of different types but related to each other, and usually show up together. This pattern can then be used to centralize the creations of those related objects.
 
 ## Benefits
 
@@ -30,7 +30,7 @@ In the diagram, `AbstractFactory` acts as the single place providing services to
 
 ## Risks
 
-- If there appears a new type of object, the abstract factory needs to add this object to the group of objects it can create, thus causing all the concrete factories to change.
+- If a new type of object arises, the abstract factory needs to be changed to handle this new type, thus causing changes to all the concrete factories.
 
 ## Implementation
 
