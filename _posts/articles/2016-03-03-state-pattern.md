@@ -4,6 +4,7 @@ title: State pattern
 excerpt: ""
 categories: articles
 tags: [design-patterns]
+modified: 2016-11-03
 ---
 
 ## Intent
